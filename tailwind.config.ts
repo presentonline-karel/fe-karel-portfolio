@@ -65,6 +65,7 @@ const config: Config = {
         "16": "4rem",
         "17": "4.25rem",
         "18": "4.5rem",
+        "14px": "14px",
         "18px": "18px",
         "26px": "26px",
         "30px": "30px",

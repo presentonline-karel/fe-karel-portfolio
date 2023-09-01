@@ -27,7 +27,7 @@ export default async function Home() {
   console.log(json);
 
   return (
-    <div className="w-full">
+    <div className="section">
       <h1 className="h h1">H1 test title</h1>
       <h2 className="h h2">H2 test title</h2>
       <h3 className="h h3">H3 test title</h3>
@@ -35,9 +35,18 @@ export default async function Home() {
       <h5 className="h h5">H5 test title</h5>
       <h6 className="h h6">H6 test title</h6>
 
-      <button className="btn btn-primary">
-        Home
-      </button>
+      <div className="flex gap-2">
+        <button className="btn btn-primary">
+          Home
+        </button>
+
+        <button className="btn btn-secondary">
+          Home
+        </button>
+      </div>
+
+      <div className="label light">Tech stacks I know</div>
+      <div className="label dark">Tech stacks I know</div>
     </div>
   )
 }
