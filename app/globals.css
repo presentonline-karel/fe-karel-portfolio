@@ -2,26 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+/* _____BASE_____  */
+@layer base {
+
+  /* Headings */
+  .h {
+    @apply text-neutrals-1300 font-kanit font-medium tracking-tight;
+  }
+
+  .h1 {
+    @apply text-40 leading-11 mb-4 xl:text-64 xl:leading-17 xl:mb-6;
+  }
+
+  .h2 {
+    @apply text-32 leading-38px xl:text-56 xl:leading-15;
+  }
+
+  .h3 {
+    @apply text-24 leading-30px xl:text-48 xl:leading-13;
+  }
+
+  .h4 {
+    @apply text-20 leading-26px xl:text-40 xl:leading-11;
+  }
+
+  .h5 {
+    @apply text-18 leading-6 xl:text-32 xl:leading-9;
+  }
+
+  .h6 {
+    @apply text-16 leading-6 xl:text-24 xl:leading-30px;
+  }
+
+  /* Paragraphs */
+  .p {
+    @apply text-16 leading-26px font-light tracking-tight xl:text-18 xl:leading-7;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+
+/* _____COMPONENTS_____  */
+@layer components {
+
+  /* Buttons */
+  .btn {
+    @apply flex items-center gap-[10px] py-4 px-7 font-kanit text-neutrals-1400 text-18 leading-18px xl:px-9 xl:text-20 xl:leading-5;
+  }
+
+  .btn-primary {
+    @apply bg-prim-500;
+  }
 }
