@@ -26,5 +26,14 @@ export async function fetcher(page: string, select = {}) {
 	});
 
 	const data = await resp.json();
+  //console.log("type dataRaw ->", typeof dataRaw);
+  //const data = JSON.parse(dataRaw.result.customPageContent);
+
+  //console.log("dataRaw ->", dataRaw);
+
+  //const data = JSON.parse(JSON.stringify(dataRaw, null, 2));
+
+  //console.log("data ->", data);
+
 	return data;
 }
