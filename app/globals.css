@@ -66,12 +66,16 @@
   }
 
   /* Labels */
+  .label {
+    @apply inline-block text-14 leading-14px py-[6px] px-3 xl:text-16 xl:leading-4;
+  }
+
   .label.light {
-    @apply inline-block text-14 leading-14px text-neutrals-1400 bg-prim-300 py-[6px] px-3;
+    @apply text-neutrals-1400 bg-prim-300;
   }
 
   .label.dark {
-    @apply inline-block text-14 leading-14px text-prim-500 bg-neutrals-1400 py-[6px] px-3;
+    @apply text-prim-500 bg-neutrals-1400;
   }
 }
 

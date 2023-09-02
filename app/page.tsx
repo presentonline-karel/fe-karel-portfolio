@@ -1,8 +1,12 @@
-export default async function Home() {
+// Next
+import { notFound } from "next/navigation";
 
-  const api = "http://be-karel-portfolio.int/api/query";
-  const username = "karel.decoene3@gmail.com";
-  const password = "TestKarelPortfolio2023!";
+
+
+export default async function Home() {
+  const api = `${process.env.NEXT_PUBLIC_KIRBYCMS_URL}`;
+  const username = `${process.env.NEXT_PUBLIC_KIRBYCMS_EMAIL}`;
+  const password = `${process.env.NEXT_PUBLIC_KIRBYCMS_PASSWORD}`;
 
   const headers = {
     Authorization: "Basic " + Buffer.from(`${username}:${password}`).toString("base64"),
@@ -10,20 +14,19 @@ export default async function Home() {
     Accept: "application/json",
   };
 
-  const response = await fetch(api, {
+  const resp = await fetch(api, {
     method: "post",
     body: JSON.stringify({
-      query: "page('projects').children",
+      query: "page('home')",
       select: {
-        "url": true,
-        "longTitle": true,
-        "description": true
+        "customPageHeader": true,
+        "customPageContent": true,
       }
     }),
     headers,
   });
 
-  const json = await response.json();
+  const json = await resp.json();
   console.log(json);
 
   return (
