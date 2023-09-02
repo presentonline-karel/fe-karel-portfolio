@@ -1,33 +1,28 @@
 // Next
 import { notFound } from "next/navigation";
 
+// Utils
+import { fetcher } from "@/utils/fetcher";
+
 
 
 export default async function Home() {
-  const api = `${process.env.NEXT_PUBLIC_KIRBYCMS_URL}`;
-  const username = `${process.env.NEXT_PUBLIC_KIRBYCMS_EMAIL}`;
-  const password = `${process.env.NEXT_PUBLIC_KIRBYCMS_PASSWORD}`;
 
-  const headers = {
-    Authorization: "Basic " + Buffer.from(`${username}:${password}`).toString("base64"),
-    "Content-Type": "application/json",
-    Accept: "application/json",
-  };
+  // Fetch KirbyCMS data
+  let requestData = {
+    query: "page('home')",
+    select: {
+      "customPageHeader": true,
+      "customPageContent": true,
+    }
+  }
 
-  const resp = await fetch(api, {
-    method: "post",
-    body: JSON.stringify({
-      query: "page('home')",
-      select: {
-        "customPageHeader": true,
-        "customPageContent": true,
-      }
-    }),
-    headers,
-  });
+  const resp = await fetcher(requestData.query, requestData.select);
 
-  const json = await resp.json();
-  console.log(json);
+  if (!resp.result || resp.result.length === 0) {
+    notFound();
+  }
+
 
   return (
     <div className="section">
