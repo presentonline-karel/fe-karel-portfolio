@@ -8,6 +8,7 @@ export interface HeroPrimaryProps {
             herotitle: string;
             heroparagraph: string;
             herobuttons: Button[];
+            heroimage: string[];
         };
     }
 }

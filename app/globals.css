@@ -38,7 +38,7 @@
 
   /* Paragraphs */
   .p {
-    @apply text-16 leading-26px font-light tracking-tight xl:text-18 xl:leading-7;
+    @apply text-16 leading-26px font-light tracking-tight text-neutrals-1100 xl:text-18 xl:leading-7;
   }
 }
 
@@ -68,6 +68,10 @@
   /* Labels */
   .label {
     @apply inline-block text-14 leading-14px py-[6px] px-3 xl:text-16 xl:leading-4;
+  }
+
+  .label.default {
+    @apply text-neutrals-1200 px-0 py-0 mb-2 lg:mb-3 xl:text-18 xl:leading-18px;
   }
 
   .label.light {

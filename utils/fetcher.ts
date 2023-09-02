@@ -1,8 +1,5 @@
 export async function fetcher(page: string, select = {}) {
 
-  console.log("page ->", page);
-  console.log("select ->", select);
-
   // KirbyCMS settings
 	const api = `${process.env.NEXT_PUBLIC_KIRBYCMS_URL}`;
 	const username = `${process.env.NEXT_PUBLIC_KIRBYCMS_EMAIL}`;
@@ -26,14 +23,5 @@ export async function fetcher(page: string, select = {}) {
 	});
 
 	const data = await resp.json();
-  //console.log("type dataRaw ->", typeof dataRaw);
-  //const data = JSON.parse(dataRaw.result.customPageContent);
-
-  //console.log("dataRaw ->", dataRaw);
-
-  //const data = JSON.parse(JSON.stringify(dataRaw, null, 2));
-
-  //console.log("data ->", data);
-
 	return data;
 }

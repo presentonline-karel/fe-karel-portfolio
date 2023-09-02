@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 
 // Utils
 import { fetcher } from "@/utils/fetcher";
-import { sectionRenderer } from "@/utils/section-renderer";
+import { sectionRenderer } from "@/utils/render-section";
 
 
 
