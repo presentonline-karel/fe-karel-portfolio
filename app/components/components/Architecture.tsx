@@ -9,7 +9,7 @@ import { ArchitectureProps } from "@/types/organisms/Architecture";
 export default function Architecture(architecture: ArchitectureProps) {
   return (
     <div className="">
-      <h3 className="h h3 mb-3">
+      <h3 className="h h3 mb-3 lg:text-32 lg:leading-38px">
         {architecture.title}
       </h3>
 
@@ -20,7 +20,7 @@ export default function Architecture(architecture: ArchitectureProps) {
         ))}
       </div>
 
-      <p className="p mb-5">
+      <p className="p mb-5 lg:mb-6">
         {architecture.paragraph}
       </p>
 
@@ -30,7 +30,7 @@ export default function Architecture(architecture: ArchitectureProps) {
           <>
             <Link
               href={`${project}`}
-              className="underline text-18 leading-6 font-normal text-neutrals-1300 whitespace-nowrap"
+              className="underline text-18 leading-6 font-normal text-neutrals-1300 whitespace-nowrap lg:text-20 lg:leading-26px"
             >
               Starter Kit
             </Link>
