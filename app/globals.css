@@ -49,20 +49,20 @@
 
   /* Buttons */
   .btn {
-    @apply flex items-center gap-[10px] py-4 px-7 font-kanit text-18 leading-18px cursor-pointer xl:px-9 xl:text-20 xl:leading-5;
+    @apply flex justify-center items-center gap-[10px] py-4 px-7 font-kanit text-18 leading-18px cursor-pointer xl:px-9 xl:text-20 xl:leading-5;
   }
 
   .btn-primary {
-    @apply bg-prim-500 text-neutrals-1400 hover:bg-prim-400;
+    @apply bg-prim-500 text-neutrals-1400 shadow-btnPrimary hover:bg-prim-400;
   }
 
   .btn-secondary {
-    @apply bg-transparent border text-neutrals-1300 border-neutrals-1300 hover:bg-neutrals-300 hover:border-neutrals-200;
+    @apply bg-transparent border text-neutrals-1300 border-neutrals-1300 shadow-btnBlack hover:bg-neutrals-300 hover:border-neutrals-200;
   }
 
   /* Section */
   .section {
-    @apply py-[72px] lg:py-[120px];
+    @apply py-[72px] lg:py-[120px] hd:py-0;
   }
 
   /* Labels */

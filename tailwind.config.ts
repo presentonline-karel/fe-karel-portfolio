@@ -5,6 +5,7 @@ const config: Config = {
 		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
 		"./components/**/*.{js,ts,jsx,tsx,mdx}",
 		"./app/**/*.{js,ts,jsx,tsx,mdx}",
+		"./utils/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
 		extend: {
@@ -13,13 +14,13 @@ const config: Config = {
 				"gradient-conic":
 					"conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
 			},
-      boxShadow: {
-        btnPrimary: "0px 2px 4px 0px rgba(252, 172, 34, 0.24)",
-        btnBlack: "0px 2px 4px 0px rgba(64, 72, 79, 0.24)",
-        card: "0px 4px 16px 0px rgba(46, 51, 56, 0.08)",
-        image: "0px 4px 16px 0px rgba(46, 51, 56, 0.10)",
-        input: "0px 4px 8px 0px rgba(46, 51, 56, 0.04)",
-      },
+			boxShadow: {
+				btnPrimary: "0px 2px 4px 0px rgba(252, 172, 34, 0.24)",
+				btnBlack: "0px 2px 4px 0px rgba(64, 72, 79, 0.24)",
+				card: "0px 4px 16px 0px rgba(46, 51, 56, 0.08)",
+				image: "0px 4px 16px 0px rgba(46, 51, 56, 0.10)",
+				input: "0px 4px 8px 0px rgba(46, 51, 56, 0.04)",
+			},
 			colors: {
 				"prim-100": "#FFF7EB",
 				"prim-200": "#FFE7C2",
@@ -78,6 +79,9 @@ const config: Config = {
 				"30px": "30px",
 				"38px": "38px",
 			},
+      maxWidth: {
+        "8xl": "1440px",
+      }
 		},
 		fontSize: {
 			"12": "12px",
@@ -99,7 +103,7 @@ const config: Config = {
 		screens: {
 			sm: "640px",
 			md: "1024px",
-			lg: "1280px",
+			lg: "1200px",
 			xl: "1440px",
 			hd: "1920px",
 		},

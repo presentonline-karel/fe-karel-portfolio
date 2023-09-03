@@ -1,5 +1,5 @@
 // Imported types
-import { Button } from "../components/Button";
+import { ButtonProps } from "../components/Button";
 
 export interface HeroPrimaryProps {
     data: {
@@ -7,7 +7,7 @@ export interface HeroPrimaryProps {
             herolabel: string;
             herotitle: string;
             heroparagraph: string;
-            herobuttons: Button[];
+            herobuttons: ButtonProps[];
             heroimage: string[];
         };
     }

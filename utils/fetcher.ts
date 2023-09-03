@@ -1,7 +1,7 @@
 export async function fetcher(page: string, select = {}) {
 
   // KirbyCMS settings
-	const api = `${process.env.NEXT_PUBLIC_KIRBYCMS_URL}`;
+	const api = `${process.env.NEXT_PUBLIC_KIRBYCMS_API_URL}`;
 	const username = `${process.env.NEXT_PUBLIC_KIRBYCMS_EMAIL}`;
 	const password = `${process.env.NEXT_PUBLIC_KIRBYCMS_PASSWORD}`;
 
