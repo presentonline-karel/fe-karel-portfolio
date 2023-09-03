@@ -14,11 +14,9 @@ import getKirbyFiles from "@/utils/helper-functions";
 
 
 export default function HeroPrimary({ data }: HeroPrimaryProps) {
-  console.log("content ->", data);
-
   return (
     <div className="HeroPrimary / section">
-      <div className="Container / px-4 flex flex-col gap-10 sm:px-12 sm:gap-12 md:flex-row md:items-center md:gap-20 lg:px-20 lg:gap-[109px] xl:max-w-8xl xl:mx-auto hd:border-x-[0.4px] hd:border-neutrals-400 hd:py-[120px]">
+      <div className="Container / px-4 flex flex-col gap-10 sm:px-12 sm:gap-12 md:flex-row md:items-center md:gap-20 lg:px-20 lg:gap-[109px] xl:max-w-8xl xl:mx-auto hd:border-x-[0.4px] hd:border-neutrals-300 hd:py-[120px]">
 
         {/* Text */}
         <div className="w-full xl:w-[547px]">

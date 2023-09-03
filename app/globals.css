@@ -13,32 +13,32 @@
   }
 
   .h1 {
-    @apply text-40 leading-11 mb-4 xl:text-64 xl:leading-17 xl:mb-6;
+    @apply text-40 leading-11 mb-4 lg:text-64 lg:leading-17 lg:mb-6;
   }
 
   .h2 {
-    @apply text-32 leading-38px xl:text-56 xl:leading-15;
+    @apply text-32 leading-38px lg:text-56 lg:leading-15;
   }
 
   .h3 {
-    @apply text-24 leading-30px xl:text-48 xl:leading-13;
+    @apply text-24 leading-30px lg:text-48 lg:leading-13;
   }
 
   .h4 {
-    @apply text-20 leading-26px xl:text-40 xl:leading-11;
+    @apply text-20 leading-26px lg:text-40 lg:leading-11;
   }
 
   .h5 {
-    @apply text-18 leading-6 xl:text-32 xl:leading-9;
+    @apply text-18 leading-6 lg:text-32 lg:leading-9;
   }
 
   .h6 {
-    @apply text-16 leading-6 xl:text-24 xl:leading-30px;
+    @apply text-16 leading-6 lg:text-24 lg:leading-30px;
   }
 
   /* Paragraphs */
   .p {
-    @apply text-16 leading-26px font-light tracking-tight text-neutrals-1100 xl:text-18 xl:leading-7;
+    @apply text-16 leading-26px font-light tracking-tight text-neutrals-1100 lg:text-18 lg:leading-7;
   }
 }
 
@@ -49,7 +49,7 @@
 
   /* Buttons */
   .btn {
-    @apply flex justify-center items-center gap-[10px] py-4 px-7 font-kanit text-18 leading-18px cursor-pointer xl:px-9 xl:text-20 xl:leading-5;
+    @apply inline-flex justify-center items-center gap-[10px] py-4 px-7 font-kanit text-18 leading-18px cursor-pointer lg:px-9 lg:text-20 lg:leading-5;
   }
 
   .btn-primary {
@@ -67,11 +67,11 @@
 
   /* Labels */
   .label {
-    @apply inline-block text-14 leading-14px py-[6px] px-3 xl:text-16 xl:leading-4;
+    @apply inline-block text-14 leading-14px py-[6px] px-3 lg:text-16 lg:leading-4;
   }
 
   .label.default {
-    @apply text-neutrals-1200 px-0 py-0 mb-2 lg:mb-3 xl:text-18 xl:leading-18px;
+    @apply text-neutrals-1200 px-0 py-0 mb-2 lg:mb-3 lg:text-18 lg:leading-18px;
   }
 
   .label.light {
@@ -79,7 +79,7 @@
   }
 
   .label.dark {
-    @apply text-prim-500 bg-neutrals-1400;
+    @apply text-prim-500 bg-neutrals-1400 mb-2;
   }
 }
 
