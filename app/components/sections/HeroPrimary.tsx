@@ -24,7 +24,7 @@ export default function HeroPrimary({ data }: HeroPrimaryProps) {
             {data.content.herolabel}
           </div>
 
-          <h1 className="h h1">
+          <h1 className="h h1 xl:text-72 xl:leading-72px">
             {data.content.herotitle}
           </h1>
 

@@ -78,10 +78,11 @@ const config: Config = {
 				"26px": "26px",
 				"30px": "30px",
 				"38px": "38px",
+				"76px": "76px",
 			},
-      maxWidth: {
-        "8xl": "1440px",
-      }
+			maxWidth: {
+				"8xl": "1440px",
+			},
 		},
 		fontSize: {
 			"12": "12px",
