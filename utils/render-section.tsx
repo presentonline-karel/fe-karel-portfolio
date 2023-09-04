@@ -2,17 +2,20 @@
 import HeroPrimary from "@/app/components/sections/HeroPrimary";
 import Services from "@/app/components/sections/Services";
 import Skills from "@/app/components/sections/Skills";
+import Faq from "@/app/components/sections/Faq";
 
 
 
 export function sectionRenderer(section: any, index: number) {
-	switch (section.type) {
+  switch (section.type) {
     case "heroPrimary":
       return <HeroPrimary key={index} data={section} />;
     case "services":
       return <Services key={index} data={section} />
     case "skills":
       return <Skills key={index} data={section} />
+    case "faq":
+      return <Faq key={index} data={section} />
     default:
       return <div key={index} className="bg-red-200">No data</div>;
   }

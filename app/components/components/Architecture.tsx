@@ -36,7 +36,7 @@ export default function Architecture(architecture: ArchitectureProps) {
             </Link>
 
             {/* divider */}
-            <div className="w-px h-[18px] bg-neutrals-1100 last:hidden" />
+            <div className="w-px h-[18px] bg-neutrals-1100 last:hidden lg:w-[2px]" />
           </>
         ))}
       </div>

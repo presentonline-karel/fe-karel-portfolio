@@ -10,7 +10,7 @@ import { renderButtonStyle } from "@/utils/render-button-style";
 
 
 
-export default function Button({button, className}: {button: ButtonProps, className: string}) {
+export default function Button({button, className}: {button: ButtonProps, className?: string}) {
   return (
     <Link
       href={`/${button.internalpage[0]}`}

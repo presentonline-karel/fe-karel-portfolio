@@ -62,7 +62,7 @@
 
   /* Section */
   .section {
-    @apply py-[72px] lg:py-[120px] hd:py-0;
+    @apply py-[72px] bg-neutrals-100 lg:py-[120px] hd:py-0;
   }
 
   /* Labels */
