@@ -8,7 +8,7 @@ import { ArchitectureProps } from "@/types/organisms/Architecture";
 
 export default function Architecture(architecture: ArchitectureProps) {
   return (
-    <div className="">
+    <div>
       <h3 className="h h3 mb-3 lg:text-32 lg:leading-38px">
         {architecture.title}
       </h3>

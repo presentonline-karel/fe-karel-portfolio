@@ -7,6 +7,7 @@ import { ArchitectureProps } from "@/types/organisms/Architecture";
 
 // Components
 import Architecture from "../components/Architecture";
+import Wrapper from "../helpers/Wrapper";
 
 // Utils
 import getKirbyFiles from "@/utils/helper-functions";
@@ -16,7 +17,7 @@ import getKirbyFiles from "@/utils/helper-functions";
 export default function Skills({ data }: SkillsProps) {
   return (
     <div className="section bg-neutrals-200">
-      <div className="px-4 sm:px-12 md:flex md:gap-20 md:items-start lg:gap-[109px] lg:px-20 xl:max-w-8xl xl:mx-auto hd:border-x-[0.4px] hd:border-neutrals-400 hd:py-[120px]">
+      <Wrapper className="md:flex md:gap-20 md:items-start lg:gap-[109px] hd:border-neutrals-400">
 
         {/* Image group */}
         <div className="hidden relative w-full aspect-[4/5] md:block xl:w-[515px]">
@@ -53,7 +54,7 @@ export default function Skills({ data }: SkillsProps) {
             ))}
           </div>
         </div>
-      </div>
+      </Wrapper>
     </div>
   )
 }

@@ -11,8 +11,6 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function Service(service: ServiceProps) {
-  console.log("service", service);
-
   return (
     <div className={`p-6 border-[0.4px] border-neutrals-1100 w-full ${service.ishighlighted === "true" ? "bg-neutrals-1200" : ""}`}>
       <h3 className="h h3 text-neutrals-100 mb-3 lg:text-32 lg:leading-38px lg:mb-4">

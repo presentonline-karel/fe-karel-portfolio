@@ -3,15 +3,15 @@ import { ServicesProps } from "@/types/sections/Services";
 import { ServiceProps } from "@/types/organisms/Service";
 
 // Components
-import Button from "../components/Button";
 import Service from "../components/Service";
+import Wrapper from "../helpers/Wrapper";
 
 
 
 export default function Services({ data }: ServicesProps) {
   return (
     <div className="section bg-neutrals-1300">
-      <div className="Container / px-4 sm:px-12 lg:px-20 xl:max-w-8xl xl:mx-auto hd:py-[120px] hd:border-x-[0.4px] hd:border-neutrals-1200">
+      <Wrapper className="hd:border-neutrals-1200">
 
         {/* Heading */}
         <div className="flex flex-col items-center gap-2 mb-10 sm:mb-12 lg:gap-3 lg:mb-[72px]">
@@ -30,7 +30,7 @@ export default function Services({ data }: ServicesProps) {
             <Service {...service} key={index} />
           ))}
         </div>
-      </div>
+      </Wrapper>
     </div>
   )
 }

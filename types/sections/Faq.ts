@@ -1,5 +1,5 @@
 // Imported types
-import { FaqAccordionProps } from "@/app/components/components/FaqAccordion";
+import { FaqAccordionProps } from "@/types/organisms/FaqAccordion";
 import { ButtonProps } from "../components/Button";
 
 export interface FaqProps {

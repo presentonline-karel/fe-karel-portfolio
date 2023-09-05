@@ -3,6 +3,7 @@ import HeroPrimary from "@/app/components/sections/HeroPrimary";
 import Services from "@/app/components/sections/Services";
 import Skills from "@/app/components/sections/Skills";
 import Faq from "@/app/components/sections/Faq";
+import Features from "@/app/components/sections/Features";
 
 
 
@@ -16,6 +17,8 @@ export function sectionRenderer(section: any, index: number) {
       return <Skills key={index} data={section} />
     case "faq":
       return <Faq key={index} data={section} />
+    case "features":
+      return <Features key={index} data={section} />
     default:
       return <div key={index} className="bg-red-200">No data</div>;
   }

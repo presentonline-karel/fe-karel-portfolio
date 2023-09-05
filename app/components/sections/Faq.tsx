@@ -14,13 +14,11 @@ import { faCaretDown, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 // Types
 import { FaqProps } from "@/types/sections/Faq";
 import { ButtonProps } from "@/types/components/Button";
-import { FaqAccordionProps } from "../components/FaqAccordion";
+import { FaqAccordionProps } from "../../../types/organisms/FaqAccordion";
 
 
 
 export default function Faq({ data }: FaqProps) {
-  console.log("faqData", data);
-
   return (
     <div className="section">
       <Wrapper className="flex flex-col gap-10 md:flex-row md:gap-20 lg:gap-[109px] hd:border-neutrals-300">
@@ -76,7 +74,7 @@ const Question = ({ question, answer }: FaqAccordionProps) => {
       </div>
 
       {/* Answer */}
-      <div className={`Answer p pl-5 lg:pl-[26px] ${accordionOpen ? "h-auto opacity-100 pb-3" : "h-0 opacity-0"}`}>
+      <div className={`p pl-5 lg:pl-[26px] ${accordionOpen ? "h-auto opacity-100 pb-3" : "h-0 opacity-0"}`}>
         {answer}
       </div>
     </div>
