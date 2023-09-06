@@ -9,7 +9,7 @@ export interface ExperiencesProps {
             experiencetitle: string;
             experiences: ExperienceProps[];
             ctatitle: string;
-            ctabutton: ButtonProps;
+            ctabutton: ButtonProps[];
         }
         isHidden: Boolean;
     }
