@@ -10,7 +10,7 @@ import Wrapper from "../helpers/Wrapper";
 
 export default function Services({ data }: ServicesProps) {
   return (!data.isHidden && (
-    <div className="section bg-neutrals-1300">
+    <section className="section bg-neutrals-1300">
       <Wrapper className="hd:border-neutrals-1200">
 
         {/* Heading */}
@@ -31,7 +31,7 @@ export default function Services({ data }: ServicesProps) {
           ))}
         </div>
       </Wrapper>
-    </div>
+    </section>
   )
   )
 }

@@ -2,7 +2,7 @@
 import Image from "next/image";
 
 // Types
-import { HeroPrimaryProps } from "@/types/sections/HeroPrimary";
+import { HeroSecondaryProps } from "@/types/sections/HeroSecondary";
 import { ButtonProps } from "@/types/components/Button";
 
 // Components
@@ -14,7 +14,7 @@ import { getKirbyFiles } from "@/utils/helper-functions";
 
 
 
-export default function HeroPrimary({ data }: HeroPrimaryProps) {
+export default function HeroPrimary({ data }: HeroSecondaryProps) {
   return (!data.isHidden && (
     <section className="section">
       <Wrapper className="flex flex-col gap-10 sm:gap-12 md:flex-row md:items-center md:gap-20 lg:gap-[109px] hd:border-neutrals-300">
@@ -25,7 +25,7 @@ export default function HeroPrimary({ data }: HeroPrimaryProps) {
             {data.content.herolabel}
           </div>
 
-          <h1 className="h h1 xl:text-72 xl:leading-72px">
+          <h1 className="h h1">
             {data.content.herotitle}
           </h1>
 
@@ -36,13 +36,13 @@ export default function HeroPrimary({ data }: HeroPrimaryProps) {
           {/* Buttons */}
           <div className="flex items-center gap-2">
             {data.content.herobuttons.map((button: ButtonProps, index: number) => (
-              <Button button={button} className={"w-full md:w-auto"} key={index} />
+              <Button button={button} key={index} />
             ))}
           </div>
         </div>
 
         {/* Image group */}
-        <div className="relative w-full aspect-square xl:w-[624px]">
+        <div className="relative w-full aspect-[3/2] xl:w-[624px]">
           <Image
             src={getKirbyFiles(data.content.heroimage[0])}
             alt="Temp alt message"

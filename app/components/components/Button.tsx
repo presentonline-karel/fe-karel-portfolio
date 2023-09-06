@@ -23,7 +23,7 @@ export default function Button({ button, className }: { button: ButtonProps, cla
 
       {/* Icon */}
       {button.icon !== "noIcon" && (
-        <FontAwesomeIcon icon={renderIcon(button.icon)} className="text-14 leading-14px text-neutrals-1400 w-[14px] h-[14px]" />
+        <FontAwesomeIcon icon={renderIcon(button.icon)} className="text-14 leading-14px text-neutrals-1400 w-[14px] h-[14px] lg:text-16 lg:leading-4 lg:h-4" />
       )}
     </Link>
   )

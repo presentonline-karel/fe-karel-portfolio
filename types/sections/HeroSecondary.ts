@@ -1,7 +1,7 @@
 // Imported types
 import { ButtonProps } from "../components/Button";
 
-export interface HeroPrimaryProps {
+export interface HeroSecondaryProps {
     data: {
         content: {
             herolabel: string;

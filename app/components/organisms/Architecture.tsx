@@ -3,6 +3,7 @@ import Link from "next/link";
 
 // Types
 import { ArchitectureProps } from "@/types/organisms/Architecture";
+import { ArchitectureProjectProps } from "@/types/organisms/ArchitectureProject";
 
 // Utils
 import { getPage } from "@/utils/helper-functions";
@@ -10,13 +11,6 @@ import { getPage } from "@/utils/helper-functions";
 
 
 export default function Architecture(architecture: ArchitectureProps) {
-
-  // Helper function - Get short title
-  async function getShortTitle(project: string) {
-    const page = await getPage(`page('${project}')`, { shortTitle: true });
-    return page.result.shortTitle;
-  }
-
   return (
     <div>
       <h3 className="h h3 mb-3 lg:text-32 lg:leading-38px">
@@ -36,14 +30,14 @@ export default function Architecture(architecture: ArchitectureProps) {
 
       {/* Projects */}
       <div className="flex items-center gap-5 flex-wrap">
-        {architecture.projects.map((project: string, index: number) => (
+        {architecture.projects.map((project: ArchitectureProjectProps, index: number) => (
           <>
             <Link
-              href={`/${project}`}
+              href={`/${project.project[0]}`}
               className="underline text-18 leading-6 font-normal text-neutrals-1300 whitespace-nowrap lg:text-20 lg:leading-26px"
               key={index}
             >
-              {getShortTitle(project)}
+              {project.anchor}
             </Link>
 
             <div className="w-px h-[18px] bg-neutrals-1100 last:hidden lg:w-[2px]" />

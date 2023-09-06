@@ -15,7 +15,7 @@ import cx from "classnames";
 
 export default function Cta({ data }: CtaProps) {
   return (!data.isHidden && (
-    <div className={cx("section py-12 bg-prim-200 lg:py-20 xl:py-0", {
+    <section className={cx("section py-12 bg-prim-200 lg:py-20 xl:py-0", {
       "xl:bg-neutrals-200": data.content.ctabgcolor === "grey",
       "xl:bg-neutrals-100": data.content.ctabgcolor === "white",
     })}>
@@ -44,7 +44,7 @@ export default function Cta({ data }: CtaProps) {
           </div>
         </Wrapper>
       </div>
-    </div>
+    </section>
   )
   )
 }
