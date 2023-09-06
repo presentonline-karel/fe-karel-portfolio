@@ -10,5 +10,6 @@ export interface FaqProps {
             faqbutton: ButtonProps[];
             faqs: FaqAccordionProps[];
         }
+        isHidden: Boolean;
     }
 }

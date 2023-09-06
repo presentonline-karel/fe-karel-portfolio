@@ -14,7 +14,7 @@ import cx from "classnames";
 
 
 export default function Cta({ data }: CtaProps) {
-  return (
+  return (!data.isHidden && (
     <div className={cx("section py-12 bg-prim-200 lg:py-20 xl:py-0", {
       "xl:bg-neutrals-200": data.content.ctabgcolor === "grey",
       "xl:bg-neutrals-100": data.content.ctabgcolor === "white",
@@ -23,7 +23,7 @@ export default function Cta({ data }: CtaProps) {
         "hd:border-neutrals-400": data.content.ctabgcolor === "grey",
         "hd:border-neutrals-300": data.content.ctabgcolor === "white",
       })}>
-        <Wrapper className="flex flex-col gap-8 md:flex-row md:justify-between md:items-end xl:max-w-[1280px] xl:px-[109px] xl:bg-prim-200 xl:py-20 xl:border xl:border-prim-300 hd:py-20">
+        <Wrapper className="flex flex-col gap-8 md:flex-row md:justify-between md:items-end xl:max-w-[1280px] xl:px-[109px] xl:bg-prim-200 xl:py-20 xl:border xl:border-prim-300 hd:!py-20">
 
           {/* Heading */}
           <div className="md:max-w-[400px] lg:max-w-[507px]">
@@ -45,5 +45,6 @@ export default function Cta({ data }: CtaProps) {
         </Wrapper>
       </div>
     </div>
+  )
   )
 }

@@ -9,5 +9,6 @@ export interface SkillsProps {
             architectures: ArchitectureProps[];
             skillsimage: string[];
         }
+        isHidden: Boolean;
     }
 }

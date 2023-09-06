@@ -39,14 +39,13 @@ export default function Architecture(architecture: ArchitectureProps) {
         {architecture.projects.map((project: string, index: number) => (
           <>
             <Link
-              href={`${project}`}
+              href={`/${project}`}
               className="underline text-18 leading-6 font-normal text-neutrals-1300 whitespace-nowrap lg:text-20 lg:leading-26px"
               key={index}
             >
               {getShortTitle(project)}
             </Link>
 
-            {/* divider */}
             <div className="w-px h-[18px] bg-neutrals-1100 last:hidden lg:w-[2px]" />
           </>
         ))}

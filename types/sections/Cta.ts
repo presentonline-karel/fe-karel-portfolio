@@ -8,6 +8,7 @@ export interface CtaProps {
             ctaparagraph: string;
             ctabuttons: ButtonProps[];
             ctabgcolor: string;
-        }
+        },
+        isHidden: Boolean;
     }
 }

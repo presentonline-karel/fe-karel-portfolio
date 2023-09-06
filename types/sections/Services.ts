@@ -8,5 +8,6 @@ export interface ServicesProps {
             servicestitle: string;
             services: ServiceProps[];
         }
+        isHidden: Boolean;
     }
 }

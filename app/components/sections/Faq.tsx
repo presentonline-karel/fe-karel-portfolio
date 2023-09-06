@@ -22,7 +22,7 @@ import cx from "classnames";
 
 
 export default function Faq({ data }: FaqProps) {
-  return (
+  return (!data.isHidden && (
     <div className="section">
       <Wrapper className="flex flex-col gap-10 md:flex-row md:gap-20 lg:gap-[109px] hd:border-neutrals-300">
 
@@ -53,6 +53,7 @@ export default function Faq({ data }: FaqProps) {
       </Wrapper>
     </div>
   )
+  )
 }
 
 
@@ -71,10 +72,7 @@ const Question = ({ question, answer }: FaqAccordionProps) => {
           "pb-3 lg:pb-4": accordionOpen === false,
         })}
       >
-        <FontAwesomeIcon 
-          icon={accordionOpen ? faCaretDown : faCaretRight} 
-          className="text-20 leading-3 w-2 h-3 pt-[7px] pr-1 lg:text-24 lg:leading-14px lg:w-[9px] lg:h-[14px] lg:pt-2 lg:pr-[5px]" 
-        />
+        <FontAwesomeIcon icon={accordionOpen ? faCaretDown : faCaretRight} className="text-20 leading-3 w-2 h-3 pt-[7px] pr-1 lg:text-24 lg:leading-14px lg:w-[9px] lg:h-[14px] lg:pt-2 lg:pr-[5px]" />
 
         {/* Question */}
         <div className="text-20 leading-26px tracking-tight lg:text-24 lg:leading-30px">
@@ -83,12 +81,12 @@ const Question = ({ question, answer }: FaqAccordionProps) => {
       </div>
 
       {/* Answer */}
-      <div className={cx("p pl-5 lg:pl-[26px]", {
+      <p className={cx("p pl-5 lg:pl-[26px]", {
         "h-auto opacity-100 pb-3": accordionOpen === true,
         "h-0 opacity-0": accordionOpen === false,
       })}>
         {answer}
-      </div>
+      </p>
     </div>
   )
 }
