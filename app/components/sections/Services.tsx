@@ -3,7 +3,7 @@ import { ServicesProps } from "@/types/sections/Services";
 import { ServiceProps } from "@/types/organisms/Service";
 
 // Components
-import Service from "../components/Service";
+import Service from "../organisms/Service";
 import Wrapper from "../helpers/Wrapper";
 
 

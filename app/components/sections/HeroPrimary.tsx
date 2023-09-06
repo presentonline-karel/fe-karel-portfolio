@@ -10,7 +10,7 @@ import Button from "../components/Button";
 import Wrapper from "../helpers/Wrapper";
 
 // Utils
-import getKirbyFiles from "@/utils/helper-functions";
+import { getKirbyFiles } from "@/utils/helper-functions";
 
 
 

@@ -6,11 +6,11 @@ import { SkillsProps } from "@/types/sections/Skills";
 import { ArchitectureProps } from "@/types/organisms/Architecture";
 
 // Components
-import Architecture from "../components/Architecture";
+import Architecture from "../organisms/Architecture";
 import Wrapper from "../helpers/Wrapper";
 
 // Utils
-import getKirbyFiles from "@/utils/helper-functions";
+import { getKirbyFiles } from "@/utils/helper-functions";
 
 
 

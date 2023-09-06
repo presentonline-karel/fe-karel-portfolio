@@ -1,6 +1,6 @@
 // Components
 import Wrapper from "../helpers/Wrapper";
-import Feature from "../components/Feature";
+import Feature from "../organisms/Feature";
 
 // Types
 import { FeaturesProps } from "@/types/sections/Features";

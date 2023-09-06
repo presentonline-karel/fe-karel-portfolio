@@ -16,6 +16,9 @@ import { FaqProps } from "@/types/sections/Faq";
 import { ButtonProps } from "@/types/components/Button";
 import { FaqAccordionProps } from "../../../types/organisms/FaqAccordion";
 
+// ClassNames
+import cx from "classnames";
+
 
 
 export default function Faq({ data }: FaqProps) {
@@ -63,9 +66,15 @@ const Question = ({ question, answer }: FaqAccordionProps) => {
       {/* Question container */}
       <div
         onClick={() => (setAccordionOpen(!accordionOpen))}
-        className={`pt-3 flex gap-2 items-start text-neutrals-1300 cursor-pointer select-none lg:gap-3 lg:pt-4 ${accordionOpen ? "pb-2 lg:pb-3" : "pb-3 lg:pb-4"}`}
+        className={cx("pt-3 flex gap-2 items-start text-neutrals-1300 cursor-pointer select-none lg:gap-3 lg:pt-4", {
+          "pb-2 lg:pb-3": accordionOpen === true,
+          "pb-3 lg:pb-4": accordionOpen === false,
+        })}
       >
-        <FontAwesomeIcon icon={accordionOpen ? faCaretDown : faCaretRight} className="text-20 leading-3 w-2 h-3 pt-[7px] pr-1 lg:text-24 lg:leading-14px lg:w-[9px] lg:h-[14px] lg:pt-2 lg:pr-[5px]" />
+        <FontAwesomeIcon 
+          icon={accordionOpen ? faCaretDown : faCaretRight} 
+          className="text-20 leading-3 w-2 h-3 pt-[7px] pr-1 lg:text-24 lg:leading-14px lg:w-[9px] lg:h-[14px] lg:pt-2 lg:pr-[5px]" 
+        />
 
         {/* Question */}
         <div className="text-20 leading-26px tracking-tight lg:text-24 lg:leading-30px">
@@ -74,7 +83,10 @@ const Question = ({ question, answer }: FaqAccordionProps) => {
       </div>
 
       {/* Answer */}
-      <div className={`p pl-5 lg:pl-[26px] ${accordionOpen ? "h-auto opacity-100 pb-3" : "h-0 opacity-0"}`}>
+      <div className={cx("p pl-5 lg:pl-[26px]", {
+        "h-auto opacity-100 pb-3": accordionOpen === true,
+        "h-0 opacity-0": accordionOpen === false,
+      })}>
         {answer}
       </div>
     </div>

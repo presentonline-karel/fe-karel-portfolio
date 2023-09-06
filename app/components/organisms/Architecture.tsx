@@ -4,9 +4,19 @@ import Link from "next/link";
 // Types
 import { ArchitectureProps } from "@/types/organisms/Architecture";
 
+// Utils
+import { getPage } from "@/utils/helper-functions";
+
 
 
 export default function Architecture(architecture: ArchitectureProps) {
+
+  // Helper function - Get short title
+  async function getShortTitle(project: string) {
+    const page = await getPage(`page('${project}')`, { shortTitle: true });
+    return page.result.shortTitle;
+  }
+
   return (
     <div>
       <h3 className="h h3 mb-3 lg:text-32 lg:leading-38px">
@@ -31,8 +41,9 @@ export default function Architecture(architecture: ArchitectureProps) {
             <Link
               href={`${project}`}
               className="underline text-18 leading-6 font-normal text-neutrals-1300 whitespace-nowrap lg:text-20 lg:leading-26px"
+              key={index}
             >
-              Starter Kit
+              {getShortTitle(project)}
             </Link>
 
             {/* divider */}
