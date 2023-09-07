@@ -2,11 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 /* _____BASE_____  */
 @layer base {
-
   /* Headings */
   .h {
     @apply text-neutrals-1300 font-kanit font-medium tracking-tight;
@@ -42,11 +39,8 @@
   }
 }
 
-
-
 /* _____COMPONENTS_____  */
 @layer components {
-
   /* Buttons */
   .btn {
     @apply inline-flex justify-center items-center gap-[10px] py-4 px-7 font-kanit text-18 leading-18px cursor-pointer lg:px-9 lg:text-20 lg:leading-5;
@@ -81,13 +75,19 @@
   .label.dark {
     @apply text-prim-500 bg-neutrals-1400 mb-2;
   }
+
+  /* __SWIPERS__ */
+  .swiper-pagination-process .swiper-pagination-bullet {
+    @apply w-2 h-2 bg-neutrals-500 rounded-none !m-0 opacity-100;
+  }
+
+  .swiper-pagination-process .swiper-pagination-bullet-active {
+    @apply w-2 h-2 bg-neutrals-1300 rounded-none !m-0 opacity-100;
+  }
 }
-
-
 
 /* _____UTILITIES_____  */
 @layer utilities {
-
   /* Animation */
   * {
     @apply transition-all ease-in-out duration-300 box-border;
@@ -95,5 +95,14 @@
 
   *::selection {
     @apply text-neutrals-1400 bg-prim-200;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 }

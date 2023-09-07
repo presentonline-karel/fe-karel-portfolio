@@ -19,7 +19,7 @@ export default function Button({ button, className }: { button: ButtonProps, cla
       href={`/${button.internalpage[0]}`}
       className={`${renderButtonStyle(button.typeofbutton)} ${className}`}
     >
-      {button.anchor}
+      <span className="whitespace-nowrap">{button.anchor}</span>
 
       {/* Icon */}
       {button.icon !== "noIcon" && (

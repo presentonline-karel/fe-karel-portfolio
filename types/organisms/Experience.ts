@@ -1,11 +1,11 @@
 export interface ExperienceProps {
     jobtitle: string;
     company: string;
-    addWebsite: string;
+    addwebsite: string;
     website: string;
-    startData: Date;
+    startdate: string;
     iscurrentjob: string;
-    endDate?: Date;
+    enddate: string;
     paragraph: string;
-    tags: string[];
+    tags: string;
 }
