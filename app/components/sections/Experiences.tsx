@@ -69,7 +69,7 @@ export default function Experiences({ data }: ExperiencesProps) {
 
             {/* Experience */}
             <div className="mb-10 py-8 px-6 bg-neutrals-1200 border-[0.4px] border-neutrals-1100 md:mb-0 lg:py-10 lg:px-8">
-              <h5 className="h h5 text-neutrals-100 mb-2 lg:mb-3">
+              <h5 className="h h5 text-neutrals-100 mb-2 sm:text-24 sm:leading-30px lg:mb-3 lg:text-32 lg:leading-38px">
                 {activeTab.jobtitle} @ {activeTab.addwebsite === "true" ? (
                   <Link
                     href={activeTab.website}

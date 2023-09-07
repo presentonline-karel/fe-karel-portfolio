@@ -84,6 +84,14 @@
   .swiper-pagination-process .swiper-pagination-bullet-active {
     @apply w-2 h-2 bg-neutrals-1300 rounded-none !m-0 opacity-100;
   }
+
+  .swiper-button.swiper-button-disabled {
+    @apply !bg-neutrals-400 !border-neutrals-400 shadow-none;
+  }
+
+  .swiper-button.swiper-button-disabled svg {
+    @apply !text-neutrals-1100;
+  }
 }
 
 /* _____UTILITIES_____  */
