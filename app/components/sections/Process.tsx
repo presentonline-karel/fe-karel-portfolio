@@ -34,6 +34,10 @@ export default function Process({ data }: ProcessProps) {
     },
     1200: {
       slidesPerView: 4
+    },
+    1400: {
+      slidesPerView: 4,
+      spaceBetween: 32,
     }
   };
 
@@ -58,9 +62,13 @@ export default function Process({ data }: ProcessProps) {
         </div>
 
         {/* Steps / Swiper container */}
-        <div className="">
+        <div className="relative">
+
+          {/* Timeline */}
+          <div className="hidden lg:block lg:w-full lg:absolute lg:top-[60px] lg:left-0 lg:border-b-2 lg:border-dashed lg:border-neutrals-1200 lg:z-0" />
+
           <Swiper
-            className="mb-4"
+            className="mb-4 z-10"
             modules={[Navigation, Pagination]}
             spaceBetween={24}
             slidesPerView={1}
