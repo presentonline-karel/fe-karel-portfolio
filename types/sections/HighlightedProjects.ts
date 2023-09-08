@@ -8,5 +8,6 @@ export interface HighlightedProjectsProps {
             highlightedprojectsparagraph: string;
             highlightedprojects: HighlightedProjectProps[];
         }
+        isHidden: Boolean;
     }
 }

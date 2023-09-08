@@ -107,11 +107,11 @@ export default function Testimonials({ data }: TestimonialsProps) {
 
             {/* Swiper navigation - arrows */}
             <div className="flex items-center gap-2">
-              <div className="swiper-button-prev-testimonials swiper-button w-10 h-10 flex justify-center items-center border border-neutrals-1300 bg-neutrals-200 shadow-btnBlack">
+              <div className="swiper-button-prev-testimonials swiper-button cursor-pointer w-10 h-10 flex justify-center items-center border border-neutrals-1300 bg-neutrals-200 shadow-btnBlack">
                 <FontAwesomeIcon icon={faArrowLeft} className="text-16 leading-4 w-4 h-4 text-neutrals-1300" />
               </div>
 
-              <div className="swiper-button-next-testimonials swiper-button w-10 h-10 flex justify-center items-center border border-neutrals-1300 bg-neutrals-200 shadow-btnBlack">
+              <div className="swiper-button-next-testimonials swiper-button cursor-pointer w-10 h-10 flex justify-center items-center border border-neutrals-1300 bg-neutrals-200 shadow-btnBlack">
                 <FontAwesomeIcon icon={faArrowRight} className="text-16 leading-4 w-4 h-4 text-neutrals-1300" />
               </div>
             </div>
