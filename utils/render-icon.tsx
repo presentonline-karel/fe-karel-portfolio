@@ -1,6 +1,5 @@
 // FontAwesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight, faChevronDown, faArrowRight, faArrowDown, faTable, faGear, faArrowPointer, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight, faChevronDown, faArrowRight, faArrowDown, faTable, faGear, faArrowPointer, faPlus, faFlagCheckered, faDumbbell, faCamera } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -24,6 +23,12 @@ export function renderIcon(type: String) {
       return faArrowPointer;
     case "plus":
       return faPlus;
+    case "flag":
+      return faFlagCheckered;
+    case "weight":
+      return faDumbbell;
+    case "camera":
+      return faCamera;
     default:
       return faArrowRight;
   }

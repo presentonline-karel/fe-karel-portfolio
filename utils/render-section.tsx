@@ -11,6 +11,7 @@ import Process from "@/app/components/sections/Process";
 import Testimonials from "@/app/components/sections/Testimonials";
 import Header from "@/app/components/sections/Header";
 import Education from "@/app/components/sections/Education";
+import Hobbies from "@/app/components/sections/Hobbies";
 
 
 
@@ -40,6 +41,8 @@ export function sectionRenderer(section: any, index: number) {
       return <Header key={index} data={section} />
     case "education":
       return <Education key={index} data={section} />
+    case "hobbies":
+      return <Hobbies key={index} data={section} />
     default:
       return <div key={index} className="bg-red-200">No data</div>;
   }

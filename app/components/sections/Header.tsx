@@ -10,7 +10,7 @@ export default function Header({ data }: HeaderProps) {
   return (!data.isHidden && (
     <section className="pt-[72px] hd:pt-0">
       <Wrapper className="hd:pb-0">
-        <h1 className="h h1 max-w-[547px] lg:text-56 lg:leading-15">
+        <h1 className="h h1 max-w-[547px] lg:text-56 lg:leading-15 xl:text-64 xl:leading-[68px]">
           {data.content.headertitle}
         </h1>
 
