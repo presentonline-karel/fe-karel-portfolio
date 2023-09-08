@@ -57,6 +57,5 @@ export default function HeroPrimary({ data }: HeroSecondaryProps) {
         </div>
       </Wrapper>
     </section>
-  )
-  )
+  ))
 }
