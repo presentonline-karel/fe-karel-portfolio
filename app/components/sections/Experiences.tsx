@@ -53,7 +53,7 @@ export default function Experiences({ data }: ExperiencesProps) {
                   <div
                     key={index}
                     onClick={() => setActiveTab(experience)}
-                    className={cx("whitespace-nowrap cursor-pointer py-3 text-20 leading-26px border-b-2 relative z-10 md:border-b-0 md:w-full md:py-3 md:px-8 md:border-l-2 md:font-medium lg:text-24 lg:leading-30px lg:py-4 lg:px-10", {
+                    className={cx("whitespace-nowrap cursor-pointer py-3 text-20 leading-26px border-b-2 relative z-10 md:border-b-0 md:w-full md:py-3 md:px-8 md:border-l-2 md:font-medium lg:text-24 lg:leading-30px lg:py-4 lg:px-10 lg:hover:bg-neutrals-1200", {
                       "text-prim-500 border-prim-500 md:bg-neutrals-1200": experience.company === activeTab.company,
                       "text-neutrals-400 border-neutrals-800": experience.company !== activeTab.company,
                     })}

@@ -2,6 +2,7 @@
 
 // Types
 import { ProcessProps } from "@/types/sections/Process";
+import { StepProps } from "@/types/organisms/Step";
 
 // Components
 import Wrapper from "../helpers/Wrapper";
@@ -15,7 +16,6 @@ import 'swiper/css';
 // FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import { StepProps } from "@/types/organisms/Step";
 
 // ClassNames
 import cx from "classnames";
@@ -24,7 +24,7 @@ import cx from "classnames";
 
 export default function Process({ data }: ProcessProps) {
 
-  // Slider breakpoint settings ADJUST THIS HERE
+  // Slider breakpoint settings
   const sliderSettings = {
     640: {
       slidesPerView: 2,
@@ -73,11 +73,11 @@ export default function Process({ data }: ProcessProps) {
             spaceBetween={24}
             slidesPerView={1}
             pagination={{
-              el: ".swiper-pagination",
+              el: ".swiper-pagination-process",
             }}
             navigation={{
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev"
+              nextEl: ".swiper-button-next-process",
+              prevEl: ".swiper-button-prev-process"
             }}
             breakpoints={sliderSettings}
           >
@@ -115,11 +115,11 @@ export default function Process({ data }: ProcessProps) {
 
             {/* Swiper navigation - arrows */}
             <div className="flex items-center gap-2">
-              <div className="swiper-button-prev swiper-button w-10 h-10 flex justify-center items-center border border-neutrals-1300 bg-neutrals-200 shadow-btnBlack">
+              <div className="swiper-button-prev-process swiper-button w-10 h-10 flex justify-center items-center border border-neutrals-1300 bg-neutrals-200 shadow-btnBlack">
                 <FontAwesomeIcon icon={faArrowLeft} className="text-16 leading-4 w-4 h-4 text-neutrals-1300" />
               </div>
 
-              <div className="swiper-button-next swiper-button w-10 h-10 flex justify-center items-center border border-neutrals-1300 bg-neutrals-200 shadow-btnBlack">
+              <div className="swiper-button-next-process swiper-button w-10 h-10 flex justify-center items-center border border-neutrals-1300 bg-neutrals-200 shadow-btnBlack">
                 <FontAwesomeIcon icon={faArrowRight} className="text-16 leading-4 w-4 h-4 text-neutrals-1300" />
               </div>
             </div>

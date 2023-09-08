@@ -43,7 +43,7 @@
 @layer components {
   /* Buttons */
   .btn {
-    @apply inline-flex justify-center items-center gap-[10px] py-4 px-7 font-kanit text-18 leading-18px cursor-pointer lg:px-9 lg:text-20 lg:leading-5;
+    @apply inline-flex justify-center items-center gap-[10px] py-4 px-7 font-kanit text-18 leading-18px cursor-pointer tracking-tight lg:px-9 lg:text-20 lg:leading-5;
   }
 
   .btn-primary {
@@ -77,11 +77,11 @@
   }
 
   /* __SWIPERS__ */
-  .swiper-pagination-process .swiper-pagination-bullet {
+  .swiper-pagination .swiper-pagination-bullet {
     @apply w-2 h-2 bg-neutrals-500 rounded-none !m-0 opacity-100;
   }
 
-  .swiper-pagination-process .swiper-pagination-bullet-active {
+  .swiper-pagination .swiper-pagination-bullet-active {
     @apply w-2 h-2 bg-neutrals-1300 rounded-none !m-0 opacity-100;
   }
 

@@ -8,6 +8,7 @@ import Features from "@/app/components/sections/Features";
 import Cta from "@/app/components/sections/Cta";
 import Experiences from "@/app/components/sections/Experiences";
 import Process from "@/app/components/sections/Process";
+import Testimonials from "@/app/components/sections/Testimonials";
 
 
 
@@ -31,6 +32,8 @@ export function sectionRenderer(section: any, index: number) {
       return <Experiences key={index} data={section} />
     case "process":
       return <Process key={index} data={section} />
+    case "testimonials":
+      return <Testimonials key={index} data={section} />
     default:
       return <div key={index} className="bg-red-200">No data</div>;
   }
