@@ -14,6 +14,7 @@ import Education from "@/app/components/sections/Education";
 import Hobbies from "@/app/components/sections/Hobbies";
 import HeroService from "@/app/components/sections/HeroService";
 import HighlightedProjects from "@/app/components/sections/HighlightedProjects";
+import HighlightedBlogs from "@/app/components/sections/HighlightedBlogs";
 
 
 
@@ -49,6 +50,8 @@ export function sectionRenderer(section: any, index: number) {
       return <HeroService key={index} data={section} />
     case "highlightedProjects":
       return <HighlightedProjects key={index} data={section} />
+    case "highlightedBlogs":
+      return <HighlightedBlogs key={index} data={section} />
     default:
       return <div key={index} className="bg-red-200">No data</div>;
   }
