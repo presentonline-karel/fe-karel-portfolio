@@ -105,7 +105,7 @@ export default function Process({ data }: ProcessProps) {
             ))}
           </Swiper>
 
-          
+
 
           {/* Swiper controls */}
           <div className="w-full relative flex justify-between items-start lg:hidden">

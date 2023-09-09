@@ -105,6 +105,7 @@
     @apply text-neutrals-1400 bg-prim-200;
   }
 
+  /* __SCROLLBAR__ */
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -112,5 +113,10 @@
 
   .no-scrollbar::-webkit-scrollbar {
     display: none;
+  }
+
+  /* __GRADIENT__ */
+  .blog-gradient {
+    background: linear-gradient(180deg, rgba(110, 124, 135, 0.32) 0%, rgba(110, 124, 135, 0.40) 0.01%, rgba(64, 72, 79, 0.80) 50%, #2E3338 100%);
   }
 }
