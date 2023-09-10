@@ -7,6 +7,9 @@ import type { Metadata } from 'next';
 // Google fonts
 import { Kanit } from 'next/font/google';
 
+// Components
+import Footer from './components/layout/Footer';
+
 
 
 // Fonts
@@ -31,7 +34,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={kanit.className}>{children}</body>
+      <body className={kanit.className}>
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }

@@ -56,8 +56,6 @@ export default function Contact({ data }: ContactProps) {
 
             {/* Inputs */}
             <div className="flex flex-col gap-5 mb-6 lg:gap-7 lg:mb-8">
-
-              {/* Input group */}
               <div className="w-full">
                 <label
                   htmlFor="name"
@@ -73,7 +71,6 @@ export default function Contact({ data }: ContactProps) {
                 />
               </div>
 
-              {/* Input group */}
               <div className="">
                 <label
                   htmlFor="email"
@@ -89,7 +86,6 @@ export default function Contact({ data }: ContactProps) {
                 />
               </div>
 
-              {/* Input group */}
               <div className="">
                 <label
                   htmlFor="subject"
@@ -105,7 +101,6 @@ export default function Contact({ data }: ContactProps) {
                 />
               </div>
 
-              {/* Input group */}
               <div className="">
                 <label
                   htmlFor="message"
