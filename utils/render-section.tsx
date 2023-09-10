@@ -16,6 +16,7 @@ import HeroService from "@/app/components/sections/HeroService";
 import HighlightedProjects from "@/app/components/sections/HighlightedProjects";
 import HighlightedBlogs from "@/app/components/sections/HighlightedBlogs";
 import TextWithImage from "@/app/components/sections/TextWithImage";
+import Contact from "@/app/components/sections/Contact";
 
 
 
@@ -55,6 +56,8 @@ export function sectionRenderer(section: any, index: number) {
       return <HighlightedBlogs key={index} data={section} />
     case "textWithImage":
       return <TextWithImage key={index} data={section} />
+    case "contact":
+      return <Contact key={index} data={section} />
     default:
       return <div key={index} className="bg-red-200">No data</div>;
   }

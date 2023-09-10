@@ -8,7 +8,7 @@ export default function Heading({ data }: HeadingProps) {
     switch (data.content.level) {
       case "h2":
         return (
-          <div className="pt-2">
+          <div className="pt-2 lg:pt-4">
             <h2 className="h h2">
               {data.content.text}
             </h2>

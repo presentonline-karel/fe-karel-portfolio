@@ -73,7 +73,7 @@
   }
 
   .label.dark {
-    @apply text-prim-500 bg-neutrals-1400 mb-2;
+    @apply text-prim-500 bg-neutrals-1400;
   }
 
   /* __SWIPERS__ */
@@ -117,6 +117,17 @@
 
   /* __GRADIENT__ */
   .blog-gradient {
-    background: linear-gradient(180deg, rgba(110, 124, 135, 0.32) 0%, rgba(110, 124, 135, 0.40) 0.01%, rgba(64, 72, 79, 0.80) 50%, #2E3338 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(110, 124, 135, 0.32) 0%,
+      rgba(110, 124, 135, 0.4) 0.01%,
+      rgba(64, 72, 79, 0.8) 50%,
+      #2e3338 100%
+    );
+  }
+
+  /* __TEXT-BLOCKS__ */
+  .text-blocks .h3 {
+    @apply lg:text-32 lg:leading-38px;
   }
 }

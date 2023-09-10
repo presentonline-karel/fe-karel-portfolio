@@ -1,5 +1,6 @@
 // FontAwesome
 import { faChevronRight, faChevronDown, faArrowRight, faArrowDown, faTable, faGear, faArrowPointer, faPlus, faFlagCheckered, faDumbbell, faCamera } from "@fortawesome/free-solid-svg-icons";
+import { faInstagram, faFacebookF, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 
 
@@ -29,6 +30,12 @@ export function renderIcon(type: String) {
       return faDumbbell;
     case "camera":
       return faCamera;
+    case "instagram":
+      return faInstagram;
+    case "facebook":
+      return faFacebookF;
+    case "linkedin":
+      return faLinkedinIn;
     default:
       return faArrowRight;
   }

@@ -12,7 +12,7 @@ export function textBlockRenderer(textBlock: any, index: number) {
     case "text":
       return <Paragraph key={index} data={textBlock} />;
     case "list":
-      return <UnorderedList key={index} />;
+      return <UnorderedList key={index} data={textBlock} />;
     default:
       return <div key={index} className="bg-red-200">No data</div>;
   }

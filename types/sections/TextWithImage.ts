@@ -4,6 +4,8 @@ export interface TextWithImageProps {
             textwithimagelabel: string;
             textwithimagetitle: string;
             textwithimagetext: string;
+            textwithimageimage: string[];
+            textwithimageimageplacement: string;
         };
 		isHidden: Boolean;
 	};
