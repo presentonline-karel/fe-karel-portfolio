@@ -16,8 +16,8 @@ export default async function Footer() {
     select: {
       "logoDark": true,
       "footerInfoParagraph": true,
-      "footerMainLinksTitle": true,
-      "footerMainLinks": true,
+      "footerMainLinksTitle": true, // @ts-ignore
+      footerMainLinks: "site.footerMainLinks.toStructure()",
       "footerServicesTitle": true,
       "footerServices": true,
       "email": true,
@@ -30,7 +30,7 @@ export default async function Footer() {
   // console.log("resp parsed ->", JSON.parse(resp.result));
 
   return (
-    <footer className="">
+    <footer className="bg-neutrals-1300">
       <Wrapper className="">
 
         {/* Mobile */}
@@ -43,7 +43,7 @@ export default async function Footer() {
               {/* Logo */}
               <div className="relative w-[120px] h-11">
                 <Image
-                  src={getKirbyFiles(resp.result.logoDark[0])}
+                  src={getKirbyFiles("site/logo-dark.png")}
                   alt="test"
                   fill={true}
                   className="object-contain"
@@ -63,6 +63,10 @@ export default async function Footer() {
             <div>
               {resp.result.footerServicesTitle}
             </div>
+
+            {/* resp.result.footerMainLinks.map((footerLink: string, index: number) => (
+              <div>{footerLink}</div>
+            )) */}
           </div>
         </div>
       </Wrapper>
