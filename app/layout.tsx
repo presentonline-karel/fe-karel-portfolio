@@ -33,10 +33,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={kanit.className}>
-        {children}
-        <Footer />
+    <html lang="en" style={{scrollBehavior:'smooth'}}>
+      <body className={`${kanit.className}`}>
+        <div id="container">
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   )

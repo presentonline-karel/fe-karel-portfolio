@@ -87,7 +87,10 @@ export default function HighlightedBlogs({ data }: HighlightedBlogsProps) {
           breakpoints={sliderSettings}
         >
           {data.content.highlightedblogs.map((blog: HighlightedBlogProps, index: number) => (
-            <SwiperSlide className="border-[0.4px] border-neutrals-400 shadow-card aspect-square w-full h-full">
+            <SwiperSlide 
+              key={index}
+              className="border-[0.4px] border-neutrals-400 shadow-card aspect-square w-full h-full"
+            >
               <Link
                 href={blog.blog[0]}
                 className={cx("w-full h-full flex flex-col items-start", {

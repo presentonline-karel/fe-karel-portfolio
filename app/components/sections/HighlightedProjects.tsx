@@ -84,7 +84,10 @@ export default function HighlightedProjects({ data }: HighlightedProjectsProps) 
           breakpoints={sliderSettings}
         >
           {data.content.highlightedprojects.map((project: HighlightedProjectProps, index: number) => (
-            <SwiperSlide className="border-[0.4px] border-neutrals-400 shadow-card !h-auto !flex flex-col justify-between bg-neutrals-1200">
+            <SwiperSlide
+              key={index}
+              className="border-[0.4px] border-neutrals-400 shadow-card !h-auto !flex flex-col justify-between bg-neutrals-1200"
+            >
               <Link href={project.project[0]}>
 
                 {/* Project cover */}
@@ -117,7 +120,12 @@ export default function HighlightedProjects({ data }: HighlightedProjectsProps) 
                     {/* Tags */}
                     <div className="flex items-center gap-1 flex-wrap mb-6 lg:mb-8">
                       {project.tags.split(", ").map((tag: string, index: number) => (
-                        <div className="label dark !mb-0">{tag}</div>
+                        <div 
+                          key={index}
+                          className="label dark !mb-0"
+                        >
+                          {tag}
+                        </div>
                       ))}
                     </div>
                   </div>

@@ -1,5 +1,5 @@
 // FontAwesome
-import { faChevronRight, faChevronDown, faArrowRight, faArrowDown, faTable, faGear, faArrowPointer, faPlus, faFlagCheckered, faDumbbell, faCamera } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight, faChevronDown, faArrowRight, faArrowDown, faTable, faGear, faArrowPointer, faPlus, faFlagCheckered, faDumbbell, faCamera, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram, faFacebookF, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 
@@ -36,6 +36,10 @@ export function renderIcon(type: String) {
       return faFacebookF;
     case "linkedin":
       return faLinkedinIn;
+    case "phone":
+      return faPhone;
+    case "envelope":
+      return faEnvelope;
     default:
       return faArrowRight;
   }
