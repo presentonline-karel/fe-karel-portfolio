@@ -16,7 +16,7 @@ import { getKirbyFiles } from "@/utils/helper-functions";
 
 export default function HeroPrimary({ data }: HeroPrimaryProps) {
   return (!data.isHidden && (
-    <section className="section">
+    <section id="heroPrimary" className="section">
       <Wrapper className="flex flex-col gap-10 sm:gap-12 md:flex-row md:items-center md:gap-20 lg:gap-[109px] hd:border-neutrals-300">
 
         {/* Text */}
@@ -57,6 +57,5 @@ export default function HeroPrimary({ data }: HeroPrimaryProps) {
         </div>
       </Wrapper>
     </section>
-  )
-  )
+  ))
 }

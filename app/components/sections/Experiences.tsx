@@ -28,7 +28,7 @@ export default function Experiences({ data }: ExperiencesProps) {
 
 
   return (!data.isHidden && (
-    <section className="section bg-neutrals-1300 lg:py-[100px] xl:py-0 xl:bg-neutrals-100">
+    <section id="experience" className="section bg-neutrals-1300 lg:py-[100px] xl:py-0 xl:bg-neutrals-100">
       <div className="xl:max-w-8xl xl:mx-auto xl:py-[100px] hd:border-x-[0.4px] hd:border-neutrals-300">
         <Wrapper className="xl:max-w-[1280px] xl:px-[109px] xl:bg-neutrals-1300 xl:py-[100px] hd:!py-[100px]">
 
@@ -124,6 +124,5 @@ export default function Experiences({ data }: ExperiencesProps) {
         </Wrapper>
       </div>
     </section>
-  )
-  )
+  ))
 }

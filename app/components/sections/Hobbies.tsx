@@ -15,7 +15,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Hobbies({ data }: HobbiesProps) {
   return (!data.isHidden && (
-    <section className="section sm:hidden">
+    <section id="hobbies" className="section sm:hidden">
       <Wrapper>
 
         {/* Heading */}

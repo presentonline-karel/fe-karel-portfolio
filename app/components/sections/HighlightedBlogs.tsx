@@ -46,7 +46,7 @@ export default function HighlightedBlogs({ data }: HighlightedBlogsProps) {
 
 
   return (!data.isHidden && (
-    <section className="section">
+    <section id="highlightedBlogs" className="section">
       <Wrapper>
 
         {/* Heading */}
@@ -87,7 +87,7 @@ export default function HighlightedBlogs({ data }: HighlightedBlogsProps) {
           breakpoints={sliderSettings}
         >
           {data.content.highlightedblogs.map((blog: HighlightedBlogProps, index: number) => (
-            <SwiperSlide 
+            <SwiperSlide
               key={index}
               className="border-[0.4px] border-neutrals-400 shadow-card aspect-square w-full h-full"
             >

@@ -21,7 +21,7 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function HeroService({ data }: HeroServiceProps) {
   return (!data.isHidden && (
-    <section className="section pt-6 sm:pt-12 md:pt-0">
+    <section id="heroService" className="section pt-6 sm:pt-12 md:pt-0">
       <Wrapper className="flex flex-col gap-10 sm:gap-12 md:pt-[146px] md:relative md:flex-row md:items-center md:gap-20 lg:gap-[109px] lg:pt-[160px] hd:border-neutrals-300 hd:pt-[160px]">
 
         {/* Freelance/project switch */}

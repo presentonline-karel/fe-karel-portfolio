@@ -36,7 +36,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
 
 
   return (!data.isHidden && (
-    <section className="section bg-neutrals-200">
+    <section id="testimonials" className="section bg-neutrals-200">
       <Wrapper>
 
         {/* Mobile */}
@@ -205,6 +205,5 @@ export default function Testimonials({ data }: TestimonialsProps) {
         </div>
       </Wrapper>
     </section>
-  )
-  )
+  ))
 }

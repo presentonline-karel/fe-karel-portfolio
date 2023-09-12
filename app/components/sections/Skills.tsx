@@ -16,8 +16,8 @@ import { getKirbyFiles } from "@/utils/helper-functions";
 
 export default function Skills({ data }: SkillsProps) {
   return (!data.isHidden && (
-    <section className="section bg-neutrals-200">
-      <Wrapper className="md:flex md:gap-20 md:items-start lg:gap-[109px] hd:border-neutrals-400">
+    <section id="skills" className="section bg-neutrals-200">
+      <Wrapper className="md:flex md:gap-20 md:items-start lg:gap-[109px] hd:!border-neutrals-400">
 
         {/* Image group */}
         <div className="hidden relative w-full aspect-[4/5] md:block xl:w-[515px]">
@@ -56,6 +56,5 @@ export default function Skills({ data }: SkillsProps) {
         </div>
       </Wrapper>
     </section>
-  )
-  )
+  ))
 }

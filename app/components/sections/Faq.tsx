@@ -23,7 +23,7 @@ import cx from "classnames";
 
 export default function Faq({ data }: FaqProps) {
   return (!data.isHidden && (
-    <section className="section">
+    <section id="faq" className="section">
       <Wrapper className="flex flex-col gap-10 md:flex-row md:gap-20 lg:gap-[109px] hd:border-neutrals-300">
 
         {/* Text */}
@@ -52,8 +52,7 @@ export default function Faq({ data }: FaqProps) {
         </div>
       </Wrapper>
     </section>
-  )
-  )
+  ))
 }
 
 

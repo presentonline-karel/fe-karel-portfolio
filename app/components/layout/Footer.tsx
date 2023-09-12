@@ -43,7 +43,7 @@ export default async function Footer() {
 
   return (
     <footer className="bg-neutrals-1300 py-12 pb-4 sm:pt-16 md:pb-6 lg:pt-[96px] lg:pb-8 hd:py-0">
-      <Wrapper className="hd:pt-[96px] hd:pb-8 hd:border-neutrals-1100">
+      <Wrapper className="hd:pt-[96px] hd:pb-8 hd:!border-neutrals-1200">
 
         {/* Top part */}
         <div className="relative z-10 md:flex md:gap-20 md:justify-between md:items-start md:pr-20 md:pb-12 md:border-b md:border-neutrals-1200 xl:pr-[109px]">

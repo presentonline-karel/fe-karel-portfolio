@@ -17,7 +17,7 @@ import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 export default function Contact({ data }: ContactProps) {
   return (!data.isHidden && (
-    <section className="section bg-neutrals-1300 lg:py-[100px] xl:py-0 xl:bg-neutrals-200">
+    <section id="contact" className="section bg-neutrals-1300 lg:py-[100px] xl:py-0 xl:bg-neutrals-200">
       <div className="xl:max-w-8xl xl:mx-auto xl:py-[100px] hd:border-x-[0.4px] hd:border-neutrals-400">
         <Wrapper className="md:flex md:items-start md:gap-20 lg:gap-[109px] xl:max-w-[1280px] xl:px-[109px] xl:bg-neutrals-1300 xl:py-[100px] hd:!py-[100px]">
 

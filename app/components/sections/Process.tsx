@@ -43,7 +43,7 @@ export default function Process({ data }: ProcessProps) {
 
 
   return (!data.isHidden && (
-    <section className="section bg-neutrals-200">
+    <section id="process" className="section bg-neutrals-200">
       <Wrapper className="hd:border-neutrals-400">
 
         {/* Text */}
@@ -127,6 +127,5 @@ export default function Process({ data }: ProcessProps) {
         </div>
       </Wrapper>
     </section>
-  )
-  )
+  ))
 }

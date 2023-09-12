@@ -45,8 +45,8 @@ export default function HighlightedProjects({ data }: HighlightedProjectsProps) 
 
 
   return (!data.isHidden && (
-    <section className="section bg-neutrals-200">
-      <Wrapper>
+    <section id="highlightedProjects" className="section bg-neutrals-200">
+      <Wrapper className="hd:!border-neutrals-400">
 
         {/* Heading */}
         <div className="mb-10 flex justify-between items-start lg:mb-[72px]">
@@ -120,7 +120,7 @@ export default function HighlightedProjects({ data }: HighlightedProjectsProps) 
                     {/* Tags */}
                     <div className="flex items-center gap-1 flex-wrap mb-6 lg:mb-8">
                       {project.tags.split(", ").map((tag: string, index: number) => (
-                        <div 
+                        <div
                           key={index}
                           className="label dark !mb-0"
                         >

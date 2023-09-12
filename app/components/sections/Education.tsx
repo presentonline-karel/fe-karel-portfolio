@@ -20,7 +20,7 @@ import { stringToDate } from "@/utils/helper-functions";
 
 export default function Education({ data }: EducationProps) {
   return (!data.isHidden && (
-    <section className="section bg-neutrals-200">
+    <section id="education" className="section bg-neutrals-200">
       <Wrapper className="md:flex md:items-start md:gap-20 lg:gap-[109px]">
 
         {/* Text */}
