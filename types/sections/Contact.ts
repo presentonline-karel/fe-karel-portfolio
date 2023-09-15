@@ -10,6 +10,7 @@ export interface ContactProps {
             contacttitle: string;
             contactparagraph: string;
             socials: SocialProps[];
+            bgcolor: string;
         }
         isHidden: Boolean;
     }

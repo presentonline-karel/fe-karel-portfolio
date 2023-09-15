@@ -23,8 +23,14 @@ import cx from "classnames";
 
 export default function Faq({ data }: FaqProps) {
   return (!data.isHidden && (
-    <section id="faq" className="section">
-      <Wrapper className="flex flex-col gap-10 md:flex-row md:gap-20 lg:gap-[109px] hd:border-neutrals-300">
+    <section id="faq" className={cx("section", {
+      "bg-neutrals-200": data.content.bgcolor === "grey",
+      "bg-neutrals-100": data.content.bgcolor === "white",
+    })}>
+      <Wrapper className={cx("flex flex-col gap-10 md:flex-row md:gap-20 lg:gap-[109px]", {
+        "hd:border-neutrals-400": data.content.bgcolor === "grey",
+        "hd:border-neutrals-300": data.content.bgcolor === "white",
+      })}>
 
         {/* Text */}
         <div className="md:w-full">

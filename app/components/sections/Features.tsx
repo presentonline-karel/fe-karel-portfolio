@@ -6,12 +6,21 @@ import Feature from "../organisms/Feature";
 import { FeaturesProps } from "@/types/sections/Features";
 import { FeatureProps } from "@/types/organisms/Feature";
 
+// ClassNames
+import cx from "classnames";
+
 
 
 export default function Features({ data }: FeaturesProps) {
   return (!data.isHidden && (
-    <section id="features" className="section bg-neutrals-1300 lg:py-[100px] xl:py-0 xl:bg-neutrals-100">
-      <div className="xl:max-w-8xl xl:mx-auto xl:py-[100px] hd:border-x-[0.4px] hd:border-neutrals-300">
+    <section id="features" className={cx("section bg-neutrals-1300 lg:py-[100px] xl:py-0", {
+      "xl:bg-neutrals-200": data.content.bgcolor === "grey",
+      "xl:bg-neutrals-100": data.content.bgcolor === "white",
+    })}>
+      <div className={cx("xl:max-w-8xl xl:mx-auto xl:py-[100px] hd:border-x-[0.4px]", {
+        "hd:border-neutrals-400": data.content.bgcolor === "grey",
+        "hd:border-neutrals-300": data.content.bgcolor === "white",
+      })}>
         <Wrapper className="xl:max-w-[1280px] xl:px-[109px] xl:bg-neutrals-1300 xl:py-[100px] hd:!py-[100px]">
 
           {/* Heading */}

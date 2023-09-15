@@ -7,6 +7,7 @@ export interface HighlightedBlogsProps {
 			highlightedblogstitle: string;
 			highlightedblogsparagraph: string;
 			highlightedblogs: HighlightedBlogProps[];
+            bgcolor: string;
 		};
 		isHidden: Boolean;
 	};

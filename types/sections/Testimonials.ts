@@ -9,6 +9,7 @@ export interface TestimonialsProps {
             testimonialstitle: string;
             testimonialsbutton: ButtonProps[];
             testimonials: TestimonialProps[];
+            bgcolor: string;
         }
         isHidden: Boolean;
     }

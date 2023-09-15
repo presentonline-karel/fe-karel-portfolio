@@ -8,6 +8,7 @@ export interface ProcessProps {
             processtitle: string;
             processparagraph: string;
             steps: StepProps[];
+            bgcolor: string;
         }
         isHidden: Boolean;
     }

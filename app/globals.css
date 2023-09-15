@@ -43,16 +43,28 @@
 @layer components {
   /* Buttons */
   .btn {
-    @apply inline-flex justify-center items-center gap-[10px] py-4 px-7 font-kanit text-18 leading-18px cursor-pointer tracking-tight lg:px-9 lg:text-20 lg:leading-5;
+    @apply inline-flex justify-center items-center gap-[10px] py-4 px-7 font-kanit text-18 leading-18px cursor-pointer tracking-tight transition-colors ease-in-out duration-300 lg:px-9 lg:text-20 lg:leading-5;
   }
 
   .btn-primary {
-    @apply bg-prim-500 text-neutrals-1400 shadow-btnPrimary hover:bg-prim-400;
+    @apply bg-prim-500 border border-prim-500 text-neutrals-1400 shadow-btnPrimary hover:bg-prim-400 hover:border-prim-400;
+  }
+
+  .btn-primary svg {
+    @apply text-neutrals-1400;
   }
 
   .btn-secondary {
-    @apply bg-transparent border text-neutrals-1300 border-neutrals-1300 shadow-btnBlack hover:bg-neutrals-300 hover:border-neutrals-200;
+    @apply bg-transparent border text-neutrals-1300 border-neutrals-1300 shadow-btnBlack !delay-0 hover:!bg-neutrals-1300 hover:!text-neutrals-100;
   }
+
+  /* .btn-secondary span, .btn-secondary svg {
+    @apply text-neutrals-1300;
+  }
+
+  .btn-secondary:hover span, .btn-secondary:hover > svg {
+    @apply !text-neutrals-100 !delay-0;
+  } */
 
   /* Section */
   .section {
@@ -97,7 +109,7 @@
 /* _____UTILITIES_____  */
 @layer utilities {
   /* Animation */
-  * {
+  *:not(.btn, .btn > svg, path, .btn > span) {
     @apply transition-all ease-in-out duration-300 box-border;
   }
 

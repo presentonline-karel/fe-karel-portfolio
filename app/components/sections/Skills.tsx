@@ -12,12 +12,21 @@ import Wrapper from "../helpers/Wrapper";
 // Utils
 import { getKirbyFiles } from "@/utils/helper-functions";
 
+// Classnames
+import cx from "classnames";
+
 
 
 export default function Skills({ data }: SkillsProps) {
   return (!data.isHidden && (
-    <section id="skills" className="section bg-neutrals-200">
-      <Wrapper className="md:flex md:gap-20 md:items-start lg:gap-[109px] hd:!border-neutrals-400">
+    <section id="skills" className={cx("section", {
+      "bg-neutrals-200": data.content.bgcolor === "grey",
+      "bg-neutrals-100": data.content.bgcolor === "white",
+    })}>
+      <Wrapper className={cx("md:flex md:gap-20 md:items-start lg:gap-[109px]", {
+        "hd:border-neutrals-400": data.content.bgcolor === "grey",
+        "hd:border-neutrals-300": data.content.bgcolor === "white",
+      })}>
 
         {/* Image group */}
         <div className="hidden relative w-full aspect-[4/5] md:block xl:w-[515px]">

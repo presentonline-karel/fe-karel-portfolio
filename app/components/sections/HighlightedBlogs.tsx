@@ -46,8 +46,14 @@ export default function HighlightedBlogs({ data }: HighlightedBlogsProps) {
 
 
   return (!data.isHidden && (
-    <section id="highlightedBlogs" className="section">
-      <Wrapper>
+    <section id="highlightedBlogs" className={cx("section", {
+      "bg-neutrals-200": data.content.bgcolor === "grey",
+      "bg-neutrals-100": data.content.bgcolor === "white",
+    })}>
+      <Wrapper className={cx("", {
+        "hd:border-neutrals-400": data.content.bgcolor === "grey",
+        "hd:border-neutrals-300": data.content.bgcolor === "white",
+      })}>
 
         {/* Heading */}
         <div className="mb-10 flex justify-between items-start lg:mb-[72px]">

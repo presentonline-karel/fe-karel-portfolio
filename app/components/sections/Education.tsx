@@ -16,12 +16,21 @@ import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 import { getKirbyFiles } from "@/utils/helper-functions";
 import { stringToDate } from "@/utils/helper-functions";
 
+// ClassNames
+import cx from "classnames";
+
 
 
 export default function Education({ data }: EducationProps) {
   return (!data.isHidden && (
-    <section id="education" className="section bg-neutrals-200">
-      <Wrapper className="md:flex md:items-start md:gap-20 lg:gap-[109px]">
+    <section id="education" className={cx("section", {
+      "bg-neutrals-200": data.content.bgcolor === "grey",
+      "bg-neutrals-100": data.content.bgcolor === "white",
+    })}>
+      <Wrapper className={cx("md:flex md:items-start md:gap-20 lg:gap-[109px]", {
+        "hd:border-neutrals-400": data.content.bgcolor === "grey",
+        "hd:border-neutrals-300": data.content.bgcolor === "white",
+      })}>
 
         {/* Text */}
         <div className="md:w-full xl:max-w-[624px]">

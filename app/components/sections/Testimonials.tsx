@@ -19,6 +19,9 @@ import { faArrowRight, faArrowLeft, faQuoteLeftAlt } from "@fortawesome/free-sol
 import Button from "../components/Button";
 import Link from "next/link";
 
+// ClassNames
+import cx from "classnames";
+
 
 
 export default function Testimonials({ data }: TestimonialsProps) {
@@ -36,8 +39,14 @@ export default function Testimonials({ data }: TestimonialsProps) {
 
 
   return (!data.isHidden && (
-    <section id="testimonials" className="section bg-neutrals-200">
-      <Wrapper>
+    <section id="testimonials" className={cx("section", {
+      "bg-neutrals-200": data.content.bgcolor === "grey",
+      "bg-neutrals-100": data.content.bgcolor === "white",
+    })}>
+      <Wrapper className={cx("", {
+        "hd:border-neutrals-400": data.content.bgcolor === "grey",
+        "hd:border-neutrals-300": data.content.bgcolor === "white",
+      })}>
 
         {/* Mobile */}
         <div className="lg:hidden">

@@ -6,6 +6,7 @@ export interface TextWithImageProps {
             textwithimagetext: string;
             textwithimageimage: string[];
             textwithimageimageplacement: string;
+            bgcolor: string;
         };
 		isHidden: Boolean;
 	};

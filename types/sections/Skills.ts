@@ -8,6 +8,7 @@ export interface SkillsProps {
             skillstitle: string;
             architectures: ArchitectureProps[];
             skillsimage: string[];
+            bgcolor: string;
         }
         isHidden: Boolean;
     }

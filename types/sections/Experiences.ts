@@ -10,6 +10,7 @@ export interface ExperiencesProps {
             experiences: ExperienceProps[];
             ctatitle: string;
             ctabutton: ButtonProps[];
+            bgcolor: string;
         }
         isHidden: Boolean;
     }

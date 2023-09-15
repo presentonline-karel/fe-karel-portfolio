@@ -7,6 +7,7 @@ export interface HighlightedProjectsProps {
             highlightedprojectstitle: string;
             highlightedprojectsparagraph: string;
             highlightedprojects: HighlightedProjectProps[];
+            bgcolor: string;
         }
         isHidden: Boolean;
     }

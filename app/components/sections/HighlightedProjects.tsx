@@ -24,6 +24,9 @@ import 'swiper/css';
 // Utils
 import { getKirbyFiles } from "@/utils/helper-functions";
 
+// Classnames
+import cx from "classnames";
+
 
 
 export default function HighlightedProjects({ data }: HighlightedProjectsProps) {
@@ -45,8 +48,14 @@ export default function HighlightedProjects({ data }: HighlightedProjectsProps) 
 
 
   return (!data.isHidden && (
-    <section id="highlightedProjects" className="section bg-neutrals-200">
-      <Wrapper className="hd:!border-neutrals-400">
+    <section id="highlightedProjects" className={cx("section", {
+      "bg-neutrals-200": data.content.bgcolor === "grey",
+      "bg-neutrals-100": data.content.bgcolor === "white",
+    })}>
+      <Wrapper className={cx("", {
+        "hd:border-neutrals-400": data.content.bgcolor === "grey",
+        "hd:border-neutrals-300": data.content.bgcolor === "white",
+      })}>
 
         {/* Heading */}
         <div className="mb-10 flex justify-between items-start lg:mb-[72px]">

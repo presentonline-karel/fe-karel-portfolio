@@ -43,8 +43,14 @@ export default function Process({ data }: ProcessProps) {
 
 
   return (!data.isHidden && (
-    <section id="process" className="section bg-neutrals-200">
-      <Wrapper className="hd:border-neutrals-400">
+    <section id="process" className={cx("section", {
+      "bg-neutrals-200": data.content.bgcolor === "grey",
+      "bg-neutrals-100": data.content.bgcolor === "white",
+    })}>
+      <Wrapper className={cx("", {
+        "hd:border-neutrals-400": data.content.bgcolor === "grey",
+        "hd:border-neutrals-300": data.content.bgcolor === "white",
+      })}>
 
         {/* Text */}
         <div className="mb-10 md:max-w-[547px] lg:mb-[72px]">

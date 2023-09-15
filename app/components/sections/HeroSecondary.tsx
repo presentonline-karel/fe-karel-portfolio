@@ -12,6 +12,9 @@ import Wrapper from "../helpers/Wrapper";
 // Utils
 import { getKirbyFiles } from "@/utils/helper-functions";
 
+// Classnames
+import cx from "classnames";
+
 
 
 export default function HeroPrimary({ data }: HeroSecondaryProps) {
@@ -29,14 +32,20 @@ export default function HeroPrimary({ data }: HeroSecondaryProps) {
             {data.content.herotitle}
           </h1>
 
-          <p className="p mb-6">
+          <p className="p mb-6 lg:mb-10">
             {data.content.heroparagraph}
           </p>
 
           {/* Buttons */}
           <div className="flex items-center gap-2">
             {data.content.herobuttons.map((button: ButtonProps, index: number) => (
-              <Button button={button} key={index} />
+              <Button
+                key={index}
+                button={button}
+                className={cx("", {
+                  "w-full md:w-auto": data.content.herobuttons.length === 2
+                })}
+              />
             ))}
           </div>
         </div>

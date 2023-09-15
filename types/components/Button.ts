@@ -7,4 +7,5 @@ export interface ButtonProps {
 	internalpage: string[];
 	idpage: string;
 	externalurl: string;
+    downloadablefile: string[];
 }

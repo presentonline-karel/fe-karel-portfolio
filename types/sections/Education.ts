@@ -15,6 +15,7 @@ export interface EducationProps {
 				tags: string;
 			};
 			educationimage: string[];
+            bgcolor: string;
 		};
 		isHidden: Boolean;
 	};

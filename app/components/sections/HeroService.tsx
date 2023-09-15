@@ -17,6 +17,9 @@ import Button from "../components/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
+// Classnames
+import cx from "classnames";
+
 
 
 export default function HeroService({ data }: HeroServiceProps) {
@@ -119,7 +122,13 @@ export default function HeroService({ data }: HeroServiceProps) {
           {/* Buttons */}
           <div className="flex items-center gap-2">
             {data.content.herobuttons.map((button: ButtonProps, index: number) => (
-              <Button button={button} key={index} />
+              <Button
+                key={index}
+                button={button}
+                className={cx("", {
+                  "w-full md:w-auto": data.content.herobuttons.length === 2
+                })}
+              />
             ))}
           </div>
         </div>

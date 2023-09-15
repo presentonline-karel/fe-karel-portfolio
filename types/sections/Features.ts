@@ -7,6 +7,7 @@ export interface FeaturesProps {
             featureslabel: string;
             featurestitle: string;
             features: FeatureProps[];
+            bgcolor: string;
         },
         isHidden: Boolean;
     }

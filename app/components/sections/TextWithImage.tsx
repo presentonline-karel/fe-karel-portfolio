@@ -18,10 +18,15 @@ import cx from "classnames";
 
 export default function TextWithImage({ data }: TextWithImageProps) {
   return (!data.isHidden && (
-    <section className="section">
+    <section className={cx("section", {
+      "bg-neutrals-200": data.content.bgcolor === "grey",
+      "bg-neutrals-100": data.content.bgcolor === "white",
+    })}>
       <Wrapper className={cx("flex flex-col gap-10 md:flex-row md:items-start md:gap-20 lg:gap-[109px]", {
         "md:flex-row": data.content.textwithimageimageplacement === "true",
-        "md:flex-row-reverse": data.content.textwithimageimageplacement === "false"
+        "md:flex-row-reverse": data.content.textwithimageimageplacement === "false",
+        "hd:border-neutrals-400": data.content.bgcolor === "grey",
+        "hd:border-neutrals-300": data.content.bgcolor === "white",
       })}>
 
         {/* Text */}
