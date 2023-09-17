@@ -21,7 +21,7 @@ import { NavigationLinkProps } from "@/types/organisms/NavigationLink";
 export default async function Footer() {
 
   // Fetch footer data
-  const api = `${process.env.NEXT_PUBLIC_KIRBYCMS_API_URL}`;
+  // const api = `${process.env.NEXT_PUBLIC_KIRBYCMS_API_URL}`;
   const username = `${process.env.NEXT_PUBLIC_KIRBYCMS_EMAIL}`;
   const password = `${process.env.NEXT_PUBLIC_KIRBYCMS_PASSWORD}`;
 
@@ -36,6 +36,8 @@ export default async function Footer() {
     mode: 'no-cors',
     headers,
   });
+
+  console.log("respFooter", resp);
 
   const data = await resp.json();
 

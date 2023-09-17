@@ -8,6 +8,7 @@ import type { Metadata } from 'next';
 import { Kanit } from 'next/font/google';
 
 // Components
+import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
 
 
@@ -36,6 +37,7 @@ export default function RootLayout({
     <html lang="en" style={{ scrollBehavior: 'smooth' }}>
       <body className={`${kanit.className}`}>
         <div id="container">
+          <Navigation />
           {children}
           <Footer />
         </div>

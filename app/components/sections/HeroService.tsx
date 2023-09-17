@@ -40,16 +40,26 @@ export default function HeroService({ data }: HeroServiceProps) {
               </div>
             </div>
           ) : (
-            <Link
-              href={data.content.freelancepage[0]}
-              className="py-3 px-4 flex items-center gap-3 border-[0.4px] bg-neutrals-100 border-neutrals-400 shadow-input hover:border-neutrals-800"
-            >
-              <div className="w-6 h-6 rounded-full bg-neutrals-100 border border-neutrals-600" />
+            data.content.linkdisabled === "true" ? (
+              <div className="py-3 px-4 flex items-center gap-3 border-[0.4px] bg-neutrals-100 border-neutrals-400 shadow-input cursor-default">
+                <div className="w-6 h-6 rounded-full bg-neutrals-100 border border-neutrals-600" />
 
-              <div className="text-18 leading-6 text-neutrals-1300 whitespace-nowrap lg:text-20 lg:leading-26px">
-                Hire me as a freelancer
+                <div className="text-18 leading-6 text-neutrals-900 whitespace-nowrap lg:text-20 lg:leading-26px">
+                  Hire me as a freelancer
+                </div>
               </div>
-            </Link>
+            ) : (
+              <Link
+                href={data.content.freelancepage[0]}
+                className="py-3 px-4 flex items-center gap-3 border-[0.4px] bg-neutrals-100 border-neutrals-400 shadow-input hover:border-neutrals-800"
+              >
+                <div className="w-6 h-6 rounded-full bg-neutrals-100 border border-neutrals-600" />
+
+                <div className="text-18 leading-6 text-neutrals-1300 whitespace-nowrap lg:text-20 lg:leading-26px">
+                  Hire me as a freelancer
+                </div>
+              </Link>
+            )
           )}
 
           {/* project option */}
@@ -62,16 +72,26 @@ export default function HeroService({ data }: HeroServiceProps) {
               </div>
             </div>
           ) : (
-            <Link
-              href={data.content.projectpage[0]}
-              className="py-3 px-4 flex items-center gap-3 border-[0.4px] bg-neutrals-100 border-neutrals-400 shadow-input hover:border-neutrals-800"
-            >
-              <div className="w-6 h-6 rounded-full bg-neutrals-100 border border-neutrals-600" />
+            data.content.linkdisabled === "true" ? (
+              <div className="py-3 px-4 flex items-center gap-3 border-[0.4px] bg-neutrals-100 border-neutrals-400 shadow-input cursor-default">
+                <div className="w-6 h-6 rounded-full bg-neutrals-100 border border-neutrals-600" />
 
-              <div className="text-18 leading-6 text-neutrals-1300 whitespace-nowrap lg:text-20 lg:leading-26px">
-                One-time project collaboration
+                <div className="text-18 leading-6 text-neutrals-900 whitespace-nowrap lg:text-20 lg:leading-26px">
+                  One-time project collaboration
+                </div>
               </div>
-            </Link>
+            ) : (
+              <Link
+                href={data.content.projectpage[0]}
+                className="py-3 px-4 flex items-center gap-3 border-[0.4px] bg-neutrals-100 border-neutrals-400 shadow-input hover:border-neutrals-800"
+              >
+                <div className="w-6 h-6 rounded-full bg-neutrals-100 border border-neutrals-600" />
+
+                <div className="text-18 leading-6 text-neutrals-1300 whitespace-nowrap lg:text-20 lg:leading-26px">
+                  One-time project collaboration
+                </div>
+              </Link>
+            )
           )}
         </div>
 
