@@ -1,112 +1,130 @@
+"use client";
+
 // Next & React
 import Image from "next/image";
 import Link from "next/link";
-// import { useState, useEffect } from "react";
-
-// Components
-import Wrapper from "../helpers/Wrapper";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 // Classnames
 import cx from "classnames";
 
 // Utils
 import { fetcher } from "@/utils/fetcher";
+import { getKirbyFiles } from "@/utils/helper-functions";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faFacebookF, faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 
 
-export default async function Navigation() {
+export default function Navigation() {
 
   // States
-  // const [menuOpen, setMenuOpen] = useState(false);
-  // const [navData, setNavData] = useState<String>();
+  const [menuOpen, setMenuOpen] = useState(false);
 
-
-
-  /* Fetch footer data
-  async function getNavData() {
-
-    // Fetch footer data
-    const api = `${process.env.NEXT_PUBLIC_KIRBYCMS_API_URL}`;
-    const username = `${process.env.NEXT_PUBLIC_KIRBYCMS_EMAIL}`;
-    const password = `${process.env.NEXT_PUBLIC_KIRBYCMS_PASSWORD}`;
-
-    const headers = {
-      Authorization: "Basic " + Buffer.from(`${username}:${password}`).toString("base64"),
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    };
-
-    const resp = await fetch("http://be-karel-portfolio.int/", {
-      method: "GET",
-      mode: 'no-cors',
-      headers,
-    });
-
-    console.log("respNav", resp);
-
-    const data = await resp.json();
-    console.log("respJson", data);
-    //console.log("dataFetch", data)
-  }
-
-
-
-  // Execute get nav data
-  useEffect(() => {
-    getNavData();
-  }, []); */
-
-  const api = `${process.env.NEXT_PUBLIC_KIRBYCMS_API_URL}`;
-  const username = `${process.env.NEXT_PUBLIC_KIRBYCMS_EMAIL}`;
-  const password = `${process.env.NEXT_PUBLIC_KIRBYCMS_PASSWORD}`;
-
-  const headers = {
-    Authorization: "Basic " + Buffer.from(`${username}:${password}`).toString("base64"),
-    "Content-Type": "application/json",
-    Accept: "application/json",
-  };
-
-  const resp = await fetch("http://be-karel-portfolio.int/", {
-    method: "GET",
-    mode: 'no-cors',
-    headers,
-  });
-
-  //console.log("respNav", resp);
-
-  const data = await resp.json();
-  console.log("respJson Nav", data);
+  // Hooks
+  const pathname = usePathname();
 
 
 
   return (
-    <nav className="py-5 bg-neutrals-100 border-b-[0.4px] border-neutrals-400">
-      <div className="px-4">
+    <div className="py-5 border-b-[0.4px] border-neutrals-400 lg:py-7">
+      <div className="px-4 sm:px-12 lg:px-20 xl:max-w-8xl xl:mx-auto">
 
         {/* Top */}
         <div className="flex justify-between items-center">
 
-          {/* Logo */}
+          {/* logo */}
           <Link href="/" className="relative w-[120px] h-11 xl:w-[154px] xl:h-14">
-            {/* <Image
-              src={data.logoLight[Object.keys(data.logoLight)[0]].url}
-              alt="TEMP karel logo alt message"
+            <Image
+              src={getKirbyFiles("site/logo-light.png")}
+              alt="logo"
               fill={true}
-              className="object-contain w-full h-full"
-            /> */}
+              className="object-contain"
+            />
           </Link>
 
-          {/* Hamburger icon */}
-          <div
-            /* onClick={() => (setMenuOpen(true), console.log("respNav", navData))} */
-            className="py-2"
+
+
+          {/* links */}
+          <div className="hidden lg:flex lg:justify-center lg:items-center lg:gap-8 lg:pt-1 xl:gap-10">
+            <Link
+              href="/"
+              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium", {
+                "border-prim-700": pathname === "/" || pathname === "/home",
+              })}
+            >
+              <span className="text-20 leading-26px tracking-tight xl:text-24 xl:leading-30px">Home</span>
+            </Link>
+
+            <Link
+              href="/projects"
+              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium", {
+                "border-prim-700": pathname === "/projects",
+              })}
+            >
+              <span className="text-20 leading-26px tracking-tight xl:text-24 xl:leading-30px">Projects</span>
+            </Link>
+
+            <Link
+              href="/#services"
+              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium")}
+            >
+              <span className="text-20 leading-26px tracking-tight xl:text-24 xl:leading-30px">Services</span>
+            </Link>
+
+            <Link
+              href="/blog"
+              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium", {
+                "border-prim-700": pathname === "/blog",
+              })}
+            >
+              <span className="text-20 leading-26px tracking-tight xl:text-24 xl:leading-30px">Blog</span>
+            </Link>
+
+            <Link
+              href="/about"
+              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium", {
+                "border-prim-700": pathname === "/about",
+              })}
+            >
+              <span className="text-20 leading-26px tracking-tight xl:text-24 xl:leading-30px">About</span>
+            </Link>
+
+            <Link
+              href="/contact"
+              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium", {
+                "border-prim-700": pathname === "/contact",
+              })}
+            >
+              <span className="text-20 leading-26px tracking-tight xl:text-24 xl:leading-30px">Contact</span>
+            </Link>
+          </div>
+
+
+
+          {/* email */}
+          <Link 
+            href="mailto:info@karrel.be"
+            className="tracking-tight text-18 leading-6 text-neutrals-1300 border-b-2 border-neutrals-900 cursor-pointer hover:border-prim-700 xl:text-20 xl:leading-26px"
           >
-            <div className="w-6 h-2 relative">
+            info@karrel.be
+          </Link>
+
+
+
+          {/* Hamburger */}
+          <div
+            onClick={() => setMenuOpen(true)}
+            className="py-2 lg:hidden"
+          >
+            <div className="relative w-6 h-2">
               <Image
                 src="/Hamburger-menu.png"
-                alt="test"
-                className="true"
+                alt="Hamburger icon CHANGE"
                 fill={true}
+                className=""
               />
             </div>
           </div>
@@ -115,43 +133,251 @@ export default async function Navigation() {
 
 
         {/* Sliding nav */}
-        <div className={cx("fixed top-0 right-0 w-[284px] h-full bg-neutrals-1300 py-5 px-4 z-50", {
-          /*"translate-x-0": menuOpen === true,
-          "translate-x-full": menuOpen === false,*/
+        <div className={cx("fixed top-0 right-0 w-[283px] h-full bg-neutrals-1300 py-5 px-4 translate-x-full z-50 flex flex-col justify-between sm:w-[400px] sm:px-12 lg:hidden", {
+          "!translate-x-0": menuOpen === true,
         })}>
-
-          {/* Flexbox */}
-          <div className="flex flex-col justify-between">
+          <div className="">
 
             {/* top */}
-            <div className="flex justify-between items-center">
-
-              {/* logo */}
+            <div className="flex justify-between items-center mb-12 md:mb-8">
               <div className="relative w-[120px] h-11">
-                {/* <Image
-                  src={data.logoDark[Object.keys(data.logoDark)[0]].url}
-                  alt="TEMP karel logo alt message"
+                <Image
+                  src={getKirbyFiles("site/logo-dark.png")}
+                  alt="logo"
                   fill={true}
-                  className="object-contain w-full h-full"
-                /> */}
+                  className="object-contain"
+                />
               </div>
 
-              {/* Cross icon */}
-              <div
-                //onClick={() => setMenuOpen(false)}
-                className="w-[18.5px] h-[18.5px] relative"
-              >
+              <div onClick={() => setMenuOpen(false)} className="relative w-[18.5px] h-[18.5px]">
                 <Image
                   src="/Menu-cross.png"
-                  alt="test"
-                  className="true"
+                  alt="Hamburger cross CHANGE"
                   fill={true}
+                  className=""
                 />
               </div>
             </div>
+
+
+
+            {/* links */}
+            <div className="flex flex-col gap-6 mb-10 md:gap-4 md:mb-8">
+              <div className="p-4 border-[0.4px] border-neutrals-1100 bg-neutrals-1200">
+
+                {/* label */}
+                <div className="mb-5 text-14 leading-14px text-neutrals-300 tracking-tight">
+                  Main links
+                </div>
+
+                {/* links */}
+                <div className="flex flex-col gap-[2px]">
+                  <Link
+                    href="/"
+                    onClick={() => setMenuOpen(false)}
+                    className={cx("flex items-center gap-2 text-neutrals-100", {
+                      "text-prim-500": pathname === "/" || pathname === "/home",
+                    })}
+                  >
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className={cx("w-[14px] h-4 hidden", {
+                        "!block": pathname === "/" || pathname === "/home",
+                      })}
+                    />
+                    <span className="text-24 leading-30px tracking-tight">Home</span>
+                  </Link>
+
+                  <Link
+                    href="/projects"
+                    onClick={() => setMenuOpen(false)}
+                    className={cx("flex items-center gap-2 text-neutrals-100", {
+                      "text-prim-500": pathname === "/projects",
+                    })}
+                  >
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className={cx("w-[14px] h-4 hidden", {
+                        "!block": pathname === "/projects"
+                      })}
+                    />
+                    <span className="text-24 leading-30px tracking-tight">Projects</span>
+                  </Link>
+
+                  <Link
+                    href="/blog"
+                    onClick={() => setMenuOpen(false)}
+                    className={cx("flex items-center gap-2 text-neutrals-100", {
+                      "text-prim-500": pathname === "/blog",
+                    })}
+                  >
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className={cx("w-[14px] h-4 hidden", {
+                        "!block": pathname === "/blog"
+                      })}
+                    />
+                    <span className="text-24 leading-30px tracking-tight">Blog</span>
+                  </Link>
+
+                  <Link
+                    href="/about"
+                    onClick={() => setMenuOpen(false)}
+                    className={cx("flex items-center gap-2 text-neutrals-100", {
+                      "text-prim-500": pathname === "/about",
+                    })}
+                  >
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className={cx("w-[14px] h-4 hidden", {
+                        "!block": pathname === "/about"
+                      })}
+                    />
+                    <span className="text-24 leading-30px tracking-tight">About</span>
+                  </Link>
+
+                  <Link
+                    href="/contact"
+                    onClick={() => setMenuOpen(false)}
+                    className={cx("flex items-center gap-2 text-neutrals-100", {
+                      "text-prim-500": pathname === "/contact",
+                    })}
+                  >
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className={cx("w-[14px] h-4 hidden", {
+                        "!block": pathname === "/contact"
+                      })}
+                    />
+                    <span className="text-24 leading-30px tracking-tight">Contact</span>
+                  </Link>
+                </div>
+              </div>
+
+
+
+              <div className="p-4 border-[0.4px] border-neutrals-1100 bg-neutrals-1200">
+
+                {/* label */}
+                <div className="mb-5 text-14 leading-14px text-neutrals-300 tracking-tight">
+                  Services
+                </div>
+
+                {/* links */}
+                <div className="flex flex-col gap-[2px]">
+                  <Link
+                    href="/web-development-project"
+                    onClick={() => setMenuOpen(false)}
+                    className={cx("flex items-center gap-2 text-neutrals-100", {
+                      "text-prim-500": pathname === "/web-development-project",
+                    })}
+                  >
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className={cx("w-[14px] h-4 hidden", {
+                        "!block": pathname === "/web-development-project",
+                      })}
+                    />
+                    <span className="text-24 leading-30px tracking-tight">Web development</span>
+                  </Link>
+
+                  <Link
+                    href="/web-design-project"
+                    onClick={() => setMenuOpen(false)}
+                    className={cx("flex items-center gap-2 text-neutrals-100", {
+                      "text-prim-500": pathname === "/web-design-project",
+                    })}
+                  >
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className={cx("w-[14px] h-4 hidden", {
+                        "!block": pathname === "/web-design-project"
+                      })}
+                    />
+                    <span className="text-24 leading-30px tracking-tight">Web design</span>
+                  </Link>
+
+                  <Link
+                    href="/playground"
+                    onClick={() => setMenuOpen(false)}
+                    className={cx("flex items-center gap-2 text-neutrals-100", {
+                      "text-prim-500": pathname === "/playground",
+                    })}
+                  >
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className={cx("w-[14px] h-4 hidden", {
+                        "!block": pathname === "/playground"
+                      })}
+                    />
+                    <span className="text-24 leading-30px tracking-tight">Playground</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+
+
+            {/* contact */}
+            <div>
+
+              {/* label */}
+              <div className="mb-5 text-14 leading-14px text-neutrals-300 tracking-tight md:mb-4">
+                Contact me
+              </div>
+
+
+              <div className="flex flex-col gap-1 mb-10 md:mb-8">
+                <Link
+                  href="mailto:info@karrel.be"
+                  className="text-24 leading-30px tracking-tight underline block font-normal text-neutrals-100"
+                >
+                  info@karrel.be
+                </Link>
+
+                <Link
+                  href="tel:+32476280902"
+                  className="text-24 leading-30px tracking-tight underline block font-normal text-neutrals-100"
+                >
+                  +32 476 28 09 02
+                </Link>
+              </div>
+
+
+
+              {/* socials */}
+              <div className="flex items-center gap-5">
+                <Link
+                  href="https://www.instagram.com/kareldecoene/"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon icon={faInstagram} className="w-[18px] h-5 text-neutrals-100" />
+                </Link>
+
+                <Link
+                  href="https://www.facebook.com/karel.decoene.5/"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon icon={faFacebookF} className="w-[18px] h-5 text-neutrals-100" />
+                </Link>
+
+                <Link
+                  href="https://www.linkedin.com/in/karel-decoene-395478187/"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon icon={faLinkedinIn} className="w-[18px] h-5 text-neutrals-100" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div className="flex justify-center items-center font-light text-neutrals-100">
+            ©2023 Karel - All rights reserved.
           </div>
         </div>
       </div>
-    </nav>
+    </div>
   )
 }

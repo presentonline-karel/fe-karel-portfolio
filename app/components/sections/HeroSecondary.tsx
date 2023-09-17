@@ -37,13 +37,13 @@ export default function HeroPrimary({ data }: HeroSecondaryProps) {
           </p>
 
           {/* Buttons */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 max-w-full">
             {data.content.herobuttons.map((button: ButtonProps, index: number) => (
               <Button
                 key={index}
                 button={button}
                 className={cx("", {
-                  "w-full md:w-auto": data.content.herobuttons.length === 2
+                  "w-full px-5 md:w-auto": data.content.herobuttons.length === 2
                 })}
               />
             ))}

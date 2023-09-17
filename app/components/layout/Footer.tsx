@@ -37,7 +37,7 @@ export default async function Footer() {
     headers,
   });
 
-  console.log("respFooter", resp);
+  //console.log("respFooter", resp);
 
   const data = await resp.json();
 
