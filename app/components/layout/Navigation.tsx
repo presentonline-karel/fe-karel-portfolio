@@ -34,8 +34,6 @@ export default function Navigation() {
   // Adjust menu when scrolled
   if (typeof window !== "undefined") {
     window.addEventListener('scroll', () => {
-      console.log(scrollY);
-
       if (scrollY >= 36) {
         setMenuSmall(true);
       } else {
@@ -160,184 +158,245 @@ export default function Navigation() {
 
 
         {/* Sliding nav */}
-        <div className={cx("fixed top-0 right-0 w-[283px] h-full bg-neutrals-1300 py-5 px-4 translate-x-full z-50 flex flex-col justify-between border-l-[0.4px] border-neutrals-1100 sm:w-[400px] sm:px-12 lg:hidden", {
+        <div 
+          onClick={() => setMenuOpen(false)}
+          className={cx("fixed top-0 right-0 w-screen h-screen translate-x-full z-50 bg-neutrals-1000 bg-opacity-70 lg:hidden", {
           "!translate-x-0": menuOpen === true,
         })}>
-          <div className="">
+          <div className={cx("ml-auto w-[283px] h-full bg-neutrals-1300 py-5 px-4 flex flex-col justify-between border-l-[0.4px] border-neutrals-1100 sm:w-[400px] sm:px-12")}>
+            <div className="">
 
-            {/* top */}
-            <div className="flex justify-between items-center mb-12 md:mb-8">
-              <div className="relative w-[120px] h-11">
-                <Image
-                  src={getKirbyFiles("site/logo-dark.png")}
-                  alt="logo"
-                  fill={true}
-                  className="object-contain"
-                />
+              {/* top */}
+              <div className="flex justify-between items-center mb-5 tall:mb-12 md:mb-8">
+                <Link 
+                  href="/"
+                  className="relative w-[120px] h-11"
+                >
+                  <Image
+                    src={getKirbyFiles("site/logo-dark.png")}
+                    alt="logo"
+                    fill={true}
+                    className="object-contain"
+                  />
+                </Link>
+
+                <div onClick={() => setMenuOpen(false)} className="relative w-[18.5px] h-[18.5px]">
+                  <Image
+                    src="/Menu-cross.png"
+                    alt="Hamburger cross CHANGE"
+                    fill={true}
+                    className=""
+                  />
+                </div>
               </div>
 
-              <div onClick={() => setMenuOpen(false)} className="relative w-[18.5px] h-[18.5px]">
-                <Image
-                  src="/Menu-cross.png"
-                  alt="Hamburger cross CHANGE"
-                  fill={true}
-                  className=""
-                />
+
+
+              {/* links */}
+              <div className="flex flex-col gap-4 mb-8 tall:mb-10 tall:gap-6 md:gap-4 md:mb-8">
+                <div className="p-4 border-[0.4px] border-neutrals-1100 bg-neutrals-1200">
+
+                  {/* label */}
+                  <div className="mb-5 text-14 leading-14px text-neutrals-300 tracking-tight hidden tall:block">
+                    Main links
+                  </div>
+
+                  {/* links */}
+                  <div className="flex flex-col gap-[2px]">
+                    <Link
+                      href="/"
+                      onClick={() => setMenuOpen(false)}
+                      className={cx("flex items-center gap-2 text-neutrals-100", {
+                        "text-prim-500": pathname === "/" || pathname === "/home",
+                      })}
+                    >
+                      <FontAwesomeIcon
+                        icon={faArrowRight}
+                        className={cx("w-[14px] h-4 hidden", {
+                          "!block": pathname === "/" || pathname === "/home",
+                        })}
+                      />
+                      <span className="text-24 leading-30px tracking-tight">Home</span>
+                    </Link>
+
+                    <Link
+                      href="/projects"
+                      onClick={() => setMenuOpen(false)}
+                      className={cx("flex items-center gap-2 text-neutrals-100", {
+                        "text-prim-500": pathname === "/projects",
+                      })}
+                    >
+                      <FontAwesomeIcon
+                        icon={faArrowRight}
+                        className={cx("w-[14px] h-4 hidden", {
+                          "!block": pathname === "/projects"
+                        })}
+                      />
+                      <span className="text-24 leading-30px tracking-tight">Projects</span>
+                    </Link>
+
+                    <Link
+                      href="/blog"
+                      onClick={() => setMenuOpen(false)}
+                      className={cx("flex items-center gap-2 text-neutrals-100", {
+                        "text-prim-500": pathname === "/blog",
+                      })}
+                    >
+                      <FontAwesomeIcon
+                        icon={faArrowRight}
+                        className={cx("w-[14px] h-4 hidden", {
+                          "!block": pathname === "/blog"
+                        })}
+                      />
+                      <span className="text-24 leading-30px tracking-tight">Blog</span>
+                    </Link>
+
+                    <Link
+                      href="/about"
+                      onClick={() => setMenuOpen(false)}
+                      className={cx("flex items-center gap-2 text-neutrals-100", {
+                        "text-prim-500": pathname === "/about",
+                      })}
+                    >
+                      <FontAwesomeIcon
+                        icon={faArrowRight}
+                        className={cx("w-[14px] h-4 hidden", {
+                          "!block": pathname === "/about"
+                        })}
+                      />
+                      <span className="text-24 leading-30px tracking-tight">About</span>
+                    </Link>
+
+                    <Link
+                      href="/contact"
+                      onClick={() => setMenuOpen(false)}
+                      className={cx("flex items-center gap-2 text-neutrals-100", {
+                        "text-prim-500": pathname === "/contact",
+                      })}
+                    >
+                      <FontAwesomeIcon
+                        icon={faArrowRight}
+                        className={cx("w-[14px] h-4 hidden", {
+                          "!block": pathname === "/contact"
+                        })}
+                      />
+                      <span className="text-24 leading-30px tracking-tight">Contact</span>
+                    </Link>
+                  </div>
+                </div>
+
+
+
+                <div className="p-4 border-[0.4px] border-neutrals-1100 bg-neutrals-1200">
+
+                  {/* label */}
+                  <div className="mb-5 text-14 leading-14px text-neutrals-300 tracking-tight">
+                    Services
+                  </div>
+
+                  {/* links */}
+                  <div className="flex flex-col gap-[2px]">
+                    <Link
+                      href="/web-development-project"
+                      onClick={() => setMenuOpen(false)}
+                      className={cx("flex items-center gap-2 text-neutrals-100", {
+                        "text-prim-500": pathname === "/web-development-project" || pathname === "/web-development-freelance",
+                      })}
+                    >
+                      <FontAwesomeIcon
+                        icon={faArrowRight}
+                        className={cx("w-[14px] h-4 hidden", {
+                          "!block": pathname === "/web-development-project" || pathname === "/web-development-freelance",
+                        })}
+                      />
+                      <span className="text-24 leading-30px tracking-tight">Web development</span>
+                    </Link>
+
+                    <Link
+                      href="/web-design-project"
+                      onClick={() => setMenuOpen(false)}
+                      className={cx("flex items-center gap-2 text-neutrals-100", {
+                        "text-prim-500": pathname === "/web-design-project" || pathname === "/web-design-freelance",
+                      })}
+                    >
+                      <FontAwesomeIcon
+                        icon={faArrowRight}
+                        className={cx("w-[14px] h-4 hidden", {
+                          "!block": pathname === "/web-design-project" || pathname === "/web-design-freelance",
+                        })}
+                      />
+                      <span className="text-24 leading-30px tracking-tight">Web design</span>
+                    </Link>
+
+                    <Link
+                      href="/playground"
+                      onClick={() => setMenuOpen(false)}
+                      className={cx("flex items-center gap-2 text-neutrals-100", {
+                        "text-prim-500": pathname === "/playground",
+                      })}
+                    >
+                      <FontAwesomeIcon
+                        icon={faArrowRight}
+                        className={cx("w-[14px] h-4 hidden", {
+                          "!block": pathname === "/playground"
+                        })}
+                      />
+                      <span className="text-24 leading-30px tracking-tight">Playground</span>
+                    </Link>
+                  </div>
+                </div>
               </div>
-            </div>
 
 
 
-            {/* links */}
-            <div className="flex flex-col gap-6 mb-10 md:gap-4 md:mb-8">
-              <div className="p-4 border-[0.4px] border-neutrals-1100 bg-neutrals-1200">
+              {/* contact */}
+              <div>
 
                 {/* label */}
-                <div className="mb-5 text-14 leading-14px text-neutrals-300 tracking-tight">
-                  Main links
+                <div className="mb-3 text-14 leading-14px text-neutrals-300 tracking-tight tall:mb-5 md:mb-4">
+                  Contact me
                 </div>
 
-                {/* links */}
-                <div className="flex flex-col gap-[2px]">
+
+                <div className="flex flex-col gap-1 mb-6 tall:mb-10 md:mb-8">
                   <Link
-                    href="/"
-                    onClick={() => setMenuOpen(false)}
-                    className={cx("flex items-center gap-2 text-neutrals-100", {
-                      "text-prim-500": pathname === "/" || pathname === "/home",
-                    })}
+                    href="mailto:info@karrel.be"
+                    className="text-20 leading-26px tall:text-24 tall:leading-30px tracking-tight underline block font-normal text-neutrals-100"
                   >
-                    <FontAwesomeIcon
-                      icon={faArrowRight}
-                      className={cx("w-[14px] h-4 hidden", {
-                        "!block": pathname === "/" || pathname === "/home",
-                      })}
-                    />
-                    <span className="text-24 leading-30px tracking-tight">Home</span>
+                    info@karrel.be
                   </Link>
 
                   <Link
-                    href="/projects"
-                    onClick={() => setMenuOpen(false)}
-                    className={cx("flex items-center gap-2 text-neutrals-100", {
-                      "text-prim-500": pathname === "/projects",
-                    })}
+                    href="tel:+32476280902"
+                    className="text-20 leading-26px tall:text-24 tall:leading-30px tracking-tight underline block font-normal text-neutrals-100"
                   >
-                    <FontAwesomeIcon
-                      icon={faArrowRight}
-                      className={cx("w-[14px] h-4 hidden", {
-                        "!block": pathname === "/projects"
-                      })}
-                    />
-                    <span className="text-24 leading-30px tracking-tight">Projects</span>
-                  </Link>
-
-                  <Link
-                    href="/blog"
-                    onClick={() => setMenuOpen(false)}
-                    className={cx("flex items-center gap-2 text-neutrals-100", {
-                      "text-prim-500": pathname === "/blog",
-                    })}
-                  >
-                    <FontAwesomeIcon
-                      icon={faArrowRight}
-                      className={cx("w-[14px] h-4 hidden", {
-                        "!block": pathname === "/blog"
-                      })}
-                    />
-                    <span className="text-24 leading-30px tracking-tight">Blog</span>
-                  </Link>
-
-                  <Link
-                    href="/about"
-                    onClick={() => setMenuOpen(false)}
-                    className={cx("flex items-center gap-2 text-neutrals-100", {
-                      "text-prim-500": pathname === "/about",
-                    })}
-                  >
-                    <FontAwesomeIcon
-                      icon={faArrowRight}
-                      className={cx("w-[14px] h-4 hidden", {
-                        "!block": pathname === "/about"
-                      })}
-                    />
-                    <span className="text-24 leading-30px tracking-tight">About</span>
-                  </Link>
-
-                  <Link
-                    href="/contact"
-                    onClick={() => setMenuOpen(false)}
-                    className={cx("flex items-center gap-2 text-neutrals-100", {
-                      "text-prim-500": pathname === "/contact",
-                    })}
-                  >
-                    <FontAwesomeIcon
-                      icon={faArrowRight}
-                      className={cx("w-[14px] h-4 hidden", {
-                        "!block": pathname === "/contact"
-                      })}
-                    />
-                    <span className="text-24 leading-30px tracking-tight">Contact</span>
+                    +32 476 28 09 02
                   </Link>
                 </div>
-              </div>
 
 
 
-              <div className="p-4 border-[0.4px] border-neutrals-1100 bg-neutrals-1200">
-
-                {/* label */}
-                <div className="mb-5 text-14 leading-14px text-neutrals-300 tracking-tight">
-                  Services
-                </div>
-
-                {/* links */}
-                <div className="flex flex-col gap-[2px]">
+                {/* socials */}
+                <div className="items-center gap-5 hidden tall:flex">
                   <Link
-                    href="/web-development-project"
-                    onClick={() => setMenuOpen(false)}
-                    className={cx("flex items-center gap-2 text-neutrals-100", {
-                      "text-prim-500": pathname === "/web-development-project" || pathname === "/web-development-freelance",
-                    })}
+                    href="https://www.instagram.com/kareldecoene/"
+                    target="_blank"
                   >
-                    <FontAwesomeIcon
-                      icon={faArrowRight}
-                      className={cx("w-[14px] h-4 hidden", {
-                        "!block": pathname === "/web-development-project" || pathname === "/web-development-freelance",
-                      })}
-                    />
-                    <span className="text-24 leading-30px tracking-tight">Web development</span>
+                    <FontAwesomeIcon icon={faInstagram} className="w-[18px] h-5 text-neutrals-100" />
                   </Link>
 
                   <Link
-                    href="/web-design-project"
-                    onClick={() => setMenuOpen(false)}
-                    className={cx("flex items-center gap-2 text-neutrals-100", {
-                      "text-prim-500": pathname === "/web-design-project" || pathname === "/web-design-freelance",
-                    })}
+                    href="https://www.facebook.com/karel.decoene.5/"
+                    target="_blank"
                   >
-                    <FontAwesomeIcon
-                      icon={faArrowRight}
-                      className={cx("w-[14px] h-4 hidden", {
-                        "!block": pathname === "/web-design-project" || pathname === "/web-design-freelance",
-                      })}
-                    />
-                    <span className="text-24 leading-30px tracking-tight">Web design</span>
+                    <FontAwesomeIcon icon={faFacebookF} className="w-[18px] h-5 text-neutrals-100" />
                   </Link>
 
                   <Link
-                    href="/playground"
-                    onClick={() => setMenuOpen(false)}
-                    className={cx("flex items-center gap-2 text-neutrals-100", {
-                      "text-prim-500": pathname === "/playground",
-                    })}
+                    href="https://www.linkedin.com/in/karel-decoene-395478187/"
+                    target="_blank"
                   >
-                    <FontAwesomeIcon
-                      icon={faArrowRight}
-                      className={cx("w-[14px] h-4 hidden", {
-                        "!block": pathname === "/playground"
-                      })}
-                    />
-                    <span className="text-24 leading-30px tracking-tight">Playground</span>
+                    <FontAwesomeIcon icon={faLinkedinIn} className="w-[18px] h-5 text-neutrals-100" />
                   </Link>
                 </div>
               </div>
@@ -345,63 +404,9 @@ export default function Navigation() {
 
 
 
-            {/* contact */}
-            <div>
-
-              {/* label */}
-              <div className="mb-5 text-14 leading-14px text-neutrals-300 tracking-tight md:mb-4">
-                Contact me
-              </div>
-
-
-              <div className="flex flex-col gap-1 mb-10 md:mb-8">
-                <Link
-                  href="mailto:info@karrel.be"
-                  className="text-24 leading-30px tracking-tight underline block font-normal text-neutrals-100"
-                >
-                  info@karrel.be
-                </Link>
-
-                <Link
-                  href="tel:+32476280902"
-                  className="text-24 leading-30px tracking-tight underline block font-normal text-neutrals-100"
-                >
-                  +32 476 28 09 02
-                </Link>
-              </div>
-
-
-
-              {/* socials */}
-              <div className="flex items-center gap-5">
-                <Link
-                  href="https://www.instagram.com/kareldecoene/"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faInstagram} className="w-[18px] h-5 text-neutrals-100" />
-                </Link>
-
-                <Link
-                  href="https://www.facebook.com/karel.decoene.5/"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faFacebookF} className="w-[18px] h-5 text-neutrals-100" />
-                </Link>
-
-                <Link
-                  href="https://www.linkedin.com/in/karel-decoene-395478187/"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faLinkedinIn} className="w-[18px] h-5 text-neutrals-100" />
-                </Link>
-              </div>
+            <div className="flex justify-center items-center font-light text-neutrals-100">
+              ©2023 Karel - All rights reserved.
             </div>
-          </div>
-
-
-
-          <div className="flex justify-center items-center font-light text-neutrals-100">
-            ©2023 Karel - All rights reserved.
           </div>
         </div>
       </div>
