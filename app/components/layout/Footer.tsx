@@ -77,7 +77,7 @@ export default async function Footer() {
               {/* socials mobile */}
               <div className="flex items-center gap-5 lg:hidden">
                 {data.socials.map((social: SocialProps, index: number) => (
-                  <FontAwesomeIcon icon={renderIcon(social.social)} className="text-neutrals-100 w-5 h-5" />
+                  <FontAwesomeIcon icon={renderIcon(social.social)} className="text-neutrals-100 w-5 !h-5" />
                 ))}
               </div>
             </div>

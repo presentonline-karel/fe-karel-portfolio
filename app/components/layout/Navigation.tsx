@@ -17,6 +17,7 @@ import { getKirbyFiles } from "@/utils/helper-functions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import ProgressBar from "../components/ProgressBar";
 
 
 
@@ -52,10 +53,12 @@ export default function Navigation() {
 
 
   return (
-    <div className={cx("py-5 border-b-[0.4px] border-neutrals-300 fixed top-0 left-0 w-screen bg-neutrals-100 z-40 lg:py-7 xl:py-10", {
-      "xl:!py-6 shadow-card border-neutrals-400": menuSmall === true,
+    <nav className={cx("border-b-[0.4px] border-neutrals-300 fixed top-0 left-0 w-screen bg-neutrals-100 z-40", {
+      "shadow-card border-neutrals-400": menuSmall === true,
     })}>
-      <div className="px-4 sm:px-12 lg:px-20 xl:max-w-8xl xl:mx-auto">
+      <div className={cx("px-4 py-5 sm:px-12 lg:px-20 lg:py-7 xl:py-10 xl:max-w-8xl xl:mx-auto", {
+        "xl:!py-7": menuSmall === true,
+      })}>
 
         {/* Top */}
         <div className="flex justify-between items-center">
@@ -410,6 +413,8 @@ export default function Navigation() {
           </div>
         </div>
       </div>
-    </div>
+
+      <ProgressBar />
+    </nav>
   )
 }
