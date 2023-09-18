@@ -24,11 +24,11 @@ import cx from "classnames";
 
 export default function HeroService({ data }: HeroServiceProps) {
   return (!data.isHidden && (
-    <section id="heroService" className="section pt-6 sm:pt-12 md:pt-0">
-      <Wrapper className="flex flex-col gap-10 sm:gap-12 md:pt-[146px] md:relative md:flex-row md:items-center md:gap-20 lg:gap-[109px] lg:pt-[160px] hd:border-neutrals-300 hd:pt-[160px]">
+    <section id="heroService" className="section pt-[109px] sm:pt-[133px] md:pt-0">
+      <Wrapper className="flex flex-col gap-10 sm:gap-12 md:pt-[231px] md:relative md:flex-row md:items-center md:gap-20 lg:gap-[109px] lg:pt-[261px] xl:!pt-[297px] hd:border-neutrals-300">
 
         {/* Freelance/project switch */}
-        <div className="md:absolute md:top-10 md:left-1/2 md:-translate-x-1/2 md:flex md:items-center md:gap-3">
+        <div className="md:absolute md:top-[125px] md:left-1/2 md:-translate-x-1/2 md:flex md:items-center md:gap-3 lg:top-[141px] xl:top-[177px]">
 
           {/* freelance option */}
           {data.content.isfreelanceorproject === "false" ? (

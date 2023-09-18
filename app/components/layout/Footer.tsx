@@ -44,7 +44,7 @@ export default async function Footer() {
 
 
   return (
-    <footer className="bg-neutrals-1300 py-12 pb-4 sm:pt-16 md:pb-6 lg:pt-[96px] lg:pb-8 hd:py-0">
+    <footer className="bg-neutrals-1300 py-12 pb-4 border-t-[0.4px] border-neutrals-1100 sm:pt-16 md:pb-6 lg:pt-[96px] lg:pb-8 hd:py-0">
       <Wrapper className="hd:pt-[96px] hd:pb-8 hd:!border-neutrals-1200">
 
         {/* Top part */}
@@ -56,7 +56,7 @@ export default async function Footer() {
           >
             <FontAwesomeIcon
               icon={faArrowUp}
-              className="w-5 h-5 text-neutrals-100 z-20 lg:w-6 lg:h-6 xl:w-7 xl:h-7"
+              className="w-5 !h-5 text-neutrals-100 z-20 lg:w-6 lg:!h-6 xl:w-7 xl:!h-7"
             />
           </Link>
 

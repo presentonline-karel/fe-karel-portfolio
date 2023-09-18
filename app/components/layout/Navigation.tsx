@@ -3,7 +3,7 @@
 // Next & React
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 // Classnames
@@ -12,6 +12,8 @@ import cx from "classnames";
 // Utils
 import { fetcher } from "@/utils/fetcher";
 import { getKirbyFiles } from "@/utils/helper-functions";
+
+// FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
@@ -22,14 +24,39 @@ export default function Navigation() {
 
   // States
   const [menuOpen, setMenuOpen] = useState(false);
+  const [menuSmall, setMenuSmall] = useState(false);
 
   // Hooks
   const pathname = usePathname();
 
 
 
+  // Adjust menu when scrolled
+  if (typeof window !== "undefined") {
+    window.addEventListener('scroll', () => {
+      console.log(scrollY);
+
+      if (scrollY >= 36) {
+        setMenuSmall(true);
+      } else {
+        setMenuSmall(false);
+      }
+    });
+  }
+
+
+
+  // Disbale body scrolling when menuOpen
+  useEffect(() => {
+    menuOpen ? (document.body.style.overflow = "hidden") : (document.body.style.overflow = "auto")
+  }, [menuOpen]);
+
+
+
   return (
-    <div className="py-5 border-b-[0.4px] border-neutrals-400 lg:py-7">
+    <div className={cx("py-5 border-b-[0.4px] border-neutrals-300 fixed top-0 left-0 w-screen bg-neutrals-100 z-40 lg:py-7 xl:py-10", {
+      "xl:!py-6 shadow-card border-neutrals-400": menuSmall === true,
+    })}>
       <div className="px-4 sm:px-12 lg:px-20 xl:max-w-8xl xl:mx-auto">
 
         {/* Top */}
@@ -51,8 +78,8 @@ export default function Navigation() {
           <div className="hidden lg:flex lg:justify-center lg:items-center lg:gap-8 lg:pt-1 xl:gap-10">
             <Link
               href="/"
-              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium", {
-                "border-prim-700": pathname === "/" || pathname === "/home",
+              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium hover:border-prim-400", {
+                "!border-prim-700": pathname === "/" || pathname === "/home",
               })}
             >
               <span className="text-20 leading-26px tracking-tight xl:text-24 xl:leading-30px">Home</span>
@@ -60,8 +87,8 @@ export default function Navigation() {
 
             <Link
               href="/projects"
-              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium", {
-                "border-prim-700": pathname === "/projects",
+              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium hover:border-prim-400", {
+                "!border-prim-700": pathname === "/projects",
               })}
             >
               <span className="text-20 leading-26px tracking-tight xl:text-24 xl:leading-30px">Projects</span>
@@ -69,15 +96,15 @@ export default function Navigation() {
 
             <Link
               href="/#services"
-              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium")}
+              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium hover:border-prim-400")}
             >
               <span className="text-20 leading-26px tracking-tight xl:text-24 xl:leading-30px">Services</span>
             </Link>
 
             <Link
               href="/blog"
-              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium", {
-                "border-prim-700": pathname === "/blog",
+              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium hover:border-prim-400", {
+                "!border-prim-700": pathname === "/blog",
               })}
             >
               <span className="text-20 leading-26px tracking-tight xl:text-24 xl:leading-30px">Blog</span>
@@ -85,8 +112,8 @@ export default function Navigation() {
 
             <Link
               href="/about"
-              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium", {
-                "border-prim-700": pathname === "/about",
+              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium hover:border-prim-400", {
+                "!border-prim-700": pathname === "/about",
               })}
             >
               <span className="text-20 leading-26px tracking-tight xl:text-24 xl:leading-30px">About</span>
@@ -94,8 +121,8 @@ export default function Navigation() {
 
             <Link
               href="/contact"
-              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium", {
-                "border-prim-700": pathname === "/contact",
+              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium hover:border-prim-400", {
+                "!border-prim-700": pathname === "/contact",
               })}
             >
               <span className="text-20 leading-26px tracking-tight xl:text-24 xl:leading-30px">Contact</span>
@@ -105,9 +132,9 @@ export default function Navigation() {
 
 
           {/* email */}
-          <Link 
+          <Link
             href="mailto:info@karrel.be"
-            className="tracking-tight text-18 leading-6 text-neutrals-1300 border-b-2 border-neutrals-900 cursor-pointer hover:border-prim-700 xl:text-20 xl:leading-26px"
+            className="hidden tracking-tight text-18 leading-6 text-neutrals-1300 border-b-2 border-neutrals-900 cursor-pointer hover:border-prim-700 lg:block xl:text-20 xl:leading-26px"
           >
             info@karrel.be
           </Link>
@@ -133,7 +160,7 @@ export default function Navigation() {
 
 
         {/* Sliding nav */}
-        <div className={cx("fixed top-0 right-0 w-[283px] h-full bg-neutrals-1300 py-5 px-4 translate-x-full z-50 flex flex-col justify-between sm:w-[400px] sm:px-12 lg:hidden", {
+        <div className={cx("fixed top-0 right-0 w-[283px] h-full bg-neutrals-1300 py-5 px-4 translate-x-full z-50 flex flex-col justify-between border-l-[0.4px] border-neutrals-1100 sm:w-[400px] sm:px-12 lg:hidden", {
           "!translate-x-0": menuOpen === true,
         })}>
           <div className="">
@@ -269,13 +296,13 @@ export default function Navigation() {
                     href="/web-development-project"
                     onClick={() => setMenuOpen(false)}
                     className={cx("flex items-center gap-2 text-neutrals-100", {
-                      "text-prim-500": pathname === "/web-development-project",
+                      "text-prim-500": pathname === "/web-development-project" || pathname === "/web-development-freelance",
                     })}
                   >
                     <FontAwesomeIcon
                       icon={faArrowRight}
                       className={cx("w-[14px] h-4 hidden", {
-                        "!block": pathname === "/web-development-project",
+                        "!block": pathname === "/web-development-project" || pathname === "/web-development-freelance",
                       })}
                     />
                     <span className="text-24 leading-30px tracking-tight">Web development</span>
@@ -285,13 +312,13 @@ export default function Navigation() {
                     href="/web-design-project"
                     onClick={() => setMenuOpen(false)}
                     className={cx("flex items-center gap-2 text-neutrals-100", {
-                      "text-prim-500": pathname === "/web-design-project",
+                      "text-prim-500": pathname === "/web-design-project" || pathname === "/web-design-freelance",
                     })}
                   >
                     <FontAwesomeIcon
                       icon={faArrowRight}
                       className={cx("w-[14px] h-4 hidden", {
-                        "!block": pathname === "/web-design-project"
+                        "!block": pathname === "/web-design-project" || pathname === "/web-design-freelance",
                       })}
                     />
                     <span className="text-24 leading-30px tracking-tight">Web design</span>

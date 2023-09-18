@@ -19,8 +19,8 @@ import cx from "classnames";
 
 export default function HeroPrimary({ data }: HeroPrimaryProps) {
   return (!data.isHidden && (
-    <section id="heroPrimary" className="section">
-      <Wrapper className="flex flex-col gap-10 sm:gap-12 md:flex-row md:items-center md:gap-20 lg:gap-[109px] hd:border-neutrals-300">
+    <section id="heroPrimary" className="section pt-[157px] lg:pt-[221px] xl:pt-0">
+      <Wrapper className="flex flex-col gap-10 sm:gap-12 md:flex-row md:items-center md:gap-20 lg:gap-[109px] xl:!pt-[257px] hd:border-neutrals-300">
 
         {/* Text */}
         <div className="w-full xl:w-[547px]">
@@ -39,12 +39,12 @@ export default function HeroPrimary({ data }: HeroPrimaryProps) {
           {/* Buttons */}
           <div className="flex items-center gap-2">
             {data.content.herobuttons.map((button: ButtonProps, index: number) => (
-              <Button 
+              <Button
                 key={index}
-                button={button} 
+                button={button}
                 className={cx("", {
-                  "w-full px-5 md:w-auto": data.content.herobuttons.length === 2
-                })} 
+                  "w-full px-5 sm:px-7 md:w-auto lg:px-9": data.content.herobuttons.length === 2
+                })}
               />
             ))}
           </div>
