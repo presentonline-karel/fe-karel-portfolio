@@ -22,7 +22,7 @@ export default async function Page({ params }: { params: { slug: string; } }) {
   }
 
   const resp = await fetcher(requestData.query, requestData.select);
-  console.log("resp", resp);
+  // console.log("resp", resp);
   // console.log("resp parsed ->", JSON.parse(resp.result.customPageContent));
 
   if (!resp.result || resp.result.length === 0) {

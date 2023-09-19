@@ -59,6 +59,8 @@ export default async function Page({ params }: { params: { slug: string; } }) {
       <HeroProject period={data.period} shortTitle={data.shortTitle} description={data.description} urls={data.urls} technologies={data.technologies.technologies} carouselImages={data.carouselImages} />
       <TextWithImage data={textWithImageData} />
       <RelatedProjects data={data.relatedProjects} />
+
+      {data.customBlocks.map((section: any, index: number) => sectionRenderer(section, index))}
     </main>
   )
 }

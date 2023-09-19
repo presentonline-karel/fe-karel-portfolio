@@ -19,15 +19,6 @@ import { getKirbyFiles } from "@/utils/helper-functions";
 
 
 export default function RelatedProjects({ data }: RelatedProjectsProps) {
-  console.log("relatedProjectsData", data);
-
-
-
-  // console.log("data", data.data);
-  // console.log("data projects with OBJECT", Object.values(Object.values(data)[0]));
-
-
-
   return (
     <section className="section">
       <Wrapper className="lg:flex lg:items-start lg:gap-8">
@@ -53,16 +44,18 @@ export default function RelatedProjects({ data }: RelatedProjectsProps) {
         <div className="flex items-stretch gap-6 lg:w-2/3">
 
           {/* project 1 */}
-          <Link 
-            href={Object.values(data)[0].slug}
-            className="bg-neutrals-1200 flex flex-col justify-between"
+          <Link
+            // @ts-ignore
+            href={data.data[Object.keys(data.data)[0]].slug}
+            className="bg-neutrals-1200 flex flex-col justify-between w-full"
           >
             <div>
 
               {/* Project cover */}
               <div className="relative aspect-[3/2]">
                 <Image
-                  src={Object.values(data)[0].cover.url}
+                  // @ts-ignore
+                  src={data.data[Object.keys(data.data)[0]].cover.url}
                   fill={true}
                   alt="Temp alt message"
                   className="object-cover"
@@ -72,23 +65,27 @@ export default function RelatedProjects({ data }: RelatedProjectsProps) {
               {/* Project content */}
               <div className="py-6 px-5 relative lg:py-8 lg:px-6">
                 <div>
-                  {Object.values(data)[0].isprojectnew === "true" && (
+                  {/* @ts-ignore */}
+                  {data.data[Object.keys(data.data)[0]].isprojectnew === "true" && (
                     <div className="label light shadow-btnPrimary absolute left-5 top-0 -translate-y-1/2">
                       New
                     </div>
                   )}
 
                   <h3 className="h h3 mb-1 text-neutrals-100 lg:text-24 lg:leading-30px">
-                    {Object.values(data)[0].longtitle}
+                    {/* @ts-ignore */}
+                    {data.data[Object.keys(data.data)[0]].longtitle}
                   </h3>
 
                   <p className="p text-neutrals-200 mb-3 lg:mb-4">
-                    {Object.values(data)[0].descriptioncard}
+                    {/* @ts-ignore */}
+                    {data.data[Object.keys(data.data)[0]].descriptioncard}
                   </p>
 
                   {/* Tags */}
                   <div className="flex items-center gap-1 flex-wrap mb-6 lg:mb-8">
-                    {Object.values(data)[0].tags.split(", ").map((tag: string, index: number) => (
+                    {/* @ts-ignore */}
+                    {data.data[Object.keys(data.data)[0]].tags.split(", ").map((tag: string, index: number) => (
                       <div
                         key={index}
                         className="label dark !mb-0"
@@ -112,16 +109,18 @@ export default function RelatedProjects({ data }: RelatedProjectsProps) {
 
 
           {/* project 2 */}
-          <Link 
-            href={Object.values(data)[1].slug}
-            className="bg-neutrals-1200 flex-col justify-between hidden sm:flex"
+          <Link
+            // @ts-ignore
+            href={data.data[Object.keys(data.data)[1]].slug}
+            className="bg-neutrals-1200 flex-col justify-between w-full hidden sm:flex"
           >
             <div>
 
               {/* Project cover */}
               <div className="relative aspect-[3/2]">
                 <Image
-                  src={Object.values(data)[1].cover.url}
+                  // @ts-ignore
+                  src={data.data[Object.keys(data.data)[1]].cover.url}
                   fill={true}
                   alt="Temp alt message"
                   className="object-cover"
@@ -131,23 +130,27 @@ export default function RelatedProjects({ data }: RelatedProjectsProps) {
               {/* Project content */}
               <div className="py-6 px-5 relative lg:py-8 lg:px-6">
                 <div>
-                  {Object.values(data)[1].isprojectnew === "true" && (
+                  {/* @ts-ignore */}
+                  {data.data[Object.keys(data.data)[1]].isprojectnew === "true" && (
                     <div className="label light shadow-btnPrimary absolute left-5 top-0 -translate-y-1/2">
                       New
                     </div>
                   )}
 
                   <h3 className="h h3 mb-1 text-neutrals-100 lg:text-24 lg:leading-30px">
-                    {Object.values(data)[1].longtitle}
+                    {/* @ts-ignore */}
+                    {data.data[Object.keys(data.data)[1]].longtitle}
                   </h3>
 
                   <p className="p text-neutrals-200 mb-3 lg:mb-4">
-                    {Object.values(data)[1].descriptioncard}
+                    {/* @ts-ignore */}
+                    {data.data[Object.keys(data.data)[1]].descriptioncard}
                   </p>
 
                   {/* Tags */}
                   <div className="flex items-center gap-1 flex-wrap mb-6 lg:mb-8">
-                    {Object.values(data)[1].tags.split(", ").map((tag: string, index: number) => (
+                    {/* @ts-ignore */}
+                    {data.data[Object.keys(data.data)[1]].tags.split(", ").map((tag: string, index: number) => (
                       <div
                         key={index}
                         className="label dark !mb-0"

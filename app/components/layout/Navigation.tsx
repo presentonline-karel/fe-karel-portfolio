@@ -57,7 +57,7 @@ export default function Navigation() {
       "shadow-card border-neutrals-400": menuSmall === true,
     })}>
       <div className={cx("px-4 py-5 sm:px-12 lg:px-20 lg:py-7 xl:py-10 xl:max-w-8xl xl:mx-auto", {
-        "xl:!py-7": menuSmall === true,
+        "xl:!py-6 hd:!py-7": menuSmall === true,
       })}>
 
         {/* Top */}
