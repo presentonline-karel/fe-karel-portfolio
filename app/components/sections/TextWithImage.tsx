@@ -45,7 +45,8 @@ export default function TextWithImage({ data }: TextWithImageProps) {
 
           {/* Text blocks */}
           <div className="text-blocks flex flex-col gap-4 lg:gap-6">
-            {JSON.parse(data.content.textwithimagetext).map((textBlock: any, index: number) => textBlockRenderer(textBlock, index))}
+            {/* @ts-ignore */}
+            {typeof data.content.textwithimagetext == "string" ? JSON.parse(data.content.textwithimagetext).map((textBlock: any, index: number) => textBlockRenderer(textBlock, index)) : data.content.textwithimagetext.map((textBlock: any, index: number) => textBlockRenderer(textBlock, index))}
           </div>
         </div>
 
@@ -54,7 +55,8 @@ export default function TextWithImage({ data }: TextWithImageProps) {
         {/* Image group */}
         <div className="block relative aspect-[3/2] w-full md:aspect-[4/5] md:block xl:w-[515px]">
           <Image
-            src={getKirbyFiles(data.content.textwithimageimage[0])}
+            // @ts-ignore
+            src={typeof data.content.textwithimageimage[0] == "string" ? getKirbyFiles(data.content.textwithimageimage[0]) : data.content.textwithimageimage.url}
             alt="temp alt message"
             fill={true}
             className="object-cover border-[0.4px] border-neutrals-400 shadow-image z-10"

@@ -58,14 +58,6 @@
     @apply bg-transparent border text-neutrals-1300 border-neutrals-1300 shadow-btnBlack !delay-0 hover:!bg-neutrals-1300 hover:!text-neutrals-100;
   }
 
-  /* .btn-secondary span, .btn-secondary svg {
-    @apply text-neutrals-1300;
-  }
-
-  .btn-secondary:hover span, .btn-secondary:hover > svg {
-    @apply !text-neutrals-100 !delay-0;
-  } */
-
   /* Section */
   .section {
     @apply py-[72px] bg-neutrals-100 lg:py-[120px] hd:py-0;
@@ -115,6 +107,10 @@
 
   *::selection {
     @apply text-neutrals-1400 bg-prim-200;
+  }
+
+  img {
+    @apply !select-none;
   }
 
   /* __SCROLLBAR__ */

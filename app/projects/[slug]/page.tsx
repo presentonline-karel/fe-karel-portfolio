@@ -7,6 +7,8 @@ import { sectionRenderer } from "@/utils/render-section";
 
 // Components
 import HeroProject from "@/app/components/sections/HeroProject";
+import TextWithImage from "@/app/components/sections/TextWithImage";
+import RelatedProjects from "@/app/components/sections/RelatedProjects";
 
 // Get fresh data
 export const revalidate = 0;
@@ -37,11 +39,26 @@ export default async function Page({ params }: { params: { slug: string; } }) {
 
 
 
-  return (
-    <div>
-      Placeholder
+  // Project textWithImage data
+  const textWithImageData = {
+    content: {
+      textwithimagelabel: data.contentLabel,
+      textwithimagetitle: data.contentTitle,
+      textwithimagetext: data.contentText,
+      textwithimageimage: data.contentImage,
+      textwithimageimageplacement: "false",
+      bgcolor: "grey",
+    },
+    isHidden: false,
+  }
 
+
+
+  return (
+    <main>
       <HeroProject period={data.period} shortTitle={data.shortTitle} description={data.description} urls={data.urls} technologies={data.technologies.technologies} carouselImages={data.carouselImages} />
-    </div>
+      <TextWithImage data={textWithImageData} />
+      <RelatedProjects data={data.relatedProjects} />
+    </main>
   )
 }

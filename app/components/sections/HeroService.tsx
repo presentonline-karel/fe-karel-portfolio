@@ -102,7 +102,7 @@ export default function HeroService({ data }: HeroServiceProps) {
           <div className="flex items-center gap-3 mb-4 lg:gap-4 lg:mb-8">
             <Link
               href="/"
-              className="underline py-2 text-14 leading-14px text-neutrals-1300 lg:text-18 lg:leading-18px"
+              className="underline py-2 text-14 leading-14px text-neutrals-1300 tracking-tight lg:text-18 lg:leading-18px"
             >
               Home
             </Link>
@@ -114,7 +114,7 @@ export default function HeroService({ data }: HeroServiceProps) {
 
             <Link
               href="/#services"
-              className="underline py-2 text-14 leading-14px text-neutrals-1300 lg:text-18 lg:leading-18px"
+              className="underline py-2 text-14 leading-14px text-neutrals-1300 tracking-tight lg:text-18 lg:leading-18px"
             >
               Services
             </Link>
@@ -124,7 +124,7 @@ export default function HeroService({ data }: HeroServiceProps) {
               className="text-[10px] leading-3 text-neutrals-1200 w-[7px] h-3 lg:w-[9px] lg:h-4"
             />
 
-            <div className="py-2 text-14 leading-14px text-neutrals-1000 lg:text-18 lg:leading-18px">
+            <div className="py-2 text-14 leading-14px text-neutrals-1000 tracking-tight lg:text-18 lg:leading-18px">
               {data.content.service}
             </div>
           </div>
