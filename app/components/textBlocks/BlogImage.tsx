@@ -12,7 +12,7 @@ export default function BlogImage({data}: BlogImageProps) {
 
   return (
     <div className="py-6">
-      <div className="relative aspect-[3/2]">
+      <div className="relative aspect-[3/2] lg:max-w-[1062px] lg:mx-auto">
         <Image
           src={getKirbyFiles(data.content.blogimage[0])}
           alt="test"

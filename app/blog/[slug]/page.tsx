@@ -39,7 +39,7 @@ export default async function Page({ params }: { params: { slug: string; } }) {
 
       {/* blogBody */}
       <section className="">
-        <Wrapper className="flex flex-col gap-4">
+        <Wrapper className="flex flex-col gap-4 lg:gap-6 hd:pt-0">
           {data.blogDetailBlocks.map((textBlock: any, index: number) => textBlockRenderer(textBlock, index))}
         </Wrapper>
       </section>

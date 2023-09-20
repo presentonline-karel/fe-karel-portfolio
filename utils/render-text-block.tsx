@@ -5,6 +5,8 @@ import UnorderedList from "@/app/components/textBlocks/UnorderedList";
 import BlogImage from "@/app/components/textBlocks/BlogImage";
 import BlogSubtitle from "@/app/components/textBlocks/BlogSubtitle";
 import BlogParagraph from "@/app/components/textBlocks/BlogParagraph";
+import BlogSubSubtitle from "@/app/components/textBlocks/BlogSubSubtitle";
+import BlogQuote from "@/app/components/textBlocks/BlogQuote";
 
 
 
@@ -22,6 +24,10 @@ export function textBlockRenderer(textBlock: any, index: number) {
       return <BlogSubtitle key={index} data={textBlock} />;
     case "blogParagraph":
       return <BlogParagraph key={index} data={textBlock} />;
+    case "blogSubSubtitle":
+      return <BlogSubSubtitle key={index} data={textBlock} />;
+    case "blogQuote":
+      return <BlogQuote key={index} data={textBlock} />;
     default:
       return <div key={index} className="bg-red-200">No data</div>;
   }
