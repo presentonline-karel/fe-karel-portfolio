@@ -66,8 +66,8 @@ export default function Projects({ labelTags, tags, projects }: ProjectsProps) {
               {tags.split(", ").map((tag: string, index: number) => (
                 <button
                   onClick={() => activeTag === tag ? setActiveTag("") : setActiveTag(tag)}
-                  className={cx("btn btn-secondary whitespace-nowrap py-3 px-4 text-16 leading-4 !border-neutrals-600 hover:!border-neutrals-1300 lg:px-8 lg:py-4 lg:text-20 lg:leading-5", {
-                    "!border-neutrals-1300 !bg-neutrals-1300 !text-neutrals-100": activeTag === tag,
+                  className={cx("btn btn-secondary whitespace-nowrap py-3 px-4 text-16 leading-4 !border-neutrals-600 hover:!bg-neutrals-100 hover:!text-neutrals-1300 focus:border-neutrals-600 focus:bg-neutrals-100 focus:text-neutrals-1300 lg:px-8 lg:py-4 lg:text-20 lg:leading-5", {
+                    "!border-neutrals-1300 !bg-neutrals-1300 !text-neutrals-100 focus:!border-neutrals-1300 focus:!bg-neutrals-1300 focus:!text-neutrals-100": activeTag === tag,
                   })}
                 >
                   {/* @ts-ignore */}
