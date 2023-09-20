@@ -7,10 +7,10 @@ import { useState, useEffect } from "react";
 
 // Types
 import { ProjectsProps } from "@/types/sections/Projects";
+import { ProjectProps } from "@/types/organisms/Project";
 
 // Components
 import Wrapper from "../helpers/Wrapper";
-import { ProjectProps } from "@/types/organisms/Project";
 
 // FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -25,17 +25,6 @@ export default function Projects({ labelTags, tags, projects }: ProjectsProps) {
 
   // States
   const [activeTag, setActiveTag] = useState("");
-
-
-
-  // @ts-ignore
-  console.log("projectProjects", Object.values(projects.data));
-
-
-
-  useEffect(() => {
-    console.log(activeTag);
-  }, [activeTag])
 
 
 

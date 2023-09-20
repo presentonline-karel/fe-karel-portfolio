@@ -3,7 +3,10 @@ import { notFound } from "next/navigation";
 
 // Components
 import Header from "../components/sections/Header";
-import Projects from "../components/sections/Projects";
+import Blogs from "../components/sections/Blogs";
+
+// Utils
+import { sectionRenderer } from "@/utils/render-section";
 
 
 
@@ -19,13 +22,11 @@ export default async function ProjectsPage() {
     Accept: "application/json",
   };
 
-  const resp = await fetch(`http://be-karel-portfolio.int/projects`, {
+  const resp = await fetch(`http://be-karel-portfolio.int/blog`, {
     method: "GET",
     mode: 'no-cors',
     headers,
   });
-
-
 
   // If data is not correct JSON -> 404 page
   let data;
@@ -41,11 +42,11 @@ export default async function ProjectsPage() {
 
 
 
-  // Projects header data
+  // Blog header data
   const headerData = {
     content: {
-      headertitle: data.projectsTitle,
-      headerparagraph: data.projectsParagraph,
+      headertitle: data.blogsTitle,
+      headerparagraph: data.blogsParagraph,
     },
     isHidden: false,
   }
@@ -55,7 +56,9 @@ export default async function ProjectsPage() {
   return (
     <main>
       <Header data={headerData} />
-      <Projects labelTags={data.labelTags} tags={data.tags} projects={data.projects} />
+      <Blogs labelTags={data.labelTags} tags={data.tags} blogs={data.blogs} />
+
+      {data.customBlocks.map((section: any, index: number) => sectionRenderer(section, index))}
     </main>
   )
 }

@@ -1,3 +1,6 @@
+// Next
+import { notFound } from "next/navigation";
+
 // Utils
 import { fetcher } from "./fetcher";
 
@@ -27,6 +30,6 @@ export async function getPage(page: string, select = {}) {
 export function stringToDate(dateString: string) {
   const date = new Date(dateString);
   const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][date.getMonth()];
-  const dateToReturn = `${month.substr(0, 3)} '${date.getFullYear().toString().substr(2,4)}`;
+  const dateToReturn = `${month.substr(0, 3)} '${date.getFullYear().toString().substr(2, 4)}`;
   return dateToReturn;
 }
