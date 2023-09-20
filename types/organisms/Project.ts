@@ -8,4 +8,5 @@ export interface ProjectProps {
 	tags: string;
 	cover: ImageProps;
 	slug: string;
+    uri?: string;
 }
