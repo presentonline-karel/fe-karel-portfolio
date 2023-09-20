@@ -1,5 +1,9 @@
 // Components
 import BlogHeader from "@/app/components/sections/BlogHeader";
+import Wrapper from "@/app/components/helpers/Wrapper";
+
+// Utils
+import { textBlockRenderer } from "@/utils/render-text-block";
 
 
 
@@ -23,13 +27,22 @@ export default async function Page({ params }: { params: { slug: string; } }) {
   });
 
   const data = await resp.json();
-  console.log("respBlogDetail", data);
+  console.log("blogDetailBlocks", data.blogDetailBlocks);
 
 
 
   return (
     <main>
       <BlogHeader blogTitle={data.blogTitle} blogIntro={data.blogIntro} publishDate={data.publishDate} minutesRead={data.minutesRead} />
+
+
+
+      {/* blogBody */}
+      <section className="">
+        <Wrapper className="flex flex-col gap-4">
+          {data.blogDetailBlocks.map((textBlock: any, index: number) => textBlockRenderer(textBlock, index))}
+        </Wrapper>
+      </section>
     </main>
   )
 }
