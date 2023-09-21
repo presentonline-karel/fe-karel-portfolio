@@ -37,8 +37,6 @@ export default async function Footer() {
     headers,
   });
 
-  //console.log("respFooter", resp);
-
   const data = await resp.json();
 
 
@@ -89,7 +87,7 @@ export default async function Footer() {
             {/* socials desktop */}
             <div className="hidden lg:flex lg:items-center lg:gap-6">
               {data.socials.map((social: SocialProps, index: number) => (
-                <FontAwesomeIcon icon={renderIcon(social.social)} className="text-neutrals-100 w-6 h-6" />
+                <FontAwesomeIcon icon={renderIcon(social.social)} className="text-neutrals-100 w-6 !h-6" />
               ))}
             </div>
 

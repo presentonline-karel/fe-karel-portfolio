@@ -155,12 +155,12 @@ export default function HeroProject({ period, shortTitle, description, urls, tec
 
             {/* Swiper navigation - arrows */}
             <div className="flex items-center gap-2">
-              <div className="swiper-button-prev-heroProject swiper-button cursor-pointer w-10 h-10 flex justify-center items-center border border-neutrals-1300 bg-neutrals-200 shadow-btnBlack">
-                <FontAwesomeIcon icon={faArrowLeft} className="text-16 leading-4 w-4 h-4 text-neutrals-1300" />
+              <div className="swiper-button-prev-heroProject swiper-button cursor-pointer w-10 h-10 flex justify-center items-center border border-neutrals-1100 text-neutrals-1100 bg-neutrals-200 shadow-btnBlack transition-colors ease-in-out duration-300 hover:border-neutrals-1400 hover:text-neutrals-1400">
+                <FontAwesomeIcon icon={faArrowLeft} className="text-16 leading-4 w-4 h-4" />
               </div>
 
-              <div className="swiper-button-next-heroProject swiper-button cursor-pointer w-10 h-10 flex justify-center items-center border border-neutrals-1300 bg-neutrals-200 shadow-btnBlack">
-                <FontAwesomeIcon icon={faArrowRight} className="text-16 leading-4 w-4 h-4 text-neutrals-1300" />
+              <div className="swiper-button-next-heroProject swiper-button cursor-pointer w-10 h-10 flex justify-center items-center border border-neutrals-1300 text-neutrals-1100 bg-neutrals-200 shadow-btnBlack transition-colors ease-in-out duration-300 hover:border-neutrals-1400 hover:text-neutrals-1400">
+                <FontAwesomeIcon icon={faArrowRight} className="text-16 leading-4 w-4 h-4" />
               </div>
             </div>
           </div>

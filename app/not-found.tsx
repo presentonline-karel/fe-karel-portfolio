@@ -26,13 +26,11 @@ export default async function PostNotFound() {
 
   const resp = await fetcher(requestData.query, requestData.select);
 
-  if (!resp.result || resp.result.length === 0) {
-    console.log("Did not find any error data!");
-  }
+
 
   return (
-    <div className="py-[72px] h-[calc(100vh-84px)] flex items-center md:h-auto md:py-[136px] hd:py-0">
-      <Wrapper className="mx-auto xl:w-[1440px] hd:py-[136px]">
+    <div className="py-[72px] h-screen flex items-center sm:h-auto sm:pt-[157px] lg:pt-[221px] lg:pb-[120px] xl:pt-0 hd:py-0">
+      <Wrapper className="mx-auto flex flex-col justify-center xl:!pt-[257px] xl:w-[1440px] xl:min-h-[calc(100vh-466px)] hd:pb-[136px] hd:pt-[272px]">
 
         {/* Icon-Container */}
         <div className="mx-auto w-[112px] h-[112px] flex justify-center items-center bg-prim-100 mb-16 lg:w-[148px] lg:h-[148px] lg:mb-[72px]">

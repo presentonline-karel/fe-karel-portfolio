@@ -1,13 +1,17 @@
+"use client";
+
 // Next
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from "react";
 
 // Components
 import Wrapper from "../helpers/Wrapper";
 
 // FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight, faChevronLeft, faClock, faChain } from "@fortawesome/free-solid-svg-icons";
-import { faFacebookF, faTwitter, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faChevronRight, faChevronLeft, faClock, faChain, faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedinIn, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 // Types
 import { BlogHeaderProps } from "@/types/sections/BlogHeader";
@@ -15,9 +19,38 @@ import { BlogHeaderProps } from "@/types/sections/BlogHeader";
 // Utils
 import { stringToDate } from "@/utils/helper-functions";
 
+// Classnames
+import cx from "classnames";
 
 
-export default function BlogHeader({blogTitle, blogIntro, publishDate, minutesRead}: BlogHeaderProps) {
+
+export default function BlogHeader({ blogTitle, blogIntro, publishDate, minutesRead }: BlogHeaderProps) {
+
+  // States
+  const [showLinkCopied, setShowLinkCopied] = useState(false);
+  const [shareUrl, setShareUrl] = useState("");
+
+
+
+  // Copy link functionality
+  const base = "https://localhost:3000";
+  const pathname = usePathname();
+
+  const copylink = () => {
+    navigator.clipboard.writeText(shareUrl);
+    setShowLinkCopied(true);
+
+    setTimeout(function () {
+      setShowLinkCopied(false);
+    }, 3000);
+  }
+
+  useEffect(() => {
+    setShareUrl(base + pathname);
+  }, [])
+
+
+
   return (
     <section className="pt-[157px] pb-6 lg:pt-[221px] lg:pb-0 xl:pt-0">
       <Wrapper className="md:max-w-[842px] md:mx-auto md:!px-0 lg:pb-10 xl:max-w-8xl xl:!px-[299px] xl:!pt-[257px] hd:!pb-10">
@@ -100,21 +133,32 @@ export default function BlogHeader({blogTitle, blogIntro, publishDate, minutesRe
           </div>
 
           <div className="flex items-center gap-5 lg:gap-6">
-            <Link href="https://google.com" target="_blank">
+            <button onClick={copylink}>
               <FontAwesomeIcon icon={faChain} className="w-5 !h-5 text-neutrals-1300 lg:w-6 lg:!h-6" />
-            </Link>
+            </button>
 
-            <Link href="https://google.com" target="_blank">
-              <FontAwesomeIcon icon={faFacebookF} className="w-[13px] !h-5 text-neutrals-1300 lg:w-[15px] lg:!h-6" />
-            </Link>
-
-            <Link href="https://google.com" target="_blank">
-              <FontAwesomeIcon icon={faTwitter} className="w-5 !h-5 text-neutrals-1300 lg:w-6 lg:!h-6" />
-            </Link>
-
-            <Link href="https://google.com" target="_blank">
+            <Link 
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=http://karrel.be`}
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faLinkedinIn} className="w-[18px] !h-5 text-neutrals-1300 lg:w-[21px] lg:!h-6" />
             </Link>
+
+            <Link
+              href={`https://wa.me/?text=${shareUrl}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon icon={faWhatsapp} className="w-5 !h-5 text-neutrals-1300 lg:w-6 lg:!h-6" />
+            </Link>
+          </div>
+
+          {/* Link copied message */}
+          <div className={cx("fixed hidden bg-success-100 text-success-500 bottom-8 left-4 w-[calc(100vw-32px)] items-center gap-2 py-2 px-4 z-20 border border-success-300 shadow-card sm:w-[calc(100vw-96px)] sm:left-12 sm:bottom-12 sm:py-4 sm:px-6 sm:gap-3 md:max-w-[842px] md:mx-auto md:left-auto", {
+            "!flex": showLinkCopied === true,
+          })}>
+            <FontAwesomeIcon icon={faCheck} className="text-16 leading-4 w-4 !h-4 sm:text-20 sm:leading-5 sm:w-5 sm:!h-5" />
+            <span className="tracking-tight text-16 leading-6 sm:text-20 sm:leading-26px">Link copied</span>
           </div>
         </div>
       </Wrapper>

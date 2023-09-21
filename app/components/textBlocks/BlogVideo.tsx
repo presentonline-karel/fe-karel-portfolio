@@ -4,8 +4,6 @@ import { BlogVideoProps } from "@/types/textBlocks/BlogVideo";
 
 
 export default function BlogVideo({ data }: BlogVideoProps) {
-  console.log("blogVideoData", data);
-
   return (
     <div className="py-6">
       <div className="aspect-[16/9] w-full lg:max-w-[1062px] lg:mx-auto">
