@@ -109,7 +109,7 @@
     @apply text-neutrals-1400 bg-prim-200;
   }
 
-  img {
+  img, iframe, video {
     @apply !select-none;
   }
 

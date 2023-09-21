@@ -7,6 +7,9 @@ import BlogSubtitle from "@/app/components/textBlocks/BlogSubtitle";
 import BlogParagraph from "@/app/components/textBlocks/BlogParagraph";
 import BlogSubSubtitle from "@/app/components/textBlocks/BlogSubSubtitle";
 import BlogQuote from "@/app/components/textBlocks/BlogQuote";
+import BlogUnorderedList from "@/app/components/textBlocks/BlogUnorderedList";
+import BlogOrderedList from "@/app/components/textBlocks/BlogOrderedList";
+import BlogVideo from "@/app/components/textBlocks/BlogVideo";
 
 
 
@@ -28,6 +31,12 @@ export function textBlockRenderer(textBlock: any, index: number) {
       return <BlogSubSubtitle key={index} data={textBlock} />;
     case "blogQuote":
       return <BlogQuote key={index} data={textBlock} />;
+    case "blogUnorderedList":
+      return <BlogUnorderedList key={index} data={textBlock} />;
+    case "blogOrderedList":
+      return <BlogOrderedList key={index} data={textBlock} />;
+    case "blogVideo":
+      return <BlogVideo key={index} data={textBlock} />;
     default:
       return <div key={index} className="bg-red-200">No data</div>;
   }
