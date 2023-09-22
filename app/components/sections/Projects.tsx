@@ -40,7 +40,7 @@ export default function Projects({ labelTags, tags, projects }: ProjectsProps) {
 
           {/* Tags */}
           <div className="flex items-center gap-2 lg:gap-3">
-            <button 
+            <button
               onClick={() => setActiveTag("")}
               className="btn btn-primary whitespace-nowrap py-3 px-4 text-16 leading-4 lg:text-20 lg:leading-5 lg:px-8 lg:py-4"
             >

@@ -1,3 +1,7 @@
+// Next & React
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
+
 // Components
 import BlogHeader from "@/app/components/sections/BlogHeader";
 import Wrapper from "@/app/components/helpers/Wrapper";
@@ -5,6 +9,34 @@ import BlogFooter from "@/app/components/sections/BlogFooter";
 
 // Utils
 import { textBlockRenderer } from "@/utils/render-text-block";
+import { fetcher } from "@/utils/fetcher";
+import { FALLBACK_SEO } from "@/utils/fallback-seo";
+
+
+
+export const revalidate = 0;
+
+// Get meta title & description
+export async function generateMetadata({ params }: { params: { slug: string }; }): Promise<Metadata> {
+  let requestData = {
+    query: `page('blog/${params.slug}')`,
+    select: {
+      "metaTitle": true,
+      "metaDescription": true,
+    }
+  }
+
+  const resp = await fetcher(requestData.query, requestData.select);
+
+  if (!resp.result || resp.result.length === 0) {
+    return FALLBACK_SEO;
+  }
+
+  return {
+    title: resp.result.metaTitle,
+    description: resp.result.metaDescription,
+  }
+}
 
 
 
@@ -27,8 +59,17 @@ export default async function Page({ params }: { params: { slug: string; } }) {
     headers,
   });
 
-  const data = await resp.json();
-  // console.log("blogDetailBlocks", data.blogDetailBlocks);
+  // If data is not correct JSON -> 404 page
+  let data;
+  try {
+    data = await resp.json();
+  } catch (jsonError: any) {
+    console.log('Error parsing JSON: ' + jsonError.message);
+  }
+
+  if (data == undefined) {
+    notFound();
+  }
 
 
 
@@ -36,9 +77,7 @@ export default async function Page({ params }: { params: { slug: string; } }) {
     <main>
       <BlogHeader blogTitle={data.blogTitle} blogIntro={data.blogIntro} publishDate={data.publishDate} minutesRead={data.minutesRead} />
 
-
-
-      {/* blogBody */}
+      {/* blogBody + footer */}
       <section className="pb-[72px] lg:pb-[120px] hd:pb-0">
         <Wrapper className="flex flex-col gap-4 lg:gap-6 hd:pt-0">
           {data.blogDetailBlocks.map((textBlock: any, index: number) => textBlockRenderer(textBlock, index))}
