@@ -101,9 +101,10 @@ export default function Experiences({ data }: ExperiencesProps) {
                 </div>
               </div>
 
-              <p className="p text-neutrals-200 mb-6">
-                {activeTab.paragraph}
-              </p>
+              <div
+                className="p text-neutrals-200 mb-6"
+                dangerouslySetInnerHTML={{ __html: activeTab.paragraph }}
+              />
 
               {/* Tags */}
               <div className="flex items-center gap-1 flex-wrap">

@@ -120,9 +120,10 @@ export default function BlogHeader({ blogTitle, blogIntro, publishDate, minutesR
           {blogTitle}
         </h1>
 
-        <p className="p font-normal mb-6 text-18 leading-[28px] lg:mb-10">
-          {blogIntro}
-        </p>
+        <div
+          className="p font-normal mb-6 text-18 leading-[28px] lg:mb-10"
+          dangerouslySetInnerHTML={{ __html: blogIntro }}
+        />
 
 
 
@@ -137,7 +138,7 @@ export default function BlogHeader({ blogTitle, blogIntro, publishDate, minutesR
               <FontAwesomeIcon icon={faChain} className="w-5 !h-5 text-neutrals-1300 lg:w-6 lg:!h-6" />
             </button>
 
-            <Link 
+            <Link
               href={`https://www.linkedin.com/sharing/share-offsite/?url=http://karrel.be`}
               target="_blank"
             >

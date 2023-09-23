@@ -70,9 +70,10 @@ export default function HeroProject({ period, shortTitle, description, urls, tec
 
           <h1 className="h h1 lg:text-56 lg:leading-15 xl:text-64 xl:leading-17">{shortTitle}</h1>
 
-          <p className="p mb-5 lg:mb-10">
-            {description}
-          </p>
+          <div
+            className="p mb-5 lg:mb-10"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
 
 
 

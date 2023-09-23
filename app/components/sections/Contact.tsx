@@ -40,9 +40,10 @@ export default function Contact({ data }: ContactProps) {
               {data.content.contacttitle}
             </h2>
 
-            <p className="p text-neutrals-200 mb-6 lg:mb-10">
-              {data.content.contactparagraph}
-            </p>
+            <div
+              className="p text-neutrals-200 mb-6 lg:mb-10"
+              dangerouslySetInnerHTML={{ __html: data.content.contactparagraph }}
+            />
 
             {/* Socials */}
             <div className="flex items-center gap-5 mb-12 md:mb-0 lg:gap-6">

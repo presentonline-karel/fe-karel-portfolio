@@ -64,9 +64,12 @@ export default function HighlightedProjects({ data }: HighlightedProjectsProps) 
               {data.content.highlightedprojectstitle}
             </h2>
 
-            <p className="p hidden lg:block">
-              {data.content.highlightedprojectsparagraph}
-            </p>
+            <div
+              className="p hidden lg:block"
+              dangerouslySetInnerHTML={{ __html: data.content.highlightedprojectsparagraph }}
+            >
+
+            </div>
           </div>
 
           <Link
@@ -122,9 +125,10 @@ export default function HighlightedProjects({ data }: HighlightedProjectsProps) 
                       {project.title}
                     </h3>
 
-                    <p className="p text-neutrals-200 mb-3 lg:mb-4">
-                      {project.intro}
-                    </p>
+                    <div
+                      className="p text-neutrals-200 mb-3 lg:mb-4"
+                      dangerouslySetInnerHTML={{ __html: project.intro }}
+                    />
 
                     {/* Tags */}
                     <div className="flex items-center gap-1 flex-wrap mb-6 lg:mb-8">

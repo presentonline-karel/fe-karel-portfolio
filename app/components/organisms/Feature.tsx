@@ -24,9 +24,10 @@ export default function Feature(feature: FeatureProps) {
         </h4>
       </div>
 
-      <p className="p text-neutrals-200">
-        {feature.paragraph}
-      </p>
+      <div
+        className="p text-neutrals-200"
+        dangerouslySetInnerHTML={{ __html: feature.paragraph }}
+      />
     </div>
   )
 }

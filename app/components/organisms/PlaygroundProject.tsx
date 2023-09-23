@@ -29,17 +29,14 @@ import Button from "../components/Button";
 
 
 export default function PlaygroundProject(project: PlaygroundProjectProps, index: number) {
-  console.log("playgroundProjectDATASPREAD", project);
-  console.log("index", index);
-
   return (
     <div
       key={index}
-      className="border-[0.4px] border-neutrals-400 shadow-card md:flex md:items-center md:gap-20 md:border-none md:shadow-none"
+      className="border-[0.4px] border-neutrals-400 shadow-card md:flex md:items-center md:gap-20 md:border-none md:shadow-none even:md:flex-row-reverse even:md:bg-neutrals-200 md:px-12 md:py-20 first:md:pt-0 lg:px-20 lg:gap-[109px]"
     >
 
       {/* swiper container */}
-      <div className="w-full md:w-1/2">
+      <div className="w-full md:w-1/2 xl:w-[624px]">
         <Swiper
           slidesPerView={1}
           modules={[Navigation, Pagination]}
@@ -50,6 +47,7 @@ export default function PlaygroundProject(project: PlaygroundProjectProps, index
             nextEl: `.swiper-button-next-plagroundProject-${project.id}`,
             prevEl: `.swiper-button-prev-plagroundProject-${project.id}`
           }}
+          className="w-full"
         >
           {project.images.map((image: string, index: number) => (
             <SwiperSlide className="relative aspect-[3/2] w-full h-full">
@@ -82,10 +80,10 @@ export default function PlaygroundProject(project: PlaygroundProjectProps, index
 
 
       {/* Project content */}
-      <div className="py-6 px-5 bg-neutrals-200 md:w-1/2 md:bg-transparent md:py-0 md:px-0">
+      <div className="py-6 px-5 bg-neutrals-200 md:w-1/2 md:bg-transparent md:py-0 md:px-0 xl:w-[547px]">
 
         {/* Top */}
-        <div className="flex items-center gap-2 mb-3">
+        <div className="flex items-center gap-2 mb-3 lg:gap-3">
           <div className="label light !mb-0">
             {project.tag}
           </div>
@@ -95,11 +93,11 @@ export default function PlaygroundProject(project: PlaygroundProjectProps, index
           </div>
         </div>
 
-        <h2 className="h h2 text-24 leading-30px mb-1">
+        <h2 className="h h2 text-24 leading-30px mb-1 lg:text-48 lg:leading-13 lg:mb-6">
           {project.title}
         </h2>
 
-        <p className={cx("p", {
+        <p className={cx("p lg:mb-10", {
           "mb-6": project.ctabutton.length !== 0,
         })}>
           {project.paragraph}
@@ -108,7 +106,7 @@ export default function PlaygroundProject(project: PlaygroundProjectProps, index
         {project.ctabutton.length !== 0 && (
           <Button
             button={project.ctabutton[0]}
-            className="px-4 py-3 text-16 leading-4"
+            className="px-4 py-3 text-16 leading-4 lg:px-9 lg:py-4 lg:text-20 lg:leading-5"
           />
         )}
       </div>

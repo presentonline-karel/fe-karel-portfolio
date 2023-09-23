@@ -38,9 +38,10 @@ export default function Faq({ data }: FaqProps) {
             {data.content.faqtitle}
           </h2>
 
-          <p className="p mb-6 lg:mb-10">
-            {data.content.faqparagraph}
-          </p>
+          <div
+            className="p mb-6 lg:mb-10"
+            dangerouslySetInnerHTML={{ __html: data.content.faqparagraph }}
+          />
 
           {/* Buttons */}
           <div className="flex items-center gap-2">
@@ -86,12 +87,13 @@ const Question = ({ question, answer }: FaqAccordionProps) => {
       </div>
 
       {/* Answer */}
-      <p className={cx("p pl-5 lg:pl-[26px]", {
-        "h-auto opacity-100 pb-3": accordionOpen === true,
-        "h-0 opacity-0": accordionOpen === false,
-      })}>
-        {answer}
-      </p>
+      <div
+        className={cx("p pl-5 lg:pl-[26px]", {
+          "h-auto opacity-100 pb-3": accordionOpen === true,
+          "h-0 opacity-0": accordionOpen === false,
+        })}
+        dangerouslySetInnerHTML={{ __html: answer }}
+      />
     </div>
   )
 }

@@ -22,9 +22,10 @@ export default function Service(service: ServiceProps) {
         {service.title}
       </h3>
 
-      <p className="p text-neutrals-200 mb-5 lg:mb-8">
-        {service.paragraph}
-      </p>
+      <div
+        className="p text-neutrals-200 mb-5 lg:mb-8"
+        dangerouslySetInnerHTML={{ __html: service.paragraph }}
+      />
 
       <Link
         href={`/${service.destination[0]}`}

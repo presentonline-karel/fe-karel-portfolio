@@ -153,9 +153,10 @@ export default function Testimonials({ data }: TestimonialsProps) {
             <div className="pt-12 pb-8 px-8 border-[0.4px] border-neutrals-400 bg-neutrals-100 relative shadow-card !h-auto !flex flex-col justify-between max-w-[624px]">
               <FontAwesomeIcon icon={faQuoteLeftAlt} className="absolute text-40 leading-11 text-prim-300 top-8 left-8 z-0" />
 
-              <p className="p relative z-10 mb-6">
-                {data.content.testimonials[0].testimonial}
-              </p>
+              <div
+                className="p relative z-10 mb-6"
+                dangerouslySetInnerHTML={{ __html: data.content.testimonials[0].testimonial }}
+              />
 
               {/* Author */}
               <div className="pt-5 border-t border-neutrals-400">
@@ -186,9 +187,10 @@ export default function Testimonials({ data }: TestimonialsProps) {
               <div className="pt-12 pb-8 px-8 border-[0.4px] border-neutrals-400 bg-neutrals-100 relative shadow-card !h-auto !flex flex-col justify-between w-full">
                 <FontAwesomeIcon icon={faQuoteLeftAlt} className="absolute text-40 leading-11 text-prim-300 top-8 left-8 z-0" />
 
-                <p className="p relative z-10 mb-6">
-                  {testimonial.testimonial}
-                </p>
+                <div
+                  className="p relative z-10 mb-6"
+                  dangerouslySetInnerHTML={{ __html: testimonial.testimonial }}
+                />
 
                 {/* Author */}
                 <div className="pt-5 border-t border-neutrals-400">

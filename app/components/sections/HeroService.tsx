@@ -135,9 +135,10 @@ export default function HeroService({ data }: HeroServiceProps) {
             {data.content.herotitle}
           </h1>
 
-          <p className="p mb-6 lg:mb-10">
-            {data.content.heroparagraph}
-          </p>
+          <div
+            className="p mb-6 lg:mb-10"
+            dangerouslySetInnerHTML={{ __html: data.content.heroparagraph }}
+          />
 
           {/* Buttons */}
           <div className="flex items-center gap-2">

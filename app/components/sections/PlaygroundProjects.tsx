@@ -33,20 +33,18 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function PlaygroundProjects({ labelTags, tags, projects }: PlaygroundProjectsProps) {
-  console.log("playgroundProjectsDATA", projects);
-  console.log("project1", Object.values(projects)[0]);
-
+  
   // States
   const [activeTag, setActiveTag] = useState("");
 
 
 
   return (
-    <section className="pt-10 pb-[72px] lg:pb-[120px] hd:pt-0 hd:pb-0">
-      <Wrapper className="hd:pt-10">
+    <section className="pt-10 pb-[72px] md:!pb-0 hd:pt-0">
+      <Wrapper className="md:!px-0 hd:pt-10 hd:pb-0">
 
         {/* Heading */}
-        <div className="mb-8 sm:mb-10">
+        <div className="mb-8 sm:mb-10 md:mb-20 md:px-12 lg:px-20">
           <div className="mb-4 tracking-tight text-16 leading-6 text-neutrals-1200 lg:text-18 lg:leading-6 lg:mb-6">
             {labelTags}
           </div>
@@ -83,7 +81,7 @@ export default function PlaygroundProjects({ labelTags, tags, projects }: Playgr
 
 
         {/* Projects */}
-        <div className="flex flex-col gap-8 sm:gap-16 md:gap-24">
+        <div className="flex flex-col gap-8 sm:gap-16 md:gap-0">
           {activeTag === "" && (
             <>
               {Object.values(projects).map((project: PlaygroundProjectProps, index: number) => (

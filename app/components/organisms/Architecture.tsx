@@ -24,9 +24,10 @@ export default function Architecture(architecture: ArchitectureProps) {
         ))}
       </div>
 
-      <p className="p mb-5 lg:mb-6">
-        {architecture.paragraph}
-      </p>
+      <div
+        className="p mb-5 lg:mb-6"
+        dangerouslySetInnerHTML={{ __html: architecture.paragraph }}
+      />
 
       {/* Projects */}
       <div className="flex items-center gap-5 flex-wrap">

@@ -84,9 +84,10 @@ export default function Education({ data }: EducationProps) {
               </div>
             </div>
 
-            <p className="p mb-6">
-              {data.content.educationcard.paragraph}
-            </p>
+            <div
+              className="p mb-6"
+              dangerouslySetInnerHTML={{ __html: data.content.educationcard.paragraph }}
+            />
 
             {/* Tags */}
             <div className="flex items-center gap-1 flex-wrap">

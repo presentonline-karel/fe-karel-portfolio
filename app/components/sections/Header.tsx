@@ -14,9 +14,10 @@ export default function Header({ data }: HeaderProps) {
           {data.content.headertitle}
         </h1>
 
-        <p className="p max-w-[547px]">
-          {data.content.headerparagraph}
-        </p>
+        <div
+          className="p max-w-[547px]"
+          dangerouslySetInnerHTML={{ __html: data.content.headerparagraph as string }}
+        />
       </Wrapper>
     </section>
   ))

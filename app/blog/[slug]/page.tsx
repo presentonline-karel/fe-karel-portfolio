@@ -6,11 +6,13 @@ import { notFound } from "next/navigation";
 import BlogHeader from "@/app/components/sections/BlogHeader";
 import Wrapper from "@/app/components/helpers/Wrapper";
 import BlogFooter from "@/app/components/sections/BlogFooter";
+import RelatedBlogs from "@/app/components/sections/RelatedBlogs";
 
 // Utils
 import { textBlockRenderer } from "@/utils/render-text-block";
 import { fetcher } from "@/utils/fetcher";
 import { FALLBACK_SEO } from "@/utils/fallback-seo";
+import { sectionRenderer } from "@/utils/render-section";
 
 
 
@@ -85,6 +87,9 @@ export default async function Page({ params }: { params: { slug: string; } }) {
           <BlogFooter />
         </Wrapper>
       </section>
+
+      <RelatedBlogs data={data.relatedBlogs} />
+      {data.customBlocks.map((section: any, index: number) => sectionRenderer(section, index))}
     </main>
   )
 }

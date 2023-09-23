@@ -62,9 +62,10 @@ export default function Process({ data }: ProcessProps) {
             {data.content.processtitle}
           </h2>
 
-          <p className="p md:max-w-[547px]">
-            {data.content.processparagraph}
-          </p>
+          <div
+            className="p md:max-w-[547px]"
+            dangerouslySetInnerHTML={{ __html: data.content.processparagraph }}
+          />
         </div>
 
         {/* Steps / Swiper container */}
@@ -104,9 +105,10 @@ export default function Process({ data }: ProcessProps) {
                   </h4>
                 </div>
 
-                <p className="p text-neutrals-200">
-                  {step.paragraph}
-                </p>
+                <div
+                  className="p text-neutrals-200"
+                  dangerouslySetInnerHTML={{ __html: step.paragraph }}
+                />
               </SwiperSlide>
             ))}
           </Swiper>

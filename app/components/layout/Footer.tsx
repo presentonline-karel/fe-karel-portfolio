@@ -80,9 +80,10 @@ export default async function Footer() {
               </div>
             </div>
 
-            <p className="p text-neutrals-200 mb-4 lg:mb-8 lg:text-16 lg:leading-26px">
-              {data.footerBlock[0].content.footerinfoparagraph}
-            </p>
+            <div
+              className="p text-neutrals-200 mb-4 lg:mb-8 lg:text-16 lg:leading-26px"
+              dangerouslySetInnerHTML={{ __html: data.footerBlock[0].content.footerinfoparagraph }}
+            />
 
             {/* socials desktop */}
             <div className="hidden lg:flex lg:items-center lg:gap-6">

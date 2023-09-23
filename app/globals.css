@@ -94,7 +94,7 @@
   }
 
   .swiper-button-playground.swiper-button-disabled {
-    @apply !bg-neutrals-100 !text-neutrals-800;
+    @apply !bg-neutrals-100 !text-neutrals-800 md:!bg-neutrals-400 md:!border-neutrals-400 md:shadow-none;
   }
 
   .swiper-button.swiper-button-disabled svg {

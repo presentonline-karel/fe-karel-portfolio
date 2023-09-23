@@ -31,9 +31,10 @@ export default function Cta({ data }: CtaProps) {
               {data.content.ctatitle}
             </h2>
 
-            <p className="p md:max-w-[358px]">
-              {data.content.ctaparagraph}
-            </p>
+            <div
+              className="p md:max-w-[358px]"
+              dangerouslySetInnerHTML={{ __html: data.content.ctaparagraph }}
+            />
           </div>
 
           {/* Buttons */}
