@@ -12,8 +12,6 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function Project(project: ProjectProps) {
-  // console.log("incoming project props url", project.url);
-
   return (
     <Link
       // @ts-ignore

@@ -20,7 +20,7 @@ import cx from "classnames";
 export default function Blog(blog: BlogProps) {
   return (
     <Link
-      href={blog.uri}
+      href={`/${blog.uri}`}
       className={cx("w-full h-full flex flex-col items-start relative aspect-square", {
         "justify-between": blog.isblognew === "true",
         "justify-end": blog.isblognew === "false",
