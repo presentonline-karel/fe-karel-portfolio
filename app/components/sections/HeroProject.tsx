@@ -162,6 +162,7 @@ export default function HeroProject({ period, shortTitle, description, urls, tec
                   alt="image props"
                   className="w-full h-full object-cover"
                   fill={true}
+                  priority={true}
                 />
               </SwiperSlide>
             ))}
