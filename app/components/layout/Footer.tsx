@@ -75,7 +75,11 @@ export default async function Footer() {
               {/* socials mobile */}
               <div className="flex items-center gap-5 lg:hidden">
                 {data.socials.map((social: SocialProps, index: number) => (
-                  <FontAwesomeIcon icon={renderIcon(social.social)} className="text-neutrals-100 w-5 !h-5" />
+                  <FontAwesomeIcon
+                    key={index}
+                    icon={renderIcon(social.social)}
+                    className="text-neutrals-100 w-5 !h-5"
+                  />
                 ))}
               </div>
             </div>
@@ -88,7 +92,11 @@ export default async function Footer() {
             {/* socials desktop */}
             <div className="hidden lg:flex lg:items-center lg:gap-6">
               {data.socials.map((social: SocialProps, index: number) => (
-                <FontAwesomeIcon icon={renderIcon(social.social)} className="text-neutrals-100 w-6 !h-6" />
+                <FontAwesomeIcon 
+                  key={index}
+                  icon={renderIcon(social.social)} 
+                  className="text-neutrals-100 w-6 !h-6" 
+                />
               ))}
             </div>
 

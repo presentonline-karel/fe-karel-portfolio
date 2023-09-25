@@ -15,17 +15,19 @@ import cx from "classnames";
 
 export default function Service(service: ServiceProps) {
   return (
-    <div className={cx("p-6 border-[0.4px] border-neutrals-1100 w-full", {
+    <div className={cx("p-6 border-[0.4px] border-neutrals-1100 w-full flex flex-col justify-between items-start", {
       "bg-neutrals-1200": service.ishighlighted === "true",
     })}>
-      <h3 className="h h3 text-neutrals-100 mb-3 lg:text-32 lg:leading-38px lg:mb-4">
-        {service.title}
-      </h3>
+      <div>
+        <h3 className="h h3 text-neutrals-100 mb-3 lg:text-32 lg:leading-38px lg:mb-4">
+          {service.title}
+        </h3>
 
-      <div
-        className="p text-neutrals-200 mb-5 lg:mb-8"
-        dangerouslySetInnerHTML={{ __html: service.paragraph }}
-      />
+        <div
+          className="p text-neutrals-200 mb-5 lg:mb-8"
+          dangerouslySetInnerHTML={{ __html: service.paragraph }}
+        />
+      </div>
 
       <Link
         href={`/${service.destination[0]}`}

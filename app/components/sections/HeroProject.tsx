@@ -82,20 +82,38 @@ export default function HeroProject({ period, shortTitle, description, urls, tec
 
           {/* URLs */}
           <div className="flex items-center gap-2 md:mb-10 lg:gap-3 xl:mb-12">
-            <Link href={urls.liveurl} className="btn btn-primary px-4 py-3 lg:px-6 lg:py-4 xl:px-9">
-              <FontAwesomeIcon icon={faChain} className="!w-[14px] !h-[14px] text-neutrals-1400 lg:!w-[18px] lg:!h-[18px]" />
-              <span className="tracking-tight text-16 leading-4 whitespace-nowrap lg:text-20 lg:leading-5">Live url</span>
-            </Link>
+            {urls.liveurl !== "" && (
+              <Link
+                href={urls.liveurl}
+                className="btn btn-primary px-4 py-3 lg:px-6 lg:py-4 xl:px-9"
+                target="_blank"
+              >
+                <FontAwesomeIcon icon={faChain} className="!w-[14px] !h-[14px] text-neutrals-1400 lg:!w-[18px] lg:!h-[18px]" />
+                <span className="tracking-tight text-16 leading-4 whitespace-nowrap lg:text-20 lg:leading-5">Live url</span>
+              </Link>
+            )}
 
-            <Link href={urls.figmaurl} className="btn btn-secondary px-4 py-3 lg:px-6 lg:py-4 xl:px-9">
-              <span className="tracking-tight text-16 leading-4 whitespace-nowrap lg:text-20 lg:leading-5">Figma</span>
-              <FontAwesomeIcon icon={faArrowRight} className="!w-[12px] !h-[12px] -rotate-45 relative top-px lg:!w-4 lg:!h-4" />
-            </Link>
+            {urls.figmaurl !== "" && (
+              <Link
+                href={urls.figmaurl}
+                className="btn btn-secondary px-4 py-3 lg:px-6 lg:py-4 xl:px-9"
+                target="_blank"
+              >
+                <span className="tracking-tight text-16 leading-4 whitespace-nowrap lg:text-20 lg:leading-5">Figma</span>
+                <FontAwesomeIcon icon={faArrowRight} className="!w-[12px] !h-[12px] -rotate-45 relative top-px lg:!w-4 lg:!h-4" />
+              </Link>
+            )}
 
-            <Link href={urls.figmaurl} className="btn btn-secondary px-4 py-3 lg:px-6 lg:py-4 xl:px-9">
-              <span className="tracking-tight text-16 leading-4 whitespace-nowrap lg:text-20 lg:leading-5">GitHub</span>
-              <FontAwesomeIcon icon={faArrowRight} className="!w-[12px] !h-[12px] -rotate-45 relative top-px lg:!w-4 lg:!h-4" />
-            </Link>
+            {urls.githuburl !== "" && (
+              <Link 
+                href={urls.figmaurl} 
+                className="btn btn-secondary px-4 py-3 lg:px-6 lg:py-4 xl:px-9"
+                target="_blank"
+              >
+                <span className="tracking-tight text-16 leading-4 whitespace-nowrap lg:text-20 lg:leading-5">GitHub</span>
+                <FontAwesomeIcon icon={faArrowRight} className="!w-[12px] !h-[12px] -rotate-45 relative top-px lg:!w-4 lg:!h-4" />
+              </Link>
+            )}
           </div>
 
 

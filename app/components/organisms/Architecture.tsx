@@ -20,7 +20,12 @@ export default function Architecture(architecture: ArchitectureProps) {
       {/* Technologies */}
       <div className="flex flex-wrap items-center gap-1 mb-6">
         {architecture.technologies.split(", ").map((technology: string, index: number) => (
-          <div className="label dark !mb-0" key={index}>{technology}</div>
+          <div
+            key={index}
+            className="label dark !mb-0"
+          >
+            {technology}
+          </div>
         ))}
       </div>
 

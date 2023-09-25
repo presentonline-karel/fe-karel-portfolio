@@ -89,7 +89,7 @@ export default function Process({ data }: ProcessProps) {
             breakpoints={sliderSettings}
           >
             {data.content.steps.map((step: StepProps, index: number) => (
-              <SwiperSlide className={cx("py-8 px-6 !h-auto", {
+              <SwiperSlide key={index} className={cx("py-8 px-6 !h-auto", {
                 "bg-neutrals-1200": step.highlightstep === "false",
                 "bg-neutrals-1400": step.highlightstep === "true"
               })}>

@@ -49,6 +49,7 @@ export default function Contact({ data }: ContactProps) {
             <div className="flex items-center gap-5 mb-12 md:mb-0 lg:gap-6">
               {data.content.socials.map((social: SocialProps, index: number) => (
                 <Link
+                  key={index}
                   href={social.url}
                   className="w-5 h-5 flex justify-center items-center lg:w-6 lg:h-6"
                   target="_blank"

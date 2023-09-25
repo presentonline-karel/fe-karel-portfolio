@@ -32,7 +32,7 @@ export default function Hobbies({ data }: HobbiesProps) {
         {/* Hobbies */}
         <div className="flex flex-col gap-3">
           {data.content.hobbies.map((hobby: HobbyProps, index: number) => (
-            <div className="flex items-center gap-3 p-2 bg-neutrals-200 border-[0.4px] border-neutrals-300">
+            <div key={index} className="flex items-center gap-3 p-2 bg-neutrals-200 border-[0.4px] border-neutrals-300">
               <div className="w-10 h-10 bg-neutrals-1300 flex justify-center items-center">
                 <FontAwesomeIcon icon={renderIcon(hobby.icon)} className="text-18 leading-18px w-[18px] h-[18px] text-prim-600" />
               </div>

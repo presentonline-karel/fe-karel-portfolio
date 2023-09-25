@@ -50,7 +50,10 @@ export default function PlaygroundProject(project: PlaygroundProjectProps, index
           className="w-full"
         >
           {project.images.map((image: string, index: number) => (
-            <SwiperSlide className="relative aspect-[3/2] w-full h-full">
+            <SwiperSlide
+              key={index}
+              className="relative aspect-[3/2] w-full h-full"
+            >
               <Image
                 src={getKirbyFiles(image)}
                 alt="test alt"
