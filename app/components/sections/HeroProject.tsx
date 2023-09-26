@@ -105,8 +105,8 @@ export default function HeroProject({ period, shortTitle, description, urls, tec
             )}
 
             {urls.githuburl !== "" && (
-              <Link 
-                href={urls.figmaurl} 
+              <Link
+                href={urls.figmaurl}
                 className="btn btn-secondary px-4 py-3 lg:px-6 lg:py-4 xl:px-9"
                 target="_blank"
               >
@@ -159,7 +159,7 @@ export default function HeroProject({ period, shortTitle, description, urls, tec
               <SwiperSlide key={index} className="w-full aspect-[3/2] shadow-image relative border-[0.4px] border-neutrals-400">
                 <Image
                   src={image.url}
-                  alt="image props"
+                  alt={`${shortTitle} mockup on Apple devices`}
                   className="w-full h-full object-cover"
                   fill={true}
                   priority={true}

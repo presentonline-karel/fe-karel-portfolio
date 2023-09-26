@@ -107,7 +107,7 @@ export default function HighlightedProjects({ data }: HighlightedProjectsProps) 
                   <Image
                     src={getKirbyFiles(project.coverimage[0])}
                     fill={true}
-                    alt="Temp alt message"
+                    alt="Project on mac preview"
                     className="object-cover"
                   />
                 </div>

@@ -57,7 +57,7 @@ export default function TextWithImage({ data }: TextWithImageProps) {
           <Image
             // @ts-ignore
             src={typeof data.content.textwithimageimage[0] == "string" ? getKirbyFiles(data.content.textwithimageimage[0]) : data.content.textwithimageimage.url}
-            alt="temp alt message"
+            alt="Karel Decoene portfolio"
             fill={true}
             className="object-cover border-[0.4px] border-neutrals-400 shadow-image z-10"
           />

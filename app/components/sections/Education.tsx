@@ -107,7 +107,7 @@ export default function Education({ data }: EducationProps) {
         <div className="hidden relative w-full aspect-[4/5] md:block md:w-full xl:max-w-[547px]">
           <Image
             src={getKirbyFiles(data.content.educationimage[0])}
-            alt="Temp alt message"
+            alt="Karel Decoene at graduation party KdG Hogeschool"
             fill={true}
             className="object-cover border-[0.4px] border-neutrals-400 shadow-image z-10"
           />

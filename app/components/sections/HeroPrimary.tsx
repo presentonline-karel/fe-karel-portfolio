@@ -55,7 +55,7 @@ export default function HeroPrimary({ data }: HeroPrimaryProps) {
         <div className="relative w-full aspect-square xl:w-[624px]">
           <Image
             src={getKirbyFiles(data.content.heroimage[0])}
-            alt="Temp alt message"
+            alt="Karel Decoene at Upthrust office in Antwerp"
             fill={true}
             priority={true}
             className="object-cover border-[0.4px] border-neutrals-400 shadow-image z-10"

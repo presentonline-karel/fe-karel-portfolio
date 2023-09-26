@@ -26,7 +26,7 @@ export default function Project(project: ProjectProps) {
             // @ts-ignore
             src={project.cover.url}
             fill={true}
-            alt="Temp alt message"
+            alt={project.alt}
             className="object-cover"
           />
         </div>
