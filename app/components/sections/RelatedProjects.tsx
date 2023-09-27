@@ -44,7 +44,10 @@ export default function RelatedProjects({ data }: RelatedProjectsProps) {
         {/* Next projects */}
         <div className="flex items-stretch gap-6 lg:w-2/3">
           <Project {...Object.values(data.data)[0]} />
-          <Project {...Object.values(data.data)[1]} />
+
+          <div className="hidden w-full sm:block">
+            <Project {...Object.values(data.data)[1]} />
+          </div>
         </div>
       </Wrapper>
     </section>

@@ -16,7 +16,7 @@ export default function Project(project: ProjectProps) {
     <Link
       // @ts-ignore
       href={`/${project.id}`}
-      className="bg-neutrals-1200 flex flex-col justify-between w-full border-[0.4px] border-neutrals-400 shadow-card"
+      className="bg-neutrals-1200 flex flex-col justify-between w-full border-[0.4px] border-neutrals-400 shadow-card md:!h-auto"
     >
       <div>
 

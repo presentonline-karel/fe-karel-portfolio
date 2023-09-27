@@ -78,7 +78,7 @@ const Question = ({ question, answer }: FaqAccordionProps) => {
           "pb-3 lg:pb-4": accordionOpen === false,
         })}
       >
-        <FontAwesomeIcon icon={accordionOpen ? faCaretDown : faCaretRight} className="text-20 leading-3 w-2 h-3 pt-[7px] pr-1 lg:text-24 lg:leading-14px lg:w-[9px] lg:h-[14px] lg:pt-2 lg:pr-[5px]" />
+        <FontAwesomeIcon icon={accordionOpen ? faCaretDown : faCaretRight} className="!w-2 !h-3 pt-[7px] pr-1 lg:!w-[9px] lg:!h-[14px] lg:pt-2 lg:pr-[5px]" />
 
         {/* Question */}
         <div className="text-20 leading-26px tracking-tight lg:text-24 lg:leading-30px">

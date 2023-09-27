@@ -78,7 +78,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
           >
             {data.content.testimonials.map((testimonial: TestimonialProps, index: number) => (
               <SwiperSlide key={index} className="pt-12 pb-8 px-6 border-[0.4px] border-neutrals-400 bg-neutrals-100 relative shadow-card !h-auto !flex flex-col justify-between">
-                <FontAwesomeIcon icon={faQuoteLeftAlt} className="absolute text-40 leading-11 text-prim-300 top-8 left-6 z-0" />
+                <FontAwesomeIcon icon={faQuoteLeftAlt} className="absolute w-10 !h-11 leading-11 text-prim-300 top-8 left-6 z-0" />
 
                 <p className="p relative z-10 mb-6">
                   {testimonial.testimonial}
@@ -151,7 +151,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
 
 
             <div className="pt-12 pb-8 px-8 border-[0.4px] border-neutrals-400 bg-neutrals-100 relative shadow-card !h-auto !flex flex-col justify-between max-w-[624px]">
-              <FontAwesomeIcon icon={faQuoteLeftAlt} className="absolute text-40 leading-11 text-prim-300 top-8 left-8 z-0" />
+              <FontAwesomeIcon icon={faQuoteLeftAlt} className="absolute w-10 !h-11 text-prim-300 top-8 left-8 z-0" />
 
               <div
                 className="p relative z-10 mb-6"
@@ -185,7 +185,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
           <div className="grid grid-cols-3 gap-8">
             {data.content.testimonials.slice(1, data.content.testimonials.length).map((testimonial: TestimonialProps, index: number) => (
               <div key={index} className="pt-12 pb-8 px-8 border-[0.4px] border-neutrals-400 bg-neutrals-100 relative shadow-card !h-auto !flex flex-col justify-between w-full">
-                <FontAwesomeIcon icon={faQuoteLeftAlt} className="absolute text-40 leading-11 text-prim-300 top-8 left-8 z-0" />
+                <FontAwesomeIcon icon={faQuoteLeftAlt} className="absolute w-10 !h-11 text-prim-300 top-8 left-8 z-0" />
 
                 <div
                   className="p relative z-10 mb-6"
