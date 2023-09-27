@@ -85,7 +85,7 @@ export default async function Footer() {
             </div>
 
             <div
-              className="p text-neutrals-200 mb-4 lg:mb-8 lg:text-16 lg:leading-26px"
+              className="p text-neutrals-200 mb-4 lg:mb-8"
               dangerouslySetInnerHTML={{ __html: data.footerBlock[0].content.footerinfoparagraph }}
             />
 
