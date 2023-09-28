@@ -60,8 +60,8 @@ export default function PlaygroundProject(project: PlaygroundProjectProps, index
                 src={getKirbyFiles(image)}
                 alt={`${project.title} carousel image`}
                 fill={true}
-                sizes="(max-width: 1023px) 100vw, 50vw"
-                className="object-cover w-full h-full"
+                sizes="(max-width: 1023px) 100vw,(max-width: 1919px) 50vw, 33vw"
+                className="object-cover w-full h-full border-[0.4px] border-neutrals-400"
               />
             </SwiperSlide>
           ))}
