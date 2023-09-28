@@ -103,11 +103,12 @@ export default function PlaygroundProject(project: PlaygroundProjectProps, index
           {project.title}
         </h2>
 
-        <p className={cx("p lg:mb-10", {
-          "mb-6": project.ctabutton.length !== 0,
-        })}>
-          {project.paragraph}
-        </p>
+        <div 
+          className={cx("p lg:mb-10", {
+            "mb-6": project.ctabutton.length !== 0,
+          })}
+          dangerouslySetInnerHTML={{ __html: project.paragraph }}
+        />
 
         {project.ctabutton.length !== 0 && (
           <Button
