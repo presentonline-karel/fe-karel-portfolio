@@ -6,7 +6,7 @@ import Image from "next/image";
 
 // Types
 import { HighlightedBlogsProps } from "@/types/sections/HighlightedBlogs";
-import { HighlightedBlogProps } from "@/types/organisms/HighlightedBlogProps";
+import { HighlightedBlogProps } from "@/types/organisms/HighlightedBlog";
 
 // Components
 import Wrapper from "../helpers/Wrapper";
@@ -111,7 +111,7 @@ export default function HighlightedBlogs({ data }: HighlightedBlogsProps) {
                   <Image
                     src={getKirbyFiles(blog.coverimage[0])}
                     fill={true}
-                    alt="Temp alt message"
+                    alt={blog.alttag}
                     className="object-cover w-full h-full"
                   />
                 </div>

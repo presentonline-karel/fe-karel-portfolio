@@ -53,11 +53,13 @@ export default function TextWithImage({ data }: TextWithImageProps) {
 
 
         {/* Image group */}
-        <div className="block relative aspect-[3/2] w-full md:aspect-[4/5] md:block xl:w-[515px]">
+        <div className={cx("block relative aspect-[3/2] w-full md:aspect-[4/5] md:block xl:w-[515px]", {
+          "!aspect-square md:!aspect-[4/5]": data.content.aspectSquareMobile === true
+        })}>
           <Image
             // @ts-ignore
             src={typeof data.content.textwithimageimage[0] == "string" ? getKirbyFiles(data.content.textwithimageimage[0]) : data.content.textwithimageimage.url}
-            alt="Karel Decoene portfolio"
+            alt={data.content.alttag}
             fill={true}
             className="object-cover border-[0.4px] border-neutrals-400 shadow-image z-10"
           />

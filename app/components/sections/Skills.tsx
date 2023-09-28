@@ -32,7 +32,7 @@ export default function Skills({ data }: SkillsProps) {
         <div className="hidden relative w-full aspect-[4/5] md:block xl:w-[515px]">
           <Image
             src={getKirbyFiles(data.content.skillsimage[0])}
-            alt="Karel Decoene at KdG Hogeschool Campus Zuid working behind PC"
+            alt={data.content.alttag}
             fill={true}
             className="object-cover border-[0.4px] border-neutrals-400 shadow-image z-10"
           />

@@ -31,6 +31,8 @@ import cx from "classnames";
 
 export default function HighlightedProjects({ data }: HighlightedProjectsProps) {
 
+  // console.log("highLightedProjects", data.content.highlightedprojects);
+
   // Slider breakpoint settings
   const sliderSettings = {
     640: {
@@ -107,7 +109,7 @@ export default function HighlightedProjects({ data }: HighlightedProjectsProps) 
                   <Image
                     src={getKirbyFiles(project.coverimage[0])}
                     fill={true}
-                    alt="Project on mac preview"
+                    alt={project.alttag}
                     className="object-cover"
                   />
                 </div>

@@ -1,5 +1,5 @@
 // Imported types
-import { HighlightedBlogProps } from "../organisms/HighlightedBlogProps";
+import { HighlightedBlogProps } from "../organisms/HighlightedBlog";
 
 export interface HighlightedBlogsProps {
 	data: {

@@ -63,7 +63,7 @@ export default async function Page({ params }: { params: { slug: string; } }) {
   let data;
   try {
     data = await resp.json();
-    console.log("dataProjectDetail", data);
+    console.log("dataProjectDetail", data.relatedProjects);
   } catch (jsonError: any) {
     console.log('Error parsing JSON: ' + jsonError.message);
   }
@@ -81,8 +81,10 @@ export default async function Page({ params }: { params: { slug: string; } }) {
       textwithimagetitle: data.contentTitle,
       textwithimagetext: data.contentText,
       textwithimageimage: data.contentImage,
+      alttag: data.alttag,
       textwithimageimageplacement: "false",
       bgcolor: "grey",
+      aspectSquareMobile: true,
     },
     isHidden: false,
   }

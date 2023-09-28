@@ -47,6 +47,8 @@ export default async function Home() {
 
   const resp = await fetcher(requestData.query, requestData.select);
 
+  console.log("customPageResp", resp);
+
   if (!resp.result || resp.result.length === 0) {
     notFound();
   }

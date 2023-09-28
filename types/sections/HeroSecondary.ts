@@ -9,6 +9,7 @@ export interface HeroSecondaryProps {
             heroparagraph: string;
             herobuttons: ButtonProps[];
             heroimage: string[];
+            alttag: string;
         },
         isHidden: Boolean;
     }

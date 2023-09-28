@@ -7,7 +7,7 @@ export interface ProjectProps {
 	descriptioncard: string;
 	tags: string;
 	cover: ImageProps;
-    alt: string;
+    alttag: string;
 	slug: string;
     uri?: string;
 }

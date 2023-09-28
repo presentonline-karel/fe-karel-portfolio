@@ -66,7 +66,7 @@ export default async function Footer() {
               <div className="relative w-[120px] h-11 xl:w-[154px] xl:h-14">
                 <Image
                   src={data.logoDark[Object.keys(data.logoDark)[0]].url}
-                  alt="TEMP karel logo alt message"
+                  alt="Logo Karel Decoene portfolio website"
                   fill={true}
                   className="object-contain w-full h-full"
                 />

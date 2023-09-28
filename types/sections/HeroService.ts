@@ -14,6 +14,7 @@ export interface HeroServiceProps {
 			heroparagraph: string;
 			herobuttons: ButtonProps[];
 			heroimage: string[];
+            alttag: string;
 		};
 		isHidden: Boolean;
 	};
