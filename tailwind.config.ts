@@ -103,7 +103,7 @@ const config: Config = {
 			"72": "72px",
 		},
 		screens: {
-      tall: { "raw": "(min-height: 800px)" },
+			tall: { raw: "(min-height: 800px)" },
 			sm: "640px",
 			md: "1024px",
 			lg: "1200px",

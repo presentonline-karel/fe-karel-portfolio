@@ -109,6 +109,7 @@ export default function HighlightedProjects({ data }: HighlightedProjectsProps) 
                   <Image
                     src={getKirbyFiles(project.coverimage[0])}
                     fill={true}
+                    sizes="(max-width: 639px) 100vw, (max-width: 1199px) 50vw, 33vw"
                     alt={project.alttag}
                     className="object-cover"
                   />

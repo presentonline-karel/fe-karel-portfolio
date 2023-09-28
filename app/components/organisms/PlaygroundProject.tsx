@@ -29,6 +29,8 @@ import Button from "../components/Button";
 
 
 export default function PlaygroundProject(project: PlaygroundProjectProps, index: number) {
+  console.log("dataPlaygroundProject", project);
+
   return (
     <div
       key={index}
@@ -56,8 +58,9 @@ export default function PlaygroundProject(project: PlaygroundProjectProps, index
             >
               <Image
                 src={getKirbyFiles(image)}
-                alt="test alt"
+                alt={`${project.title} carousel image`}
                 fill={true}
+                sizes="(max-width: 1023px) 100vw, 50vw"
                 className="object-cover w-full h-full"
               />
             </SwiperSlide>

@@ -34,6 +34,7 @@ export default function Skills({ data }: SkillsProps) {
             src={getKirbyFiles(data.content.skillsimage[0])}
             alt={data.content.alttag}
             fill={true}
+            sizes="(max-width: 1023px) 0vw, 50vw"
             className="object-cover border-[0.4px] border-neutrals-400 shadow-image z-10"
           />
 

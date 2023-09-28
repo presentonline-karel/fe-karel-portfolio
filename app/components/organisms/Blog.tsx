@@ -32,6 +32,7 @@ export default function Blog(blog: BlogProps) {
         <Image
           src={blog.coverImage.url}
           fill={true}
+          sizes="(max-width: 639px) 100vw, (max-width: 1199px) 50vw, 33vw"
           alt="Temp alt message"
           className="object-cover w-full h-full"
         />

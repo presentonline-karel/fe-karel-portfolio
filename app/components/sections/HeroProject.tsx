@@ -162,6 +162,7 @@ export default function HeroProject({ period, shortTitle, description, urls, tec
                   alt={`${shortTitle} mockup on Apple devices`}
                   className="w-full h-full object-cover"
                   fill={true}
+                  sizes="(max-width: 1023px) 100vw, 50vw"
                   priority={true}
                 />
               </SwiperSlide>

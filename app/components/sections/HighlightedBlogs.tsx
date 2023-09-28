@@ -111,6 +111,7 @@ export default function HighlightedBlogs({ data }: HighlightedBlogsProps) {
                   <Image
                     src={getKirbyFiles(blog.coverimage[0])}
                     fill={true}
+                    sizes="(max-width: 639px) 100vw, (max-width: 1199px) 50vw, 33vw"
                     alt={blog.alttag}
                     className="object-cover w-full h-full"
                   />

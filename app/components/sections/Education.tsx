@@ -109,6 +109,7 @@ export default function Education({ data }: EducationProps) {
             src={getKirbyFiles(data.content.educationimage[0])}
             alt="Karel Decoene at graduation party KdG Hogeschool"
             fill={true}
+            sizes="(max-width: 1023px) 0vw, 50vw"
             className="object-cover border-[0.4px] border-neutrals-400 shadow-image z-10"
           />
 

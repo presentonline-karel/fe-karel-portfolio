@@ -68,6 +68,7 @@ export default async function Footer() {
                   src={data.logoDark[Object.keys(data.logoDark)[0]].url}
                   alt="Logo Karel Decoene portfolio website"
                   fill={true}
+                  sizes="(max-width: 1439px) 30vw, 11vw"
                   className="object-contain w-full h-full"
                 />
               </div>

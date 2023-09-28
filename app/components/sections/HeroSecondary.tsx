@@ -59,6 +59,7 @@ export default function HeroPrimary({ data }: HeroSecondaryProps) {
             src={getKirbyFiles(data.content.heroimage[0])}
             alt={data.content.alttag}
             fill={true}
+            sizes="(max-width: 1023px) 100vw, 50vw"
             priority={true}
             className="object-cover border-[0.4px] border-neutrals-400 shadow-image z-10"
           />

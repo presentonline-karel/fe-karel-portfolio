@@ -61,6 +61,7 @@ export default function TextWithImage({ data }: TextWithImageProps) {
             src={typeof data.content.textwithimageimage[0] == "string" ? getKirbyFiles(data.content.textwithimageimage[0]) : data.content.textwithimageimage.url}
             alt={data.content.alttag}
             fill={true}
+            sizes="(max-width: 1023px) 100vw, 50vw"
             className="object-cover border-[0.4px] border-neutrals-400 shadow-image z-10"
           />
 

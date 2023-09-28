@@ -69,6 +69,7 @@ export default function Navigation() {
               src={getKirbyFiles("site/logo-light.png")}
               alt="Logo Karel Decoene portfolio website"
               fill={true}
+              sizes="(max-width: 1439px) 30vw, 11vw"
               className="object-contain"
             />
           </Link>
@@ -152,6 +153,7 @@ export default function Navigation() {
                 src="/Hamburger-menu.png"
                 alt="Hamburger icon to open slide menu"
                 fill={true}
+                sizes="5vw"
                 className=""
               />
             </div>
@@ -161,17 +163,17 @@ export default function Navigation() {
 
 
         {/* Sliding nav */}
-        <div 
+        <div
           onClick={() => setMenuOpen(false)}
           className={cx("fixed top-0 right-0 w-screen h-screen translate-x-full z-50 bg-neutrals-1000 bg-opacity-70 lg:hidden", {
-          "!translate-x-0": menuOpen === true,
-        })}>
+            "!translate-x-0": menuOpen === true,
+          })}>
           <div className={cx("ml-auto w-[283px] h-full bg-neutrals-1300 py-5 px-4 flex flex-col justify-between border-l-[0.4px] border-neutrals-1100 sm:w-[400px] sm:px-12")}>
             <div className="">
 
               {/* top */}
               <div className="flex justify-between items-center mb-5 tall:mb-12 md:mb-8">
-                <Link 
+                <Link
                   href="/"
                   className="relative w-[120px] h-11"
                 >
@@ -179,6 +181,7 @@ export default function Navigation() {
                     src={getKirbyFiles("site/logo-dark.png")}
                     alt="Logo Karel Decoene portfolio website"
                     fill={true}
+                    sizes="(max-width: 1439px) 30vw, 0vw"
                     className="object-contain"
                   />
                 </Link>
@@ -188,6 +191,7 @@ export default function Navigation() {
                     src="/Menu-cross.png"
                     alt="Cross icon to close slide menu"
                     fill={true}
+                    sizes="5vw"
                     className=""
                   />
                 </div>

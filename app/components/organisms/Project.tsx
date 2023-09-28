@@ -26,6 +26,7 @@ export default function Project(project: ProjectProps) {
             // @ts-ignore
             src={project.cover.url}
             fill={true}
+            sizes="(max-width: 639px) 100vw, (max-width: 1199px) 50vw, 33vw"
             alt={project.alttag}
             className="object-cover"
           />
