@@ -1,5 +1,8 @@
+"use client";
+
 // Next & React
 import Link from "next/link";
+import React, { useState, FormEvent } from 'react'
 
 // Types
 import { ContactProps } from "@/types/sections/Contact";
@@ -19,6 +22,51 @@ import cx from "classnames";
 
 
 export default function Contact({ data }: ContactProps) {
+
+  // States
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    setIsLoading(true) // Set loading to true when the request starts
+
+    try {
+      const formData = new FormData(event.currentTarget)
+
+      /*
+      const response = await fetch('http://be-karel-portfolio.int/contact', {
+        method: 'POST',
+        body: formData,
+      }); */
+
+      // Fetch project info
+      const username = `${process.env.NEXT_PUBLIC_KIRBYCMS_EMAIL}`;
+      const password = `${process.env.NEXT_PUBLIC_KIRBYCMS_PASSWORD}`;
+
+      const headers = {
+        Authorization: "Basic " + Buffer.from(`${username}:${password}`).toString("base64"),
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      };
+
+      const response = await fetch(`http://be-karel-portfolio.int/contact`, {
+        method: "POST",
+        mode: 'no-cors',
+        body: formData,
+        headers,
+      });
+
+      const data = await response.json()
+      // ...
+    } catch (error) {
+      console.error(error)
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
+
+
   return (!data.isHidden && (
     <section id="contact" className={cx("section bg-neutrals-1300 lg:py-[100px] xl:py-0", {
       "xl:bg-neutrals-200": data.content.bgcolor === "grey",
@@ -63,7 +111,10 @@ export default function Contact({ data }: ContactProps) {
 
 
           {/* Form */}
-          <form className="w-full xl:w-[515px]">
+          <form
+            onSubmit={onSubmit}
+            className="w-full xl:w-[515px]"
+          >
 
             {/* Inputs */}
             <div className="flex flex-col gap-5 mb-6 lg:gap-7 lg:mb-8">
@@ -79,6 +130,7 @@ export default function Contact({ data }: ContactProps) {
                   className="block py-3 px-4 bg-neutrals-1100 text-neutrals-100 border-none text-16 leading-6 w-full focus:border-none focus:outline-none focus:outline-0 focus-visible:outline-none lg:text-20 lg:leading-26px lg:px-6 lg:py-4"
                   type="text"
                   name="name"
+                  required
                 />
               </div>
 
@@ -94,6 +146,8 @@ export default function Contact({ data }: ContactProps) {
                   className="block py-3 px-4 bg-neutrals-1100 text-neutrals-100 border-none text-16 leading-6 w-full focus:border-none focus:outline-none focus:outline-0 focus-visible:outline-none lg:text-20 lg:leading-26px lg:px-6 lg:py-4"
                   type="email"
                   name="email"
+                  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                  required
                 />
               </div>
 
@@ -109,6 +163,7 @@ export default function Contact({ data }: ContactProps) {
                   className="block py-3 px-4 bg-neutrals-1100 text-neutrals-100 border-none text-16 leading-6 w-full focus:border-none focus:outline-none focus:outline-0 focus-visible:outline-none lg:text-20 lg:leading-26px lg:px-6 lg:py-4"
                   type="text"
                   name="subject"
+                  required
                 />
               </div>
 
@@ -123,6 +178,7 @@ export default function Contact({ data }: ContactProps) {
                   id="message"
                   className="resize-none block h-[200px] py-3 px-4 bg-neutrals-1100 text-neutrals-100 border-none text-16 leading-6 w-full focus:border-none focus:outline-none focus:outline-0 focus-visible:outline-none lg:text-20 lg:leading-26px lg:px-6 lg:py-4"
                   name="message"
+                  required
                 />
               </div>
             </div>
