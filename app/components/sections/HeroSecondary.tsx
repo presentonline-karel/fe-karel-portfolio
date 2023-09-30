@@ -21,7 +21,7 @@ export default function HeroPrimary({ data }: HeroSecondaryProps) {
   return (!data.isHidden && (
     <section id="heroSecondary" className="section pt-[157px] lg:pt-[221px] xl:pt-0">
       <Wrapper className={cx("flex flex-col gap-10 sm:gap-12 md:flex-row md:items-center md:gap-20 lg:gap-[109px] xl:!pt-[257px] hd:border-neutrals-300", {
-        "xl:min-h-[calc(100vh-466px)]": data.content.herolabel === "Thank you"
+        "xl:min-h-[calc(100vh-466px)]": data.content.herolabel === "Thank you" || data.content.herolabel === "Contact me"
       })}>
 
         {/* Text */}

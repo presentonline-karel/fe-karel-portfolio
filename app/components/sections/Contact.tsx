@@ -24,44 +24,30 @@ import cx from "classnames";
 export default function Contact({ data }: ContactProps) {
 
   // States
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
 
-  async function onSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    setIsLoading(true) // Set loading to true when the request starts
+  // Submit handler
+  const onSubmit = async (e: FormEvent) => {
+    e.preventDefault();
 
     try {
-      const formData = new FormData(event.currentTarget)
-
-      /*
-      const response = await fetch('http://be-karel-portfolio.int/contact', {
-        method: 'POST',
-        body: formData,
-      }); */
-
-      // Fetch project info
-      const username = `${process.env.NEXT_PUBLIC_KIRBYCMS_EMAIL}`;
-      const password = `${process.env.NEXT_PUBLIC_KIRBYCMS_PASSWORD}`;
-
-      const headers = {
-        Authorization: "Basic " + Buffer.from(`${username}:${password}`).toString("base64"),
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      };
-
-      const response = await fetch(`http://be-karel-portfolio.int/contact`, {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        mode: 'no-cors',
-        body: formData,
-        headers,
-      });
-
-      const data = await response.json()
-      // ...
-    } catch (error) {
-      console.error(error)
-    } finally {
-      setIsLoading(false);
+        body: JSON.stringify({
+          name, 
+          email, 
+          subject, 
+          message
+        }),
+        headers: {
+          "content-type": "application/json"
+        },
+      })
+    } catch (err: any) {
+      console.error("Err", err);
     }
   }
 
@@ -112,8 +98,8 @@ export default function Contact({ data }: ContactProps) {
 
           {/* Form */}
           <form
-            onSubmit={onSubmit}
             className="w-full xl:w-[515px]"
+            onSubmit={onSubmit}
           >
 
             {/* Inputs */}
@@ -130,6 +116,8 @@ export default function Contact({ data }: ContactProps) {
                   className="block py-3 px-4 bg-neutrals-1100 text-neutrals-100 border-none text-16 leading-6 w-full focus:border-none focus:outline-none focus:outline-0 focus-visible:outline-none lg:text-20 lg:leading-26px lg:px-6 lg:py-4"
                   type="text"
                   name="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   required
                 />
               </div>
@@ -147,6 +135,8 @@ export default function Contact({ data }: ContactProps) {
                   type="email"
                   name="email"
                   pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
               </div>
@@ -163,6 +153,8 @@ export default function Contact({ data }: ContactProps) {
                   className="block py-3 px-4 bg-neutrals-1100 text-neutrals-100 border-none text-16 leading-6 w-full focus:border-none focus:outline-none focus:outline-0 focus-visible:outline-none lg:text-20 lg:leading-26px lg:px-6 lg:py-4"
                   type="text"
                   name="subject"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
                   required
                 />
               </div>
@@ -178,6 +170,8 @@ export default function Contact({ data }: ContactProps) {
                   id="message"
                   className="resize-none block h-[200px] py-3 px-4 bg-neutrals-1100 text-neutrals-100 border-none text-16 leading-6 w-full focus:border-none focus:outline-none focus:outline-0 focus-visible:outline-none lg:text-20 lg:leading-26px lg:px-6 lg:py-4"
                   name="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   required
                 />
               </div>
