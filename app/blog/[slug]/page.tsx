@@ -65,6 +65,7 @@ export default async function Page({ params }: { params: { slug: string; } }) {
   let data;
   try {
     data = await resp.json();
+    console.log("blogDetailData", data);
   } catch (jsonError: any) {
     console.log('Error parsing JSON: ' + jsonError.message);
   }
@@ -88,7 +89,10 @@ export default async function Page({ params }: { params: { slug: string; } }) {
         </Wrapper>
       </section>
 
-      <RelatedBlogs data={data.relatedBlogs} />
+      {data.relatedBlogs.data.length !== 0 && (
+        <RelatedBlogs data={data.relatedBlogs} />
+      )}
+      
       {data.customBlocks.map((section: any, index: number) => sectionRenderer(section, index))}
     </main>
   )

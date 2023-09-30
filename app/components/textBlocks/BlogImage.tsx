@@ -8,8 +8,6 @@ import { getKirbyFiles } from "@/utils/helper-functions";
 
 
 export default function BlogImage({ data }: BlogImageProps) {
-  console.log("blogImage", data);
-
   return (
     <div className="py-6">
       <div className="relative aspect-[3/2] lg:max-w-[1062px] lg:mx-auto">
