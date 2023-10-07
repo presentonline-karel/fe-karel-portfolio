@@ -200,7 +200,7 @@ export default async function Footer() {
           <span className="whitespace-nowrap">©2023 Karel - All rights reserved  /</span>
 
           <Link
-            href="privacy-policy"
+            href="/privacy-policy"
             className="underline whitespace-nowrap"
           >
             Privacy policy
