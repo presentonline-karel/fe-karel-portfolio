@@ -63,7 +63,6 @@ export default async function Page({ params }: { params: { slug: string; } }) {
   let data;
   try {
     data = await resp.json();
-    console.log("dataProjectDetail", data.relatedProjects);
   } catch (jsonError: any) {
     console.log('Error parsing JSON: ' + jsonError.message);
   }

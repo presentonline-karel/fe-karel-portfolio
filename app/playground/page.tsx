@@ -31,7 +31,6 @@ export default async function PlaygroundPage() {
   let data;
   try {
     data = await resp.json();
-    console.log("dataPlayground", data);
   } catch (jsonError: any) {
     console.log('Error parsing JSON: ' + jsonError.message);
   }

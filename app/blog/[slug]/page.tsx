@@ -55,7 +55,7 @@ export default async function Page({ params }: { params: { slug: string; } }) {
     Accept: "application/json",
   };
 
-  const resp = await fetch(`${process.env.NEXT_PUBLIC_KIRBYCMS_URL}/${params.slug}`, {
+  const resp = await fetch(`${process.env.NEXT_PUBLIC_KIRBYCMS_URL}/blog/${params.slug}`, {
     method: "GET",
     mode: 'no-cors',
     headers,
@@ -65,7 +65,6 @@ export default async function Page({ params }: { params: { slug: string; } }) {
   let data;
   try {
     data = await resp.json();
-    console.log("blogDetailData", data);
   } catch (jsonError: any) {
     console.log('Error parsing JSON: ' + jsonError.message);
   }

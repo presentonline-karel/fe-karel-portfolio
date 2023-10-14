@@ -39,6 +39,7 @@ export async function generateMetadata({ params }: { params: { slug: string }; }
 
 
 
+// Return page
 export default async function ProjectsPage() {
 
   /* Fetch project info */

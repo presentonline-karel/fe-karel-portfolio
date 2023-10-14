@@ -24,7 +24,7 @@ export default function BlogFooter() {
 
 
   // Copy link functionality
-  const base = "https://localhost:3000";
+  const base = "https://karrel.dev";
   const pathname = usePathname();
 
   const copylink = () => {

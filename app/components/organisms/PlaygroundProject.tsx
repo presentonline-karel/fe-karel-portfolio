@@ -29,8 +29,6 @@ import Button from "../components/Button";
 
 
 export default function PlaygroundProject(project: PlaygroundProjectProps, index: number) {
-  console.log("dataPlaygroundProject", project);
-
   return (
     <div
       key={index}
