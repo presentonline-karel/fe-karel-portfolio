@@ -10,6 +10,7 @@ import { Kanit } from 'next/font/google';
 // Components
 import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
+import Head from 'next/head';
 
 
 
@@ -35,6 +36,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" style={{ scrollBehavior: 'smooth' }}>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CELKBJZVJM" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${process.env.NEX_PUBLIC_GOOGLE_ANALYTICS}', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
+      </Head>
       <body className={`${kanit.className}`}>
         <div id="container">
           <Navigation />

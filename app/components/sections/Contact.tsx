@@ -23,7 +23,7 @@ import cx from "classnames";
 
 export default function Contact({ data }: ContactProps) {
 
-  // States
+  /* States
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -49,12 +49,12 @@ export default function Contact({ data }: ContactProps) {
     } catch (err: any) {
       console.error("Err", err);
     }
-  }
+  } */
 
 
 
   return (!data.isHidden && (
-    <section id="contact" className={cx("section bg-neutrals-1300 lg:py-[100px] xl:py-0", {
+    {/*<section id="contact" className={cx("section bg-neutrals-1300 lg:py-[100px] xl:py-0", {
       "xl:bg-neutrals-200": data.content.bgcolor === "grey",
       "xl:bg-neutrals-100": data.content.bgcolor === "white",
     })}>
@@ -64,7 +64,7 @@ export default function Contact({ data }: ContactProps) {
       })}>
         <Wrapper className="md:flex md:items-start md:gap-20 lg:gap-[109px] xl:max-w-[1280px] xl:px-[109px] xl:bg-neutrals-1300 xl:py-[100px] hd:!py-[100px]">
 
-          {/* Text */}
+          {/* Text
           <div className="mb-10 w-full xl:w-[438px]">
             <div className="label dark">
               {data.content.contactlabel}
@@ -79,7 +79,7 @@ export default function Contact({ data }: ContactProps) {
               dangerouslySetInnerHTML={{ __html: data.content.contactparagraph }}
             />
 
-            {/* Socials */}
+            {/* Socials
             <div className="flex items-center gap-5 mb-12 md:mb-0 lg:gap-6">
               {data.content.socials.map((social: SocialProps, index: number) => (
                 <Link
@@ -96,13 +96,13 @@ export default function Contact({ data }: ContactProps) {
 
 
 
-          {/* Form */}
+          {/* Form
           <form
             className="w-full xl:w-[515px]"
             onSubmit={onSubmit}
           >
 
-            {/* Inputs */}
+            {/* Inputs
             <div className="flex flex-col gap-5 mb-6 lg:gap-7 lg:mb-8">
               <div className="w-full">
                 <label
@@ -189,6 +189,6 @@ export default function Contact({ data }: ContactProps) {
           </form>
         </Wrapper>
       </div>
-    </section>
+    </section> */}
   ))
 }

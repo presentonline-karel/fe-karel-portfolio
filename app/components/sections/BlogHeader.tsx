@@ -33,7 +33,7 @@ export default function BlogHeader({ blogTitle, blogIntro, publishDate, minutesR
 
 
   // Copy link functionality
-  const base = "https://localhost:3000";
+  const base = "https://karrel.dev";
   const pathname = usePathname();
 
   const copylink = () => {

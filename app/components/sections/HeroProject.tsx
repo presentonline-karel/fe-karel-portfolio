@@ -106,7 +106,7 @@ export default function HeroProject({ period, shortTitle, description, urls, tec
 
             {urls.githuburl !== "" && (
               <Link
-                href={urls.figmaurl}
+                href={urls.githuburl}
                 className="btn btn-secondary px-4 py-3 lg:px-6 lg:py-4 xl:px-9"
                 target="_blank"
               >
