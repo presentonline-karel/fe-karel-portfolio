@@ -31,7 +31,7 @@ export default async function Footer() {
     Accept: "application/json",
   };
 
-  const resp = await fetch("http://be-karel-portfolio.int/_site", {
+  const resp = await fetch(`${process.env.NEXT_PUBLIC_KIRBYCMS_URL}/_site`, {
     method: "GET",
     mode: 'no-cors',
     headers,

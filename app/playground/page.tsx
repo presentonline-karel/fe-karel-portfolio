@@ -19,7 +19,7 @@ export default async function PlaygroundPage() {
     Accept: "application/json",
   };
 
-  const resp = await fetch(`http://be-karel-portfolio.int/playground`, {
+  const resp = await fetch(`${process.env.NEXT_PUBLIC_KIRBYCMS_URL}/playground`, {
     method: "GET",
     mode: 'no-cors',
     headers,

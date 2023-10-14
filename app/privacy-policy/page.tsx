@@ -51,7 +51,7 @@ export default async function Page() {
     Accept: "application/json",
   };
 
-  const resp = await fetch(`http://be-karel-portfolio.int/privacy-policy`, {
+  const resp = await fetch(`${process.env.NEXT_PUBLIC_KIRBYCMS_URL}/privacy-policy`, {
     method: "GET",
     mode: 'no-cors',
     headers,

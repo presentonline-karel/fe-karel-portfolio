@@ -50,7 +50,7 @@ export default async function ProjectsPage() {
     Accept: "application/json",
   };
 
-  const resp = await fetch(`http://be-karel-portfolio.int/projects`, {
+  const resp = await fetch(`${process.env.NEXT_PUBLIC_KIRBYCMS_URL}/projects`, {
     method: "GET",
     mode: 'no-cors',
     headers,

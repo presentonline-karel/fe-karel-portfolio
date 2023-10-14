@@ -53,7 +53,7 @@ export default async function Page({ params }: { params: { slug: string; } }) {
     Accept: "application/json",
   };
 
-  const resp = await fetch(`http://be-karel-portfolio.int/projects/${params.slug}`, {
+  const resp = await fetch(`${process.env.NEXT_PUBLIC_KIRBYCMS_URL}/projects/${params.slug}`, {
     method: "GET",
     mode: 'no-cors',
     headers,
