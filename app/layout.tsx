@@ -37,7 +37,27 @@ export default function RootLayout({
   return (
     <html lang="en" style={{ scrollBehavior: 'smooth' }}>
       <Head>
+
+        {/* Meta tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:image" content="https://www.karrel.dev/KarelDecoene_Portfolio_SocialsPreview.jpg" />
+        <meta content="1200" property="og:image:width" />
+        <meta content="630" property="og:image:height" />
+        <meta content="Karel Decoene" name="author" />
+        <meta content="Karel Decoene - Web developer/designer - Portfolio Website" property="og:title" />
+        <meta content="Karel Decoene - Web developer/designer - Portfolio Website" property="og:site_name" />
+        <meta content="Hi, I'm Karel and I'm a creative technologist focused on web development/design. Welcome to my portfolio website." name="description" />
+        <meta content="index,follow,noodp" name="robots" />
+        <meta content="https://karrel.dev" property="og:url" />
+        <meta content="Karel Decoene" property="article:author" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Karel Decoene - Web developer/designer - Portfolio Website" />
+        <meta name="twitter:site" content="karrel.dev" />
+        <meta name="twitter:creator" content="KarelDecoene" />
+        <meta name="twitter:image" content="https://www.karrel.dev/KarelDecoene_Portfolio_SocialsPreview.jpg" />
+        <link rel="canonical" href="https://karrel.dev" />
+        <link rel="shortlink" href="https://karrel.dev" />
+
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-CELKBJZVJM" />
         <script
           dangerouslySetInnerHTML={{

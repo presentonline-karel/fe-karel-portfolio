@@ -33,7 +33,7 @@ export default function Service(service: ServiceProps) {
         href={`/${service.destination[0]}`}
         className="btn btn-primary py-3 px-4 w-auto text-16 leading-4 lg:py-4 lg:px-7 lg:text-18 lg:leading-18px"
       >
-        <span>More info</span>
+        <span>{service.title}</span>
         <FontAwesomeIcon icon={faArrowRight} className="text-14 leading-14px text-neutrals-1400 w-[14px] h-[14px]" />
       </Link>
     </div>

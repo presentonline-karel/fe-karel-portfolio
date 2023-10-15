@@ -388,6 +388,7 @@ export default function Navigation() {
                   <Link
                     href="https://www.instagram.com/kareldecoene/"
                     target="_blank"
+                    aria-label="Instagram Karel Decoene"
                   >
                     <FontAwesomeIcon icon={faInstagram} className="w-[18px] h-5 text-neutrals-100" />
                   </Link>
@@ -395,6 +396,7 @@ export default function Navigation() {
                   <Link
                     href="https://www.facebook.com/karel.decoene.5/"
                     target="_blank"
+                    aria-label="Facebook Karel Decoene"
                   >
                     <FontAwesomeIcon icon={faFacebookF} className="w-[18px] h-5 text-neutrals-100" />
                   </Link>
@@ -402,6 +404,7 @@ export default function Navigation() {
                   <Link
                     href="https://www.linkedin.com/in/karel-decoene-395478187/"
                     target="_blank"
+                    aria-label="LinkedIn Karel Decoene"
                   >
                     <FontAwesomeIcon icon={faLinkedinIn} className="w-[18px] h-5 text-neutrals-100" />
                   </Link>
