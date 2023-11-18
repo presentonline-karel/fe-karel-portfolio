@@ -135,10 +135,10 @@ export default function Navigation() {
 
           {/* email */}
           <Link
-            href="mailto:info@karrel.be"
+            href="mailto:hi@karrel.dev"
             className="hidden tracking-tight text-18 leading-6 text-neutrals-1300 border-b-2 border-neutrals-900 cursor-pointer hover:border-prim-700 lg:block xl:text-20 xl:leading-26px"
           >
-            info@karrel.be
+            hi@karrel.dev
           </Link>
 
 
@@ -367,10 +367,10 @@ export default function Navigation() {
 
                 <div className="flex flex-col gap-1 mb-6 tall:mb-10 md:mb-8">
                   <Link
-                    href="mailto:info@karrel.be"
+                    href="mailto:hi@karrel.dev"
                     className="text-20 leading-26px tall:text-24 tall:leading-30px tracking-tight underline block font-normal text-neutrals-100"
                   >
-                    info@karrel.be
+                    hi@karrel.dev
                   </Link>
 
                   <Link
