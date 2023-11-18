@@ -1,3 +1,6 @@
+// Next
+import Script from 'next/script';
+
 // Global CSS
 import './globals.css';
 
@@ -11,6 +14,9 @@ import { Kanit } from 'next/font/google';
 import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
 import Head from 'next/head';
+
+// Analytics
+import GoogleAnalytics from "./GoogleAnalytics";
 
 
 
@@ -57,20 +63,9 @@ export default function RootLayout({
         <meta name="twitter:image" content="https://www.karrel.dev/KarelDecoene_Portfolio_SocialsPreview.jpg" />
         <link rel="canonical" href="https://karrel.dev" />
         <link rel="shortlink" href="https://karrel.dev" />
-
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CELKBJZVJM" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-CELKBJZVJM');
-            `,
-          }}
-        />
       </Head>
       <body className={`${kanit.className}`}>
+        <GoogleAnalytics />
         <div id="container">
           <Navigation />
           {children}
