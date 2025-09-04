@@ -95,7 +95,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
                       <Link
                         href={testimonial.website}
                         target="_blank"
-                        className="underline"
+                        className="a11y-focus underline"
                       >
                         {` ${testimonial.company}`}
                       </Link>
@@ -169,7 +169,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
                     <Link
                       href={data.content.testimonials[0].website}
                       target="_blank"
-                      className="underline"
+                      className="a11y-focus underline"
                     >
                       {` ${data.content.testimonials[0].company}`}
                     </Link>
@@ -203,7 +203,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
                       <Link
                         href={testimonial.website}
                         target="_blank"
-                        className="underline"
+                        className="a11y-focus underline"
                       >
                         {` ${testimonial.company}`}
                       </Link>

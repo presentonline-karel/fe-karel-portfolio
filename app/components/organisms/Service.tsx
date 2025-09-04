@@ -24,18 +24,18 @@ export default function Service(service: ServiceProps) {
         </h3>
 
         <div
-          className="p text-neutrals-200 mb-5 lg:mb-8"
+          className="p text-neutrals-200"
           dangerouslySetInnerHTML={{ __html: service.paragraph }}
         />
       </div>
 
-      <Link
+      {/* <Link
         href={`/${service.destination[0]}`}
-        className="btn btn-primary py-3 px-4 w-auto text-16 leading-4 lg:py-4 lg:px-7 lg:text-18 lg:leading-18px"
+        className="a11y-focus btn btn-primary py-3 px-4 w-auto text-16 leading-4 lg:py-4 lg:px-7 lg:text-18 lg:leading-18px"
       >
         <span>{service.title}</span>
         <FontAwesomeIcon icon={faArrowRight} className="text-14 leading-14px text-neutrals-1400 w-[14px] h-[14px]" />
-      </Link>
+      </Link> */}
     </div>
   )
 }

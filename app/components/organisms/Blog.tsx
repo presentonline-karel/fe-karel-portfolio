@@ -21,7 +21,7 @@ export default function Blog(blog: BlogProps) {
   return (
     <Link
       href={`/${blog.uri}`}
-      className={cx("w-full h-full flex flex-col items-start relative aspect-square", {
+      className={cx("a11y-focus w-full h-full flex flex-col items-start relative aspect-square", {
         "justify-between": blog.isblognew === "true",
         "justify-end": blog.isblognew === "false",
       })}
@@ -73,7 +73,7 @@ export default function Blog(blog: BlogProps) {
           {blog.blogTitle}
         </h3>
 
-        <button className="btn btn-primary !text-16 !leading-4 !px-4 !py-3 !inline-flex !w-min">
+        <button className="a11y-focus btn btn-primary !text-16 !leading-4 !px-4 !py-3 !inline-flex !w-min">
           <span className="tracking-tight whitespace-nowrap">Read blog</span>
           <FontAwesomeIcon icon={faArrowRight} className="text-12 leading-3 w-[11px] h-3" />
         </button>

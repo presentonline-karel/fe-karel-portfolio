@@ -39,7 +39,7 @@ export default function HeroProject({ period, shortTitle, description, urls, tec
             <div className="flex items-center gap-3 lg:gap-4">
               <Link
                 href="/"
-                className="underline py-2 text-14 leading-14px text-neutrals-1300 tracking-tight lg:text-18 lg:leading-18px"
+                className="a11y-focus underline py-2 text-14 leading-14px text-neutrals-1300 tracking-tight lg:text-18 lg:leading-18px"
               >
                 Home
               </Link>
@@ -51,7 +51,7 @@ export default function HeroProject({ period, shortTitle, description, urls, tec
 
               <Link
                 href="/projects"
-                className="underline py-2 text-14 leading-14px text-neutrals-1300 tracking-tight lg:text-18 lg:leading-18px"
+                className="a11y-focus underline py-2 text-14 leading-14px text-neutrals-1300 tracking-tight lg:text-18 lg:leading-18px"
               >
                 Projects
               </Link>
@@ -85,7 +85,7 @@ export default function HeroProject({ period, shortTitle, description, urls, tec
             {urls.liveurl !== "" && (
               <Link
                 href={urls.liveurl}
-                className="btn btn-primary px-4 py-3 lg:px-6 lg:py-4 xl:px-9"
+                className="a11y-focus btn btn-primary px-4 py-3 lg:px-6 lg:py-4 xl:px-9"
                 target="_blank"
               >
                 <FontAwesomeIcon icon={faChain} className="!w-[14px] !h-[14px] text-neutrals-1400 lg:!w-[18px] lg:!h-[18px]" />
@@ -96,7 +96,7 @@ export default function HeroProject({ period, shortTitle, description, urls, tec
             {urls.figmaurl !== "" && (
               <Link
                 href={urls.figmaurl}
-                className="btn btn-secondary px-4 py-3 lg:px-6 lg:py-4 xl:px-9"
+                className="a11y-focus btn btn-secondary px-4 py-3 lg:px-6 lg:py-4 xl:px-9"
                 target="_blank"
               >
                 <span className="tracking-tight text-16 leading-4 whitespace-nowrap lg:text-20 lg:leading-5">Figma</span>
@@ -107,7 +107,7 @@ export default function HeroProject({ period, shortTitle, description, urls, tec
             {urls.githuburl !== "" && (
               <Link
                 href={urls.githuburl}
-                className="btn btn-secondary px-4 py-3 lg:px-6 lg:py-4 xl:px-9"
+                className="a11y-focus btn btn-secondary px-4 py-3 lg:px-6 lg:py-4 xl:px-9"
                 target="_blank"
               >
                 <span className="tracking-tight text-16 leading-4 whitespace-nowrap lg:text-20 lg:leading-5">GitHub</span>

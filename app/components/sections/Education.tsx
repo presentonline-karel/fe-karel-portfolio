@@ -61,7 +61,7 @@ export default function Education({ data }: EducationProps) {
 
               {data.content.educationcard.addwebsite === "true" ? (
                 <Link
-                  className="underline"
+                  className="a11y-focus underline"
                   href={data.content.educationcard.website}
                   target="_blank"
                 >

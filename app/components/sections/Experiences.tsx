@@ -79,7 +79,7 @@ export default function Experiences({ data }: ExperiencesProps) {
                 {activeTab.jobtitle} @ {activeTab.addwebsite === "true" ? (
                   <Link
                     href={activeTab.website}
-                    className="underline"
+                    className="a11y-focus underline"
                     target="_blank"
                   >
                     {activeTab.company}

@@ -62,7 +62,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center">
 
           {/* logo */}
-          <Link href="/" className="relative w-[120px] h-11 xl:w-[154px] xl:h-14">
+          <Link href="/" className="a11y-focus relative w-[120px] h-11 xl:w-[154px] xl:h-14">
             <Image
               src={getKirbyFiles("site/logo-light.png")}
               alt="Logo Karel Decoene portfolio website"
@@ -78,7 +78,7 @@ export default function Navigation() {
           <div className="hidden lg:flex lg:justify-center lg:items-center lg:gap-8 lg:pt-1 xl:gap-10">
             <Link
               href="/"
-              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium hover:border-prim-400", {
+              className={cx("a11y-focus text-neutrals-1300 border-b-2 border-neutrals-100 font-medium hover:border-prim-400", {
                 "!border-prim-700": pathname === "/" || pathname === "/home",
               })}
             >
@@ -87,16 +87,16 @@ export default function Navigation() {
 
             <Link
               href="/projects"
-              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium hover:border-prim-400", {
+              className={cx("a11y-focus text-neutrals-1300 border-b-2 border-neutrals-100 font-medium hover:border-prim-400", {
                 "!border-prim-700": pathname === "/projects",
               })}
             >
-              <span className="text-20 leading-26px tracking-tight xl:text-24 xl:leading-30px">Cases</span>
+              <span className="text-20 leading-26px tracking-tight xl:text-24 xl:leading-30px">Projects</span>
             </Link>
 
             <Link
               href="/blog"
-              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium hover:border-prim-400", {
+              className={cx("a11y-focus text-neutrals-1300 border-b-2 border-neutrals-100 font-medium hover:border-prim-400", {
                 "!border-prim-700": pathname === "/blog",
               })}
             >
@@ -105,7 +105,7 @@ export default function Navigation() {
 
             <Link
               href="/about"
-              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium hover:border-prim-400", {
+              className={cx("a11y-focus text-neutrals-1300 border-b-2 border-neutrals-100 font-medium hover:border-prim-400", {
                 "!border-prim-700": pathname === "/about",
               })}
             >
@@ -114,7 +114,7 @@ export default function Navigation() {
 
             <Link
               href="/contact"
-              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium hover:border-prim-400", {
+              className={cx("a11y-focus text-neutrals-1300 border-b-2 border-neutrals-100 font-medium hover:border-prim-400", {
                 "!border-prim-700": pathname === "/contact",
               })}
             >
@@ -127,7 +127,7 @@ export default function Navigation() {
           {/* email */}
           <Link
             href="mailto:hi@karrel.dev"
-            className="hidden tracking-tight text-18 leading-6 text-neutrals-1300 border-b-2 border-neutrals-900 cursor-pointer hover:border-prim-700 lg:block xl:text-20 xl:leading-26px"
+            className="a11y-focus hidden tracking-tight text-18 leading-6 text-neutrals-1300 border-b-2 border-neutrals-900 cursor-pointer hover:border-prim-700 lg:block xl:text-20 xl:leading-26px"
           >
             hi@karrel.dev
           </Link>
@@ -166,7 +166,7 @@ export default function Navigation() {
               <div className="flex justify-between items-center mb-5 tall:mb-12 md:mb-8">
                 <Link
                   href="/"
-                  className="relative w-[120px] h-11"
+                  className="a11y-focus relative w-[120px] h-11"
                 >
                   <Image
                     src={getKirbyFiles("site/logo-dark.png")}
@@ -204,7 +204,7 @@ export default function Navigation() {
                     <Link
                       href="/"
                       onClick={() => setMenuOpen(false)}
-                      className={cx("flex items-center gap-2 text-neutrals-100", {
+                      className={cx("a11y-focus flex items-center gap-2 text-neutrals-100", {
                         "text-prim-500": pathname === "/" || pathname === "/home",
                       })}
                     >
@@ -220,7 +220,7 @@ export default function Navigation() {
                     <Link
                       href="/projects"
                       onClick={() => setMenuOpen(false)}
-                      className={cx("flex items-center gap-2 text-neutrals-100", {
+                      className={cx("a11y-focus flex items-center gap-2 text-neutrals-100", {
                         "text-prim-500": pathname === "/projects",
                       })}
                     >
@@ -230,13 +230,13 @@ export default function Navigation() {
                           "!block": pathname === "/projects"
                         })}
                       />
-                      <span className="text-24 leading-30px tracking-tight">Cases</span>
+                      <span className="text-24 leading-30px tracking-tight">Projects</span>
                     </Link>
 
                     <Link
                       href="/blog"
                       onClick={() => setMenuOpen(false)}
-                      className={cx("flex items-center gap-2 text-neutrals-100", {
+                      className={cx("a11y-focus flex items-center gap-2 text-neutrals-100", {
                         "text-prim-500": pathname === "/blog",
                       })}
                     >
@@ -252,7 +252,7 @@ export default function Navigation() {
                     <Link
                       href="/about"
                       onClick={() => setMenuOpen(false)}
-                      className={cx("flex items-center gap-2 text-neutrals-100", {
+                      className={cx("a11y-focus flex items-center gap-2 text-neutrals-100", {
                         "text-prim-500": pathname === "/about",
                       })}
                     >
@@ -268,7 +268,7 @@ export default function Navigation() {
                     <Link
                       href="/contact"
                       onClick={() => setMenuOpen(false)}
-                      className={cx("flex items-center gap-2 text-neutrals-100", {
+                      className={cx("a11y-focus flex items-center gap-2 text-neutrals-100", {
                         "text-prim-500": pathname === "/contact",
                       })}
                     >
@@ -297,7 +297,7 @@ export default function Navigation() {
                     <Link
                       href="/web-development-project"
                       onClick={() => setMenuOpen(false)}
-                      className={cx("flex items-center gap-2 text-neutrals-100", {
+                      className={cx("a11y-focus flex items-center gap-2 text-neutrals-100", {
                         "text-prim-500": pathname === "/web-development-project" || pathname === "/web-development-freelance",
                       })}
                     >
@@ -313,7 +313,7 @@ export default function Navigation() {
                     <Link
                       href="/web-design-project"
                       onClick={() => setMenuOpen(false)}
-                      className={cx("flex items-center gap-2 text-neutrals-100", {
+                      className={cx("a11y-focusflex items-center gap-2 text-neutrals-100", {
                         "text-prim-500": pathname === "/web-design-project" || pathname === "/web-design-freelance",
                       })}
                     >
@@ -329,7 +329,7 @@ export default function Navigation() {
                     <Link
                       href="/playground"
                       onClick={() => setMenuOpen(false)}
-                      className={cx("flex items-center gap-2 text-neutrals-100", {
+                      className={cx("a11y-focus flex items-center gap-2 text-neutrals-100", {
                         "text-prim-500": pathname === "/playground",
                       })}
                     >
@@ -359,14 +359,14 @@ export default function Navigation() {
                 <div className="flex flex-col gap-1 mb-6 tall:mb-10 md:mb-8">
                   <Link
                     href="mailto:hi@karrel.dev"
-                    className="text-20 leading-26px tall:text-24 tall:leading-30px tracking-tight underline block font-normal text-neutrals-100"
+                    className="a11y-focus text-20 leading-26px tall:text-24 tall:leading-30px tracking-tight underline block font-normal text-neutrals-100"
                   >
                     hi@karrel.dev
                   </Link>
 
                   <Link
                     href="tel:+32476280902"
-                    className="text-20 leading-26px tall:text-24 tall:leading-30px tracking-tight underline block font-normal text-neutrals-100"
+                    className="a11y-focus text-20 leading-26px tall:text-24 tall:leading-30px tracking-tight underline block font-normal text-neutrals-100"
                   >
                     +32 476 28 09 02
                   </Link>
@@ -377,25 +377,10 @@ export default function Navigation() {
                 {/* socials */}
                 <div className="items-center gap-5 hidden tall:flex">
                   <Link
-                    href="https://www.instagram.com/kareldecoene/"
-                    target="_blank"
-                    aria-label="Instagram Karel Decoene"
-                  >
-                    <FontAwesomeIcon icon={faInstagram} className="w-[18px] h-5 text-neutrals-100" />
-                  </Link>
-
-                  <Link
-                    href="https://www.facebook.com/karel.decoene.5/"
-                    target="_blank"
-                    aria-label="Facebook Karel Decoene"
-                  >
-                    <FontAwesomeIcon icon={faFacebookF} className="w-[18px] h-5 text-neutrals-100" />
-                  </Link>
-
-                  <Link
                     href="https://www.linkedin.com/in/karel-decoene-395478187/"
                     target="_blank"
                     aria-label="LinkedIn Karel Decoene"
+                    className="a11y-focus"
                   >
                     <FontAwesomeIcon icon={faLinkedinIn} className="w-[18px] h-5 text-neutrals-100" />
                   </Link>

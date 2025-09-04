@@ -1,7 +1,6 @@
 "use client";
 
 // Next & React
-import Link from "next/link";
 import Image from "next/image";
 
 // Types
@@ -101,7 +100,7 @@ export default function PlaygroundProject(project: PlaygroundProjectProps, index
           {project.title}
         </h2>
 
-        <div 
+        <div
           className={cx("p lg:mb-10", {
             "mb-6": project.ctabutton.length !== 0,
           })}

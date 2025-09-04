@@ -84,6 +84,9 @@ const config: Config = {
 			maxWidth: {
 				"8xl": "1440px",
 			},
+			outlineOffset: {
+				6: "6px",
+			},
 		},
 		fontSize: {
 			"12": "12px",

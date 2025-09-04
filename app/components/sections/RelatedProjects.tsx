@@ -32,7 +32,7 @@ export default function RelatedProjects({ data }: RelatedProjectsProps) {
 
           <Link
             href="/projects"
-            className="btn btn-secondary py-3 px-4 text-16 leading-4 lg:px-9 lg:py-4 lg:text-20 lg:leading-5 lg:gap-3"
+            className="a11y-focus btn btn-secondary py-3 px-4 text-16 leading-4 lg:px-9 lg:py-4 lg:text-20 lg:leading-5 lg:gap-3"
           >
             <span className="tracking-tight whitespace-nowrap">All projects</span>
             <FontAwesomeIcon icon={faArrowRight} className="text-12 leading-3 w-[11px] h-3 lg:text-16 lg:leading-4 lg:w-[14px] lg:h-4" />

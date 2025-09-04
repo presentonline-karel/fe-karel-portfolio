@@ -74,7 +74,7 @@ export default function HighlightedProjects({ data }: HighlightedProjectsProps) 
 
           <Link
             href="projects"
-            className="btn btn-secondary py-3 px-4 text-16 leading-4 lg:px-9 lg:py-4 lg:text-20 lg:leading-5 lg:gap-3"
+            className="a11y-focus btn btn-secondary py-3 px-4 text-16 leading-4 lg:px-9 lg:py-4 lg:text-20 lg:leading-5 lg:gap-3"
           >
             <span className="tracking-tight whitespace-nowrap">All projects</span>
             <FontAwesomeIcon icon={faArrowRight} className="text-12 leading-3 w-[11px] h-3 lg:text-16 lg:leading-4 lg:w-[14px] lg:h-4" />
@@ -100,7 +100,7 @@ export default function HighlightedProjects({ data }: HighlightedProjectsProps) 
               key={index}
               className="border-[0.4px] border-neutrals-400 shadow-card !h-auto !flex flex-col justify-between bg-neutrals-1200"
             >
-              <Link href={project.project[0]}>
+              <Link href={project.project[0]} className="a11y-focus">
 
                 {/* Project cover */}
                 <div className="relative aspect-[3/2]">
@@ -148,7 +148,7 @@ export default function HighlightedProjects({ data }: HighlightedProjectsProps) 
 
               <Link
                 href={project.project[0]}
-                className="btn btn-primary !text-16 !leading-4 !px-4 !py-3 !inline-flex !w-min !relative bottom-6 left-5 lg:left-6 lg:bottom-8"
+                className="a11y-focus btn btn-primary !text-16 !leading-4 !px-4 !py-3 !inline-flex !w-min !relative bottom-6 left-5 lg:left-6 lg:bottom-8"
               >
                 <span className="tracking-tight whitespace-nowrap">Discover project</span>
                 <FontAwesomeIcon icon={faArrowRight} className="text-12 leading-3 w-[11px] h-3" />

@@ -40,7 +40,7 @@ export default function Architecture(architecture: ArchitectureProps) {
           <>
             <Link
               href={`/${project.project[0]}`}
-              className="underline text-18 leading-6 font-normal text-neutrals-1300 whitespace-nowrap lg:text-20 lg:leading-26px"
+              className="a11y-focus underline text-18 leading-6 font-normal text-neutrals-1300 whitespace-nowrap lg:text-20 lg:leading-26px"
               key={index}
             >
               {project.anchor}

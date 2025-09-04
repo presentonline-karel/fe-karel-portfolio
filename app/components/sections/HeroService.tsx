@@ -51,7 +51,7 @@ export default function HeroService({ data }: HeroServiceProps) {
             ) : (
               <Link
                 href={data.content.freelancepage[0]}
-                className="py-3 px-4 flex items-center gap-3 border-[0.4px] bg-neutrals-100 border-neutrals-400 shadow-input hover:border-neutrals-800"
+                className="a11y-focus py-3 px-4 flex items-center gap-3 border-[0.4px] bg-neutrals-100 border-neutrals-400 shadow-input hover:border-neutrals-800"
               >
                 <div className="w-6 h-6 rounded-full bg-neutrals-100 border border-neutrals-600" />
 
@@ -83,7 +83,7 @@ export default function HeroService({ data }: HeroServiceProps) {
             ) : (
               <Link
                 href={data.content.projectpage[0]}
-                className="py-3 px-4 flex items-center gap-3 border-[0.4px] bg-neutrals-100 border-neutrals-400 shadow-input hover:border-neutrals-800"
+                className="a11y-focus py-3 px-4 flex items-center gap-3 border-[0.4px] bg-neutrals-100 border-neutrals-400 shadow-input hover:border-neutrals-800"
               >
                 <div className="w-6 h-6 rounded-full bg-neutrals-100 border border-neutrals-600" />
 
@@ -102,7 +102,7 @@ export default function HeroService({ data }: HeroServiceProps) {
           <div className="flex items-center gap-3 mb-4 lg:gap-4 lg:mb-8">
             <Link
               href="/"
-              className="underline py-2 text-14 leading-14px text-neutrals-1300 tracking-tight lg:text-18 lg:leading-18px"
+              className="a11y-focus underline py-2 text-14 leading-14px text-neutrals-1300 tracking-tight lg:text-18 lg:leading-18px"
             >
               Home
             </Link>
@@ -114,7 +114,7 @@ export default function HeroService({ data }: HeroServiceProps) {
 
             <Link
               href="/#services"
-              className="underline py-2 text-14 leading-14px text-neutrals-1300 tracking-tight lg:text-18 lg:leading-18px"
+              className="a11y-focus underline py-2 text-14 leading-14px text-neutrals-1300 tracking-tight lg:text-18 lg:leading-18px"
             >
               Services
             </Link>

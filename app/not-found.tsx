@@ -35,7 +35,7 @@ export default async function PostNotFound() {
 
           <Link
             href="/"
-            className="btn btn-primary"
+            className="btn btn-primary a11y-focus"
           >
             <span className="whitespace-nowrap">Home</span>
             <FontAwesomeIcon icon={faArrowRight} className="text-14 leading-14px text-neutrals-1400 w-[14px] h-[14px] lg:text-16 lg:leading-4 lg:h-4" />

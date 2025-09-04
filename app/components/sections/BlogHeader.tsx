@@ -59,7 +59,7 @@ export default function BlogHeader({ blogTitle, blogIntro, publishDate, minutesR
         <div className="flex justify-between items-center mb-6 lg:mb-10">
 
           {/* Breadcrumb mobile */}
-          <Link href="/blog" className="flex items-center gap-3 md:hidden">
+          <Link href="/blog" className="a11y-focus flex items-center gap-3 md:hidden">
             <FontAwesomeIcon
               icon={faChevronLeft}
               className="text-[10px] leading-3 text-neutrals-1200 !w-[7px] !h-3 lg:!w-[9px] lg:!h-4"
@@ -74,7 +74,7 @@ export default function BlogHeader({ blogTitle, blogIntro, publishDate, minutesR
           <div className="hidden items-center gap-3 lg:gap-4 md:flex">
             <Link
               href="/"
-              className="underline py-2 text-14 leading-14px text-neutrals-1300 tracking-tight lg:text-18 lg:leading-18px"
+              className="a11y-focus underline py-2 text-14 leading-14px text-neutrals-1300 tracking-tight lg:text-18 lg:leading-18px"
             >
               Home
             </Link>
@@ -86,7 +86,7 @@ export default function BlogHeader({ blogTitle, blogIntro, publishDate, minutesR
 
             <Link
               href="/blog"
-              className="underline py-2 text-14 leading-14px text-neutrals-1300 tracking-tight lg:text-18 lg:leading-18px"
+              className="a11y-focus underline py-2 text-14 leading-14px text-neutrals-1300 tracking-tight lg:text-18 lg:leading-18px"
             >
               Blog
             </Link>
@@ -134,13 +134,14 @@ export default function BlogHeader({ blogTitle, blogIntro, publishDate, minutesR
           </div>
 
           <div className="flex items-center gap-5 lg:gap-6">
-            <button onClick={copylink}>
+            <button onClick={copylink} className="a11y-focus">
               <FontAwesomeIcon icon={faChain} className="w-5 !h-5 text-neutrals-1300 lg:w-6 lg:!h-6" />
             </button>
 
             <Link
               href={`https://www.linkedin.com/sharing/share-offsite/?url=http://karrel.be`}
               target="_blank"
+              className="a11y-focus"
             >
               <FontAwesomeIcon icon={faLinkedinIn} className="w-[18px] !h-5 text-neutrals-1300 lg:w-[21px] lg:!h-6" />
             </Link>
@@ -149,6 +150,7 @@ export default function BlogHeader({ blogTitle, blogIntro, publishDate, minutesR
               href={`https://wa.me/?text=${shareUrl}`}
               target="_blank"
               rel="noreferrer"
+              className="a11y-focus"
             >
               <FontAwesomeIcon icon={faWhatsapp} className="w-5 !h-5 text-neutrals-1300 lg:w-6 lg:!h-6" />
             </Link>

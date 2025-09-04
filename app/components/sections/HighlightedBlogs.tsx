@@ -70,7 +70,7 @@ export default function HighlightedBlogs({ data }: HighlightedBlogsProps) {
 
           <Link
             href="/blog"
-            className="btn btn-secondary py-3 px-4 text-16 leading-4 lg:px-9 lg:py-4 lg:text-20 lg:leading-5 lg:gap-3"
+            className="a11y-focus btn btn-secondary py-3 px-4 text-16 leading-4 lg:px-9 lg:py-4 lg:text-20 lg:leading-5 lg:gap-3"
           >
             <span className="tracking-tight whitespace-nowrap">All blogs</span>
             <FontAwesomeIcon icon={faArrowRight} className="text-12 leading-3 w-[11px] h-3 lg:text-16 lg:leading-4 lg:w-[14px] lg:h-4" />
@@ -100,7 +100,7 @@ export default function HighlightedBlogs({ data }: HighlightedBlogsProps) {
             >
               <Link
                 href={blog.blog[0]}
-                className={cx("w-full h-full flex flex-col items-start", {
+                className={cx("a11y-focus w-full h-full flex flex-col items-start", {
                   "justify-between": blog.addnewlabel === "true",
                   "justify-end": blog.addnewlabel === "false",
                 })}
@@ -152,7 +152,7 @@ export default function HighlightedBlogs({ data }: HighlightedBlogsProps) {
                     {blog.title}
                   </h3>
 
-                  <button className="btn btn-primary !text-16 !leading-4 !px-4 !py-3 !inline-flex !w-min">
+                  <button className="a11y-focus btn btn-primary !text-16 !leading-4 !px-4 !py-3 !inline-flex !w-min">
                     <span className="tracking-tight whitespace-nowrap">Read blog</span>
                     <FontAwesomeIcon icon={faArrowRight} className="text-12 leading-3 w-[11px] h-3" />
                   </button>

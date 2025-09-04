@@ -144,4 +144,8 @@
   .text-blocks .h3 {
     @apply lg:text-32 lg:leading-38px;
   }
+
+  .a11y-focus {
+    @apply focus-visible:outline-[3px] focus-visible:outline-offset-6 focus-visible:outline-prim-700;
+  }
 }

@@ -16,7 +16,7 @@ export default function Project(project: ProjectProps) {
     <Link
       // @ts-ignore
       href={`/${project.id}`}
-      className="bg-neutrals-1200 flex flex-col justify-between w-full border-[0.4px] border-neutrals-400 shadow-card md:!h-auto"
+      className="a11y-focus bg-neutrals-1200 flex flex-col justify-between w-full border-[0.4px] border-neutrals-400 shadow-card md:!h-auto"
     >
       <div>
 
@@ -69,7 +69,7 @@ export default function Project(project: ProjectProps) {
       </div>
 
       <button
-        className="btn btn-primary !text-16 !leading-4 !px-4 !py-3 !inline-flex !w-min !relative bottom-6 left-5 lg:left-6 lg:bottom-8"
+        className="a11y-focus btn btn-primary !text-16 !leading-4 !px-4 !py-3 !inline-flex !w-min !relative bottom-6 left-5 lg:left-6 lg:bottom-8"
       >
         <span className="tracking-tight whitespace-nowrap">Discover project</span>
         <FontAwesomeIcon icon={faArrowRight} className="text-12 leading-3 w-[11px] h-3" />

@@ -18,7 +18,7 @@ export default function Button({ button, className }: { button: ButtonProps, cla
   return (
     <Link
       href={renderButtonHref(button)}
-      className={`${renderButtonStyle(button.typeofbutton)} ${className}`}
+      className={`a11y-focus ${renderButtonStyle(button.typeofbutton)} ${className}`}
       target={button.destination === "internal" ? "_self" : "_blank"}
     >
       <span className="whitespace-nowrap">{button.anchor}</span>

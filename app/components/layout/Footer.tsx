@@ -28,7 +28,7 @@ export default async function Footer() {
 
           <Link
             href="#container"
-            className="absolute right-0 top-3 md:top-0"
+            className="a11y-focus absolute right-0 top-3 md:top-0"
           >
             <FontAwesomeIcon
               icon={faArrowUp}
@@ -52,7 +52,7 @@ export default async function Footer() {
               <div className="flex items-center gap-5 lg:hidden">
                 <Link
                   href="https://www.linkedin.com/in/karel-decoene-395478187/"
-                  className="text-neutrals-100 w-5 !h-5"
+                  className="a11y-focus text-neutrals-100 w-5 !h-5"
                   target="_blank"
                 >
                   <FontAwesomeIcon icon={faLinkedinIn} className="w-5 h-5" />
@@ -69,7 +69,7 @@ export default async function Footer() {
             <div className="hidden lg:flex lg:items-center lg:gap-6">
               <Link
                 href="https://www.linkedin.com/in/karel-decoene-395478187/"
-                className="text-neutrals-100 w-6 !h-6"
+                className="a11y-focus text-neutrals-100 w-6 !h-6"
                 target="_blank"
               >
                 <FontAwesomeIcon icon={faLinkedinIn} className="w-6 h-6" />
@@ -79,7 +79,7 @@ export default async function Footer() {
             <div className="py-2 px-3 bg-neutrals-1200 inline-flex items-center gap-4 lg:hidden">
               <Link
                 href={`tel:+32476280902`}
-                className="flex items-center gap-[6px] text-neutrals-100"
+                className="a11y-focus flex items-center gap-[6px] text-neutrals-100"
                 target="_blank"
               >
                 <FontAwesomeIcon icon={renderIcon("phone")} className="w-3 h-3" />
@@ -90,7 +90,7 @@ export default async function Footer() {
 
               <Link
                 href={`mailto:hi@karrel.dev`}
-                className="flex items-center gap-[6px] text-neutrals-100"
+                className="a11y-focus flex items-center gap-[6px] text-neutrals-100"
               >
                 <FontAwesomeIcon icon={renderIcon("envelope")} className="w-3 h-3" />
                 <span className="text-16 leading-4 font-normal">hi@karrel.dev</span>
@@ -109,35 +109,35 @@ export default async function Footer() {
               <div className="flex flex-col gap-[2px] text-neutrals-100 xl:gap-2">
                 <Link
                   href={`/`}
-                  className="w-full text-20 leading-26px font-medium lg:text-16 lg:leading-6 lg:underline lg:font-light xl:text-18 xl:leading-6"
+                  className="a11y-focus w-full text-20 leading-26px font-medium lg:text-16 lg:leading-6 lg:underline lg:font-light xl:text-18 xl:leading-6"
                 >
                   Home
                 </Link>
 
                 <Link
                   href={`/projects`}
-                  className="w-full text-20 leading-26px font-medium lg:text-16 lg:leading-6 lg:underline lg:font-light xl:text-18 xl:leading-6"
+                  className="a11y-focus w-full text-20 leading-26px font-medium lg:text-16 lg:leading-6 lg:underline lg:font-light xl:text-18 xl:leading-6"
                 >
-                  Cases
+                  Projects
                 </Link>
 
                 <Link
                   href={`/blog`}
-                  className="w-full text-20 leading-26px font-medium lg:text-16 lg:leading-6 lg:underline lg:font-light xl:text-18 xl:leading-6"
+                  className="a11y-focus w-full text-20 leading-26px font-medium lg:text-16 lg:leading-6 lg:underline lg:font-light xl:text-18 xl:leading-6"
                 >
                   Blog
                 </Link>
 
                 <Link
                   href={`/about`}
-                  className="w-full text-20 leading-26px font-medium lg:text-16 lg:leading-6 lg:underline lg:font-light xl:text-18 xl:leading-6"
+                  className="a11y-focus w-full text-20 leading-26px font-medium lg:text-16 lg:leading-6 lg:underline lg:font-light xl:text-18 xl:leading-6"
                 >
                   About
                 </Link>
 
                 <Link
                   href={`/contact`}
-                  className="w-full text-20 leading-26px font-medium lg:text-16 lg:leading-6 lg:underline lg:font-light xl:text-18 xl:leading-6"
+                  className="a11y-focus w-full text-20 leading-26px font-medium lg:text-16 lg:leading-6 lg:underline lg:font-light xl:text-18 xl:leading-6"
                 >
                   Contact
                 </Link>
@@ -152,7 +152,7 @@ export default async function Footer() {
               <div className="flex flex-col gap-[2px] text-neutrals-100 xl:gap-2">
                 <Link
                   href={`mailto:hi@karrel.dev`}
-                  className="w-full text-20 leading-26px font-medium lg:text-16 lg:leading-6 lg:underline lg:font-light xl:text-18 xl:leading-6"
+                  className="a11y-focus w-full text-20 leading-26px font-medium lg:text-16 lg:leading-6 lg:underline lg:font-light xl:text-18 xl:leading-6"
                   target="_blank"
                 >
                   hi@karrel.dev
@@ -160,7 +160,7 @@ export default async function Footer() {
 
                 <Link
                   href={`tel:+32476280902`}
-                  className="w-full text-20 leading-26px font-medium lg:text-16 lg:leading-6 lg:underline lg:font-light"
+                  className="a11y-focus w-full text-20 leading-26px font-medium lg:text-16 lg:leading-6 lg:underline lg:font-light"
                   target="_blank"
                 >
                   +32 476 28 09 02
@@ -173,11 +173,11 @@ export default async function Footer() {
 
 
         <div className="pt-4 flex justify-center items-center gap-[3px] font-light text-neutrals-100 text-16 leading-26px md:pt-6 lg:pt-8 xl:text-18 xl:leading-18px">
-          <span className="whitespace-nowrap">©2025 Karel - All rights reserved  /</span>
+          <span className="whitespace-nowrap">©{new Date().getFullYear()} Karel - All rights reserved  /</span>
 
           <Link
             href="/privacy-policy"
-            className="underline whitespace-nowrap"
+            className="a11y-focus underline whitespace-nowrap"
           >
             Privacy policy
           </Link>
