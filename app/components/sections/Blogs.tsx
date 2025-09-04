@@ -24,7 +24,7 @@ export default function Blogs({ labelTags, tags, blogs }: BlogsProps) {
 
 
   return (
-    <section className="pt-10 pb-[72px] lg:pb-[120px] hd:pt-0 hd:pb-0">
+    <section className="pt-10 pb-[72px] lg:pb-[100px] hd:pt-0 hd:pb-0">
       <Wrapper className="hd:pt-10">
 
         {/* Heading */}

@@ -11,7 +11,7 @@ import { FALLBACK_SEO } from "@/utils/fallback-seo";
 
 export const revalidate = 0;
 
-// Get meta title & description
+/* Get meta title & description
 export async function generateMetadata({ params }: { params: { slug: string }; }): Promise<Metadata> {
   let requestData = {
     query: `page('${params.slug}')`,
@@ -23,34 +23,58 @@ export async function generateMetadata({ params }: { params: { slug: string }; }
 
   const resp = await fetcher(requestData.query, requestData.select);
 
-  if (!resp.result || resp.result.length === 0) {
+  if (!resp || resp.length === 0) {
     return FALLBACK_SEO;
   }
 
   return {
-    title: resp.result.metaTitle,
-    description: resp.result.metaDescription,
+    title: resp.metaTitle,
+    description: resp.metaDescription,
   }
-}
+} */
 
 
 
 // Return page
-export default async function Page({ params }: { params: { slug: string; } }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{
+    slug: string;
+  }>;
+}) {
+  const awaitedParams = await params;
 
-  // Fetch KirbyCMS data
-  let requestData = {
-    query: `page('${params.slug}')`,
-    select: {
-      "customPageContent": true,
+  let data;
+
+  try {
+    const resp = await fetch(
+      `${process.env.NEXT_PUBLIC_KIRBYCMS_URL}/${awaitedParams.slug}`,
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_KIRBY_API_TOKEN}`,
+        },
+        // Important: this prevents caching (same as revalidate = 0)
+        cache: "no-store",
+      },
+    );
+
+    if (!resp.ok) {
+      console.error("Failed to fetch page: ", resp.status);
+      notFound(); // Handle 404 or bad resp
     }
-  }
 
-  const resp = await fetcher(requestData.query, requestData.select);
+    data = await resp.json();
 
-  if (!resp.result || resp.result.length === 0) {
+    // You can also validate that the data is in expected shape
+    if (!data) {
+      // console.error("Invalid data shape: ", data);
+      notFound();
+    }
+  } catch (error) {
+    // console.error("Fetch or JSON parse error: ", error);
     notFound();
   }
 
-  return JSON.parse(resp.result.customPageContent).map((section: any, index: number) => sectionRenderer(section, index));
+  return data.customPageContent.map((section: any, index: number) => sectionRenderer(section, index));
 }

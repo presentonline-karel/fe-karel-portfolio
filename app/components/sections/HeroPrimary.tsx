@@ -19,8 +19,8 @@ import cx from "classnames";
 
 export default function HeroPrimary({ data }: HeroPrimaryProps) {
   return (!data.isHidden && (
-    <section id="heroPrimary" className="section pt-[157px] lg:pt-[221px] xl:pt-0">
-      <Wrapper className="flex flex-col gap-10 sm:gap-12 md:flex-row md:items-center md:gap-20 lg:gap-[109px] xl:!pt-[257px] hd:border-neutrals-300">
+    <section id="heroPrimary" className="section pt-[157px] lg:pt-[189px] xl:pt-0">
+      <Wrapper className="flex flex-col gap-10 sm:gap-12 md:flex-row md:items-center md:gap-20 lg:gap-[109px] xl:!pt-[205px] hd:border-neutrals-300">
 
         {/* Text */}
         <div className="w-full xl:w-[547px]">

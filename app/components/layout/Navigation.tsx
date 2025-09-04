@@ -56,9 +56,7 @@ export default function Navigation() {
     <nav className={cx("border-b-[0.4px] border-neutrals-300 fixed top-0 left-0 w-screen bg-neutrals-100 z-40", {
       "shadow-card border-neutrals-400": menuSmall === true,
     })}>
-      <div className={cx("px-4 py-5 sm:px-12 lg:px-20 lg:py-7 xl:py-10 xl:max-w-8xl xl:mx-auto", {
-        "xl:!py-6 hd:!py-7": menuSmall === true,
-      })}>
+      <div className={cx("px-4 py-5 sm:px-12 lg:px-20 lg:py-6 xl:max-w-8xl xl:mx-auto")}>
 
         {/* Top */}
         <div className="flex justify-between items-center">
@@ -93,14 +91,7 @@ export default function Navigation() {
                 "!border-prim-700": pathname === "/projects",
               })}
             >
-              <span className="text-20 leading-26px tracking-tight xl:text-24 xl:leading-30px">Projects</span>
-            </Link>
-
-            <Link
-              href="/#services"
-              className={cx("text-neutrals-1300 border-b-2 border-neutrals-100 font-medium hover:border-prim-400")}
-            >
-              <span className="text-20 leading-26px tracking-tight xl:text-24 xl:leading-30px">Services</span>
+              <span className="text-20 leading-26px tracking-tight xl:text-24 xl:leading-30px">Cases</span>
             </Link>
 
             <Link
@@ -239,7 +230,7 @@ export default function Navigation() {
                           "!block": pathname === "/projects"
                         })}
                       />
-                      <span className="text-24 leading-30px tracking-tight">Projects</span>
+                      <span className="text-24 leading-30px tracking-tight">Cases</span>
                     </Link>
 
                     <Link

@@ -14,20 +14,6 @@ import { fetcher } from "@/utils/fetcher";
 
 
 export default async function PostNotFound() {
-
-  // Fetch KirbyCMS data
-  let requestData = {
-    query: "page('error')",
-    select: {
-      "defaultTitle": true,
-      "defaultParagraph": true,
-    }
-  }
-
-  const resp = await fetcher(requestData.query, requestData.select);
-
-
-
   return (
     <div className="py-[72px] h-screen flex items-center sm:h-auto sm:pt-[157px] lg:pt-[221px] lg:pb-[120px] xl:pt-0 hd:py-0">
       <Wrapper className="mx-auto flex flex-col justify-center xl:!pt-[257px] xl:w-[1440px] xl:min-h-[calc(100vh-466px)] hd:pb-[136px] hd:pt-[272px]">
@@ -40,11 +26,11 @@ export default async function PostNotFound() {
         {/* Content */}
         <div className="flex flex-col items-center sm:max-w-[624px] sm:mx-auto">
           <h1 className="h h1 text-center lg:mb-6">
-            {resp.result.defaultTitle}
+            Page not found
           </h1>
 
           <p className="p mb-6 text-center lg:mb-10">
-            {resp.result.defaultParagraph}
+            Ooopps. It seems this page does not exist!
           </p>
 
           <Link

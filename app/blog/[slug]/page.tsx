@@ -80,7 +80,7 @@ export default async function Page({ params }: { params: { slug: string; } }) {
       <BlogHeader blogTitle={data.blogTitle} blogIntro={data.blogIntro} publishDate={data.publishDate} minutesRead={data.minutesRead} />
 
       {/* blogBody + footer */}
-      <section className="pb-[72px] lg:pb-[120px] hd:pb-0">
+      <section className="pb-[72px] lg:pb-[100px] hd:pb-0">
         <Wrapper className="flex flex-col gap-4 lg:gap-6 hd:pt-0">
           {data.blogDetailBlocks.map((textBlock: any, index: number) => textBlockRenderer(textBlock, index))}
 
@@ -91,7 +91,7 @@ export default async function Page({ params }: { params: { slug: string; } }) {
       {data.relatedBlogs.data.length !== 0 && (
         <RelatedBlogs data={data.relatedBlogs} />
       )}
-      
+
       {data.customBlocks.map((section: any, index: number) => sectionRenderer(section, index))}
     </main>
   )

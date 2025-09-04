@@ -73,7 +73,7 @@ export default async function Page() {
 
   return (
     <main>
-      <section className="pt-[157px] lg:pt-[221px] xl:pt-0 pb-[72px] lg:pb-[120px] hd:pb-0">
+      <section className="pt-[157px] lg:pt-[221px] xl:pt-0 pb-[72px] lg:pb-[100px] hd:pb-0">
         <Wrapper className="flex flex-col gap-4 lg:gap-6 xl:!pt-[257px] hd:pt-0">
           <h1 className="h h1 md:w-[842px] md:mx-auto">Privacy policy</h1>
           {data.privacyPolicyContent.map((textBlock: any, index: number) => textBlockRenderer(textBlock, index))}

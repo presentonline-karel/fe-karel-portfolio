@@ -60,7 +60,7 @@
 
   /* Section */
   .section {
-    @apply py-[72px] bg-neutrals-100 lg:py-[120px] hd:py-0;
+    @apply py-[72px] bg-neutrals-100 lg:py-[100px] hd:py-0;
   }
 
   /* Labels */
@@ -113,7 +113,9 @@
     @apply text-neutrals-1400 bg-prim-200;
   }
 
-  img, iframe, video {
+  img,
+  iframe,
+  video {
     @apply !select-none;
   }
 
