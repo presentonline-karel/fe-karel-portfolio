@@ -63,7 +63,7 @@ export default async function Footer() {
             <div
               className="p text-neutrals-200 mb-4 lg:mb-8"
             >
-              I'm a web developer/designer living in Antwerp. This website was designed and developed by me.
+              I’m a UX designer who likes to make things clear, simple and useful. This website was designed and developed by me.
             </div>
 
             <div className="hidden lg:flex lg:items-center lg:gap-6">
