@@ -1,4 +1,5 @@
 export const FALLBACK_SEO = {
-	title: "Karel Decoene - Web developer/designer - Portfolio Website",
-	description: "Hi, I'm Karel and I'm a creative technologist focused on web development/design. Welcome to my portfolio website.",
+	title: "Karel Decoene - UX designer - Portfolio Website",
+	description:
+		"I’m a UX designer who likes to make things clear, simple and useful. Welcome to my portfolio website.",
 };

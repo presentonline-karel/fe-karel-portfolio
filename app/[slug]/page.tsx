@@ -11,7 +11,7 @@ import { FALLBACK_SEO } from "@/utils/fallback-seo";
 
 export const revalidate = 0;
 
-/* Get meta title & description
+// Get meta title & description
 export async function generateMetadata({ params }: { params: { slug: string }; }): Promise<Metadata> {
   let requestData = {
     query: `page('${params.slug}')`,
@@ -28,20 +28,16 @@ export async function generateMetadata({ params }: { params: { slug: string }; }
   }
 
   return {
-    title: resp.metaTitle,
-    description: resp.metaDescription,
+    title: resp.result.metaTitle,
+    description: resp.result.metaDescription,
   }
-} */
+}
 
 
 
 // Return page
-export default async function Page({
-  params,
-}: {
-  params: Promise<{
-    slug: string;
-  }>;
+export default async function Page({ params }: {
+  params: Promise<{ slug: string; }>;
 }) {
   const awaitedParams = await params;
 
