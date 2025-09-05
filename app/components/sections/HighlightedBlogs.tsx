@@ -104,6 +104,7 @@ export default function HighlightedBlogs({ data }: HighlightedBlogsProps) {
                   "justify-between": blog.addnewlabel === "true",
                   "justify-end": blog.addnewlabel === "false",
                 })}
+                tabIndex={-1} aria-hidden="true"
               >
 
                 {/* Image group */}

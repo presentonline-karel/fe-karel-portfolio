@@ -66,7 +66,7 @@ export default async function ProjectsPage() {
     console.log('Error parsing JSON: ' + jsonError.message);
   }
 
-  if(data == undefined) {
+  if (data == undefined) {
     notFound();
   }
 
@@ -84,7 +84,7 @@ export default async function ProjectsPage() {
 
 
   return (
-    <main>
+    <main id="main-content">
       <Header data={headerData} />
       <Projects labelTags={data.labelTags} tags={data.tags} projects={data.projects} />
     </main>

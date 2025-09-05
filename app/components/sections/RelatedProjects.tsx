@@ -21,8 +21,8 @@ import Project from "../organisms/Project";
 
 export default function RelatedProjects({ data }: RelatedProjectsProps) {
   return (
-    <section className="section">
-      <Wrapper className="lg:flex lg:items-start lg:gap-8">
+    <section className="section bg-neutrals-200">
+      <Wrapper className="!border-neutrals-400 lg:flex lg:items-start lg:gap-8">
 
         {/* Heading */}
         <div className="mb-10 flex justify-between items-start lg:mb-0 lg:w-1/3 lg:flex-col lg:justify-start">

@@ -53,7 +53,7 @@ export default async function PlaygroundPage() {
 
 
   return (
-    <main>
+    <main id="main-content">
       <Header data={headerData} />
       <PlaygroundProjects labelTags={data.labelTags} tags={data.tags} projects={data.playgroundProjects} />
     </main>

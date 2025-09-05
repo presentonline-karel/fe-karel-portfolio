@@ -76,5 +76,9 @@ export default async function Page({
     notFound();
   }
 
-  return data.customPageContent.map((section: any, index: number) => sectionRenderer(section, index));
+  return (
+    <main id="main-content">
+      {data.customPageContent.map((section: any, index: number) => sectionRenderer(section, index))}
+    </main>
+  )
 }

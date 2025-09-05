@@ -37,6 +37,10 @@
   .p {
     @apply text-16 leading-26px font-light tracking-tight text-neutrals-1100 lg:text-18 lg:leading-7;
   }
+
+  .p > a {
+    @apply a11y-focus;
+  }
 }
 
 /* _____COMPONENTS_____  */
@@ -146,6 +150,6 @@
   }
 
   .a11y-focus {
-    @apply focus-visible:outline-[3px] focus-visible:outline-offset-6 focus-visible:outline-prim-700;
+    @apply focus:!transition-none focus-within:!transition-none focus-visible:!transition-none focus-visible:!shadow-none focus:!shadow-none focus-within:!shadow-none focus-visible:outline-[3px] focus-visible:outline-offset-6 focus-visible:outline-prim-700;
   }
 }

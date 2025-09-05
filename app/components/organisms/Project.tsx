@@ -17,6 +17,8 @@ export default function Project(project: ProjectProps) {
       // @ts-ignore
       href={`/${project.id}`}
       className="a11y-focus bg-neutrals-1200 flex flex-col justify-between w-full border-[0.4px] border-neutrals-400 shadow-card md:!h-auto"
+      tabIndex={-1}
+      aria-hidden="true"
     >
       <div>
 

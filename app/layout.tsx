@@ -67,6 +67,8 @@ export default function RootLayout({
       <body className={`${kanit.className}`}>
         <GoogleAnalytics />
         <div id="container">
+          <a href="#main-content" className="absolute left-[-999px] top-auto w-px h-px overflow-hidden a11y-focus focus:left-2 focus:top-2 focus:w-auto focus:h-auto focus:p-2 focus:bg-prim-200 focus:text-neutrals-1400 focus:z-50 focus:rounded focus:shadow">Skip to main content</a>
+
           <Navigation />
           {children}
           <Footer />

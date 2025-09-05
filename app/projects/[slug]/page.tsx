@@ -11,6 +11,8 @@ import { FALLBACK_SEO } from "@/utils/fallback-seo";
 import HeroProject from "@/app/components/sections/HeroProject";
 import TextWithImage from "@/app/components/sections/TextWithImage";
 import RelatedProjects from "@/app/components/sections/RelatedProjects";
+import Wrapper from "@/app/components/helpers/Wrapper";
+import { textBlockRenderer } from "@/utils/render-text-block";
 
 
 
@@ -91,9 +93,19 @@ export default async function Page({ params }: { params: { slug: string; } }) {
 
 
   return (
-    <main>
+    <main id="main-content">
       <HeroProject period={data.period} shortTitle={data.shortTitle} description={data.description} urls={data.urls} technologies={data.technologies.technologies} carouselImages={data.carouselImages} />
       <TextWithImage data={textWithImageData} />
+
+      {/* Project body */}
+      {Array.isArray(data.projectBodyBlocks) && data.projectBodyBlocks.length > 0 &&
+        <section className="pt-12 pb-[72px] lg:pb-[100px] lg:pt-[76px] hd:pb-0">
+          <Wrapper className="flex flex-col gap-4 lg:gap-6 hd:pt-0">
+            {data.projectBodyBlocks.map((textBlock: any, index: number) => textBlockRenderer(textBlock, index))}
+          </Wrapper>
+        </section>
+      }
+
       <RelatedProjects data={data.relatedProjects} />
 
       {data.customBlocks.map((section: any, index: number) => sectionRenderer(section, index))}

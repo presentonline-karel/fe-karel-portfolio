@@ -100,7 +100,7 @@ export default function HighlightedProjects({ data }: HighlightedProjectsProps) 
               key={index}
               className="border-[0.4px] border-neutrals-400 shadow-card !h-auto !flex flex-col justify-between bg-neutrals-1200"
             >
-              <Link href={project.project[0]} className="a11y-focus">
+              <Link href={project.project[0]} tabIndex={-1} aria-hidden="true">
 
                 {/* Project cover */}
                 <div className="relative aspect-[3/2]">

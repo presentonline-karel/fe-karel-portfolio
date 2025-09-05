@@ -76,7 +76,7 @@ export default async function Page({ params }: { params: { slug: string; } }) {
 
 
   return (
-    <main>
+    <main id="main-content">
       <BlogHeader blogTitle={data.blogTitle} blogIntro={data.blogIntro} publishDate={data.publishDate} minutesRead={data.minutesRead} />
 
       {/* blogBody + footer */}
