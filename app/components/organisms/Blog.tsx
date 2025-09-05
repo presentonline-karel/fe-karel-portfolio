@@ -25,6 +25,8 @@ export default function Blog(blog: BlogProps) {
         "justify-between": blog.isblognew === "true",
         "justify-end": blog.isblognew === "false",
       })}
+      tabIndex={-1}
+      aria-hidden="true"
     >
 
       {/* Image group */}
