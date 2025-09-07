@@ -41,6 +41,11 @@
   .p > a {
     @apply a11y-focus;
   }
+
+  b,
+  strong {
+    @apply !font-medium;
+  }
 }
 
 /* _____COMPONENTS_____  */
