@@ -36,7 +36,7 @@ export default async function Footer() {
             />
           </Link>
 
-          <div className="border-b border-neutrals-1200 pb-9 md:w-[360px] md:border-none md:pb-0 xl:w-[405px]">
+          <div className="border-b border-neutrals-1200 pb-9 md:w-[440px] md:border-none md:pb-0 xl:w-[405px]">
             <div className="flex items-center gap-8 mb-6 md:gap-12 lg:mb-10">
 
               <div className="relative w-[120px] h-11 xl:w-[154px] xl:h-14">
@@ -76,7 +76,7 @@ export default async function Footer() {
               </Link>
             </div>
 
-            <div className="py-2 px-3 bg-neutrals-1200 inline-flex items-center gap-4 lg:hidden">
+            <div className="py-4 px-3 bg-neutrals-1200 flex flex-col gap-4 sm:flex-row sm:items-center lg:hidden">
               <Link
                 href={`tel:+32476280902`}
                 className="a11y-focus flex items-center gap-[6px] text-neutrals-100"
@@ -86,14 +86,14 @@ export default async function Footer() {
                 <span className="text-16 leading-4 font-normal">+32 476 28 09 02</span>
               </Link>
 
-              <div className="w-px h-4 bg-neutrals-1100" />
+              <div className="w-px h-4 bg-neutrals-1100 hidden sm:block" />
 
               <Link
-                href={`mailto:hi@karrel.dev`}
+                href={`mailto:karel.decoene3@gmail.com`}
                 className="a11y-focus flex items-center gap-[6px] text-neutrals-100"
               >
                 <FontAwesomeIcon icon={renderIcon("envelope")} className="w-3 h-3" />
-                <span className="text-16 leading-4 font-normal">hi@karrel.dev</span>
+                <span className="text-16 leading-4 font-normal">karel.decoene3@gmail.com</span>
               </Link>
             </div>
           </div>
@@ -151,11 +151,11 @@ export default async function Footer() {
 
               <div className="flex flex-col gap-[2px] text-neutrals-100 xl:gap-2">
                 <Link
-                  href={`mailto:hi@karrel.dev`}
+                  href={`mailto:karel.decoene3@gmail.com`}
                   className="a11y-focus w-full text-20 leading-26px font-medium lg:text-16 lg:leading-6 lg:underline lg:font-light xl:text-18 xl:leading-6"
                   target="_blank"
                 >
-                  hi@karrel.dev
+                  karel.decoene3@gmail.com
                 </Link>
 
                 <Link

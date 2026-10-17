@@ -126,10 +126,10 @@ export default function Navigation() {
 
           {/* email */}
           <Link
-            href="mailto:hi@karrel.dev"
+            href="mailto:karel.decoene3@gmail.com"
             className="a11y-focus hidden tracking-tight text-18 leading-6 text-neutrals-1300 border-b-2 border-neutrals-900 cursor-pointer hover:border-prim-700 lg:block xl:text-20 xl:leading-26px"
           >
-            hi@karrel.dev
+            karel.decoene3@gmail.com
           </Link>
 
 
@@ -159,7 +159,7 @@ export default function Navigation() {
           className={cx("fixed top-0 right-0 w-screen h-screen translate-x-full z-50 bg-neutrals-1000 bg-opacity-70 lg:hidden", {
             "!translate-x-0": menuOpen === true,
           })}>
-          <div className={cx("ml-auto w-[283px] h-full bg-neutrals-1300 py-5 px-4 flex flex-col justify-between border-l-[0.4px] border-neutrals-1100 sm:w-[400px] sm:px-12")}>
+          <div className={cx("ml-auto h-full bg-neutrals-1300 py-5 px-4 flex flex-col justify-between border-l-[0.4px] border-neutrals-1100 sm:w-[400px] sm:px-12")}>
             <div className="">
 
               {/* top */}
@@ -313,7 +313,7 @@ export default function Navigation() {
                     <Link
                       href="/web-design-project"
                       onClick={() => setMenuOpen(false)}
-                      className={cx("a11y-focusflex items-center gap-2 text-neutrals-100", {
+                      className={cx("a11y-focus flex items-center gap-2 text-neutrals-100", {
                         "text-prim-500": pathname === "/web-design-project" || pathname === "/web-design-freelance",
                       })}
                     >
@@ -358,10 +358,10 @@ export default function Navigation() {
 
                 <div className="flex flex-col gap-1 mb-6 tall:mb-10 md:mb-8">
                   <Link
-                    href="mailto:hi@karrel.dev"
+                    href="mailto:karel.decoene3@gmail.com"
                     className="a11y-focus text-20 leading-26px tall:text-24 tall:leading-30px tracking-tight underline block font-normal text-neutrals-100"
                   >
-                    hi@karrel.dev
+                    karel.decoene3@gmail.com
                   </Link>
 
                   <Link
@@ -391,7 +391,7 @@ export default function Navigation() {
 
 
             <div className="flex justify-center items-center font-light text-neutrals-100">
-              ©2023 Karel - All rights reserved.
+              ©{new Date().getFullYear()} Karel - All rights reserved.
             </div>
           </div>
         </div>
