@@ -1,9 +1,12 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import loading from "@/public/loading.json";
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
-
+const Player = dynamic(
+  () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
+  { ssr: false }
+);
 
 export default function Loading() {
   return (
@@ -16,5 +19,5 @@ export default function Loading() {
         className="w-24 h-24 / md:w-60 md:h-60"
       />
     </div>
-  )
+  );
 }
