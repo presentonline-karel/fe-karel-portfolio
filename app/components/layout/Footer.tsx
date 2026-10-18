@@ -41,7 +41,7 @@ export default async function Footer() {
 
               <div className="relative w-[120px] h-11 xl:w-[154px] xl:h-14">
                 <Image
-                  src="/KarelDecoene-logo-dark.png"
+                  src="/Karel-Decoene-Project-Manager-Logo-Dark.png"
                   alt="Logo Karel Decoene portfolio website"
                   fill={true}
                   sizes="(max-width: 1439px) 30vw, 11vw"

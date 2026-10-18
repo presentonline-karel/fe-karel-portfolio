@@ -64,7 +64,7 @@ export default function Navigation() {
           {/* logo */}
           <Link href="/" className="a11y-focus relative w-[120px] h-11 xl:w-[154px] xl:h-14">
             <Image
-              src={getKirbyFiles("site/logo-light.png")}
+              src={getKirbyFiles("site/Karel-Decoene-Project-Manager-Logo-Light.png")}
               alt="Logo Karel Decoene portfolio website"
               fill={true}
               sizes="(max-width: 1439px) 30vw, 11vw"
@@ -169,7 +169,7 @@ export default function Navigation() {
                   className="a11y-focus relative w-[120px] h-11"
                 >
                   <Image
-                    src={getKirbyFiles("site/logo-dark.png")}
+                    src={getKirbyFiles("site/Karel-Decoene-Project-Manager-Logo-Dark.png")}
                     alt="Logo Karel Decoene portfolio website"
                     fill={true}
                     sizes="(max-width: 1439px) 30vw, 0vw"
