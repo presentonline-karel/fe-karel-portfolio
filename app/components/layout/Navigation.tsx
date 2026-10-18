@@ -282,67 +282,6 @@ export default function Navigation() {
                     </Link>
                   </div>
                 </div>
-
-
-
-                <div className="p-4 border-[0.4px] border-neutrals-1100 bg-neutrals-1200">
-
-                  {/* label */}
-                  <div className="mb-5 text-14 leading-14px text-neutrals-300 tracking-tight">
-                    Services
-                  </div>
-
-                  {/* links */}
-                  <div className="flex flex-col gap-[2px]">
-                    <Link
-                      href="/web-development-project"
-                      onClick={() => setMenuOpen(false)}
-                      className={cx("a11y-focus flex items-center gap-2 text-neutrals-100", {
-                        "text-prim-500": pathname === "/web-development-project" || pathname === "/web-development-freelance",
-                      })}
-                    >
-                      <FontAwesomeIcon
-                        icon={faArrowRight}
-                        className={cx("w-[14px] h-4 hidden", {
-                          "!block": pathname === "/web-development-project" || pathname === "/web-development-freelance",
-                        })}
-                      />
-                      <span className="text-24 leading-30px tracking-tight">Web development</span>
-                    </Link>
-
-                    <Link
-                      href="/web-design-project"
-                      onClick={() => setMenuOpen(false)}
-                      className={cx("a11y-focus flex items-center gap-2 text-neutrals-100", {
-                        "text-prim-500": pathname === "/web-design-project" || pathname === "/web-design-freelance",
-                      })}
-                    >
-                      <FontAwesomeIcon
-                        icon={faArrowRight}
-                        className={cx("w-[14px] h-4 hidden", {
-                          "!block": pathname === "/web-design-project" || pathname === "/web-design-freelance",
-                        })}
-                      />
-                      <span className="text-24 leading-30px tracking-tight">Web design</span>
-                    </Link>
-
-                    <Link
-                      href="/playground"
-                      onClick={() => setMenuOpen(false)}
-                      className={cx("a11y-focus flex items-center gap-2 text-neutrals-100", {
-                        "text-prim-500": pathname === "/playground",
-                      })}
-                    >
-                      <FontAwesomeIcon
-                        icon={faArrowRight}
-                        className={cx("w-[14px] h-4 hidden", {
-                          "!block": pathname === "/playground"
-                        })}
-                      />
-                      <span className="text-24 leading-30px tracking-tight">Playground</span>
-                    </Link>
-                  </div>
-                </div>
               </div>
 
 
